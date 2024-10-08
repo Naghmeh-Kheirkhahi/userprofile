@@ -1,0 +1,43 @@
+
+.mybtn {
+
+    margin: 5rem 2rem;
+    padding: 1rem 2rem;
+    color: rgb(93, 0, 112);
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid rgb(145, 0, 174);
+    border-radius: 10px;
+    background-color: rgb(226, 174, 237);
+    cursor: pointer;
+}
+
+
+
+.mytitle {
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: rgb(12, 90, 21);
+}
+
+
+
+
+.myinput {
+    outline: none;
+    margin-left: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 149, 17);
+    background-color: rgb(176, 245, 184);
+    color: rgb(76, 76, 76);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.mytext {
+    margin-left: 3rem;
+    color: rgb(47, 47, 47);
+    font-size: 1.5rem;
+}
