@@ -59,6 +59,7 @@
     font-weight: 800;
     padding: 1rem 2rem;
     width: 40%;
+    cursor: pointer;
 }
 
 .container h3 {

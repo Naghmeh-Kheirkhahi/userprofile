@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Button from './Components/Button';
 import Form from './Components/Form';
+import Test from './Components/Test';
 
 
 
@@ -10,10 +11,12 @@ function App() {
     
     <>
     
-    <Button/>
+    {/* <Button/>
 
 
-    <Form/>
+    <Form/> */}
+
+    <Test/>
     
     </>
   );
