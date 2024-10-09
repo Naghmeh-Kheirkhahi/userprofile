@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Button from "./Button";
 
 
 function Test() {
@@ -44,7 +45,6 @@ if (error) {
         <>
             {data.map(item=>(
                 <div>
-                    <div>{item.name}</div>
                     <div>{item.username}</div>
                     <div>{item.email}</div>
                     <div>{item.address.street}</div>
@@ -57,7 +57,16 @@ if (error) {
                     <div>{item.website}</div>
                     <div>{item.company.name}</div>
                     <div>{item.company.catchPhrase}</div>
-                    <div>{item.company.bs}</div>
+                    <div>{item.company.bs}</div>  <div>{item.name}</div>
+                    <Button 
+
+                    name={item.name}
+                    email={item.email}
+                    phone={item.phone}
+
+
+/>
+                  
                 </div>
             ))}
         
