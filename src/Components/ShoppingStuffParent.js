@@ -31,7 +31,7 @@ function ShoppingStuffParent() {
 
     return (
         <>
-            <div className="container">
+            <div className="mainClassProduct">
                 <h1>Different Products</h1>
 
                 <div class="btns">
