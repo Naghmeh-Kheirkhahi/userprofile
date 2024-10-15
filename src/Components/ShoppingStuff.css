@@ -44,26 +44,44 @@
 
 
 
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    border: 1px solid rgb(149, 149, 149);
+    border-radius: 10px;
+    background-color: rgb(241, 241, 241);
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is spaced evenly */
+    padding: 1rem; /* Add some padding for better spacing */
+    margin: 1rem; /* Add margin to separate the products */
+}
 
 .product img {
     width: 300px;
     height: 350px;
     border-radius: 20px;
-    width: 100%;
+    margin: 2rem auto; /* Center the image horizontally */
 }
 
 .productInfo {
-    margin: 2rem 0 6rem 0;
+    flex: 1; /* Make productInfo take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product h2 {
     margin-bottom: 2rem;
     font-size: 1.7rem;
-    color: rgb(68, 68, 68);
 }
 
-.price {
-    font-size: 1.6rem;
+.price, .category, .description, .rating {
+    font-size: 1.2rem;
     color: rgb(47, 47, 47);
     margin: 1rem 0;
 }
