@@ -7,7 +7,10 @@ import ShoppingStuffChild from "./ShoppingStuffChild";
 
 import './ShoppingStuff.css';
 
-import ShoppingButton from './ShoppingButton';
+import ShoppingButton from "./ShoppingButton";
+
+import { useNavigate } from "react-router-dom";
+
 
 
 
@@ -20,11 +23,22 @@ function ShoppingStuffParent() {
     useEffect(() => {
         axios.get('https://fakestoreapi.com/products/')
             .then(res => {
-                console.log(res);
+                // console.log(res);
                 setData(res.data)
             })
     }, [])
 
+
+
+
+
+    const navigate = useNavigate();
+
+    const handleProductPage = (productId) => {
+        console.log(productId)
+
+        navigate(`/product/${productId}`)
+    }
 
 
 
@@ -35,10 +49,10 @@ function ShoppingStuffParent() {
                 <h1>Different Products</h1>
 
                 <div class="btns">
-                    <ShoppingButton btnName={"Men's Clothing"}/>
-                    <ShoppingButton btnName={"Women's Clothing"}/>
-                    <ShoppingButton btnName={"Jewelery"}/>
-                    <ShoppingButton btnName={"Electronics"}/>
+                    <ShoppingButton btnName={"Men's Clothing"} />
+                    <ShoppingButton btnName={"Women's Clothing"} />
+                    <ShoppingButton btnName={"Jewelery"} />
+                    <ShoppingButton btnName={"Electronics"} />
                 </div>
 
 
@@ -51,6 +65,7 @@ function ShoppingStuffParent() {
                             category={item.category}
                             description={item.description}
                             ratingRate={item.rating.rate}
+                            click={() => { handleProductPage(item.id) }}
                         />
                     ))}
                 </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import './ShoppingStuff.css';
+import ShoppingButton from "./ShoppingButton";
+
 
 function ShoppingStuffChild(props) {
     return (
@@ -18,6 +20,8 @@ function ShoppingStuffChild(props) {
                                 : props.description}
                         </p>
                         <p className="rating"><b>Rating: </b>{props.ratingRate}</p>
+
+                        <button onClick={props.click}>See More</button>
                     </div>
                 {/* </div> */}
             </div>

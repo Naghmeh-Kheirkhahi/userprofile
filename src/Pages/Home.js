@@ -1,6 +1,7 @@
 
 import React from "react";
 import ShoppingStuffParent from "../Components/ShoppingStuffParent";
+import "./Home.css";
 
 
 
@@ -8,7 +9,10 @@ import ShoppingStuffParent from "../Components/ShoppingStuffParent";
 function Home() {
     return (
         <>
-            <h1>Welcome to the Home Page</h1>
+
+            <div className="homePage">
+                <h1>Producto Shop</h1>
+            </div>
             <ShoppingStuffParent/>
         </>
     )

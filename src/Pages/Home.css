@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.homePage {
+    background-image: url('/src/Assets/images/bg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; /* Optional: Set the height to cover the viewport */
+}
+
+
+.homePage h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    margin: 5rem 0 2rem 0;
+    color: #fff3ce;
+    text-shadow: -3px 3px 7px #272727;
+}

@@ -10,6 +10,7 @@ import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
 import { Route, Routes } from 'react-router-dom';
+import SingleProduct from './Components/SingleProduct';
 
 
 
@@ -18,13 +19,14 @@ function App() {
 
     <>
 
-      <Nav />
-
+      <Nav/>
 
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Contact' element={<Contact />} />
         <Route path='/About' element={<About />} />
+       
+        <Route path='/Product/:productId' element={<SingleProduct/>}/>
       </Routes>
 
     </>
