@@ -1,6 +1,6 @@
 
 import React from "react";
-import Form from "../Components/Form";
+import ContactForm from "../Components/ContactForm";
 
 
 function Contact() {
@@ -8,7 +8,7 @@ function Contact() {
         <>
             <h1>Welcome to the Contact Page</h1>
 
-            <Form/>
+            <ContactForm/>
         </>
     )
 }

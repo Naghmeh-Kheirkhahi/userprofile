@@ -1,0 +1,39 @@
+
+section {
+    margin: 10rem 0;
+
+}
+
+section h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #66418e;
+}
+
+section p {
+    font-size: 1.5rem;
+}
+
+form {
+    border: 1px solid #9d78c4;
+    border-radius: 10px;
+    background-color: #edddff;
+}
+
+form label {
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 0.5rem;
+    color: #432a60;
+}
+
+form button {
+    margin: 0 15rem;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border: 1px solid rgb(228, 133, 0);
+    border-radius: 10px;
+    background-color: rgb(255, 149, 0);
+    color: #5a397d;
+}

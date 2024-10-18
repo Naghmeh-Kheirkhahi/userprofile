@@ -1,25 +1,41 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 
 
 .homePage {
+    margin-top: 7rem;
     background-image: url('/src/Assets/images/bg1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh; /* Optional: Set the height to cover the viewport */
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
 }
 
 
 .homePage h1 {
     font-size: 6rem;
     font-weight: 900;
-    font-family: "Times New Roman", Times, serif;
-    text-align: center;
     margin: 5rem 0 2rem 0;
     color: #fff3ce;
     text-shadow: -3px 3px 7px #272727;
+}
+
+.homePage p {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #563778;
+    text-shadow: -3px 3px 7px #fff0bd;
+}
+
+
+.homeBtn {
+    margin-top: 2rem;
+    border: 1px solid #c0c0c0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color:  #563778;
+    font-size: 1.8rem;
+    font-weight: 900;
+    padding: 1rem 2rem;
 }

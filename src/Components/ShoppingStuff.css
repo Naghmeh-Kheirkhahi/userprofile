@@ -19,6 +19,7 @@
     margin: 2rem 0 3rem 0;
     font-size: 4rem;
     color: rgb(68, 68, 68);
+    font-weight: 900;
 }
 
 
@@ -30,14 +31,14 @@
 }
 
 
-.shopBtn {
+.productBtn {
     margin: 1rem 2rem;
     border: 1px solid rgb(50, 50, 50);
     border-radius: 10px;
     background-color: rgb(50, 50, 50);
-    color:  rgb(157, 211, 41);
+    color:  rgb(255, 149, 0);
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 900;
     padding: 1rem 2rem;
 }
 
@@ -50,7 +51,7 @@
 }
 
 .product {
-    border: 1px solid rgb(149, 149, 149);
+    border: 2px solid #b39dc9;
     border-radius: 10px;
     background-color: rgb(241, 241, 241);
     flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis */
@@ -59,6 +60,7 @@
     justify-content: space-between; /* Ensure content is spaced evenly */
     padding: 1rem; /* Add some padding for better spacing */
     margin: 1rem; /* Add margin to separate the products */
+    cursor: pointer;
 }
 
 .product img {

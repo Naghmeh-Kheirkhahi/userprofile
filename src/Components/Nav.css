@@ -1,0 +1,37 @@
+
+.mainMenu {
+    position: fixed;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0px 5px 10px #917c5e;;
+}
+
+
+nav {
+    background-color: rgb(255, 240, 216);
+}
+
+nav img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+nav li {
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+}
+
+
+.navLink {
+    color: rgb(139, 60, 0);
+    text-decoration: none;
+} 
+
+
+.navLink:hover {
+    color: rgb(211, 92, 0);
+} 
