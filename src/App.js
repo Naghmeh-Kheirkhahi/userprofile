@@ -22,9 +22,9 @@ function App() {
       <Nav/>
 
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/Contact' element={<Contact />} />
-        <Route path='/About' element={<About />} />
+        <Route path='/' element={<Home/>}/>
+        <Route path='/Contact' element={<Contact/>}/>
+        <Route path='/About' element={<About/>}/>
        
         <Route path='/Product/:productId' element={<SingleProduct/>}/>
       </Routes>

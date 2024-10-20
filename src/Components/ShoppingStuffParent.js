@@ -49,10 +49,10 @@ function ShoppingStuffParent() {
                 <h1>Different Products</h1>
 
                 <div class="btns">
-                    <ShoppingButton btnName={"Men's Clothing"} btnClass={'productBtn'}/>
-                    <ShoppingButton btnName={"Women's Clothing"} btnClass={'productBtn'}/>
-                    <ShoppingButton btnName={"Jewelery"} btnClass={'productBtn'}/>
-                    <ShoppingButton btnName={"Electronics"} btnClass={'productBtn'}/>
+                    <ShoppingButton btnName={"Men's Clothing"} btnClass={'categoryBtn'}/>
+                    <ShoppingButton btnName={"Women's Clothing"} btnClass={'categoryBtn'}/>
+                    <ShoppingButton btnName={"Jewelery"} btnClass={'categoryBtn'}/>
+                    <ShoppingButton btnName={"Electronics"} btnClass={'categoryBtn'}/>
                 </div>
 
 

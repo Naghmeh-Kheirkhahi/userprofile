@@ -6,7 +6,8 @@ import ShoppingButton from "./ShoppingButton";
 function ShoppingStuffChild(props) {
     return (
         <div className="col-4 product-container">
-            <div className="product" onClick={props.click}>
+            <div className="product" onClick={props.click}> 
+                {/* we can chose any name for click action after props*/}
                 {/* <div className="card"> */}
                     <img src={props.image} alt="..." />
                     <div className="productInfo">
