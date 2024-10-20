@@ -1,0 +1,30 @@
+
+.aboutUs {
+    align-items: center;
+    background-color: rgb(234, 192, 255);
+    padding: 5rem 8rem 10rem 8rem;
+}
+
+.aboutUs h1 {
+    font-size: 3.5rem;
+    color: rgb(86, 56, 99);
+    font-weight: 900;
+}
+
+.aboutUs h2 {
+    font-size: 2.5rem;
+    color: rgb(98, 65, 113);
+    font-weight: 600;
+}
+
+.aboutUs p {
+    font-size: 1.5rem;
+    color: rgb(61, 61, 61);
+}
+
+.aboutUs ul {
+    font-size: 1.5rem;
+    color: rgb(61, 61, 61);
+    list-style-type: circle; /* Add this line to show circle bullet points */
+}
+

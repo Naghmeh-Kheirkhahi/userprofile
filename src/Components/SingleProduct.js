@@ -32,6 +32,8 @@ function SingleProduct() {
                     <p className="productPrice"><b>{product.price} </b>Euro</p>
                     <p className="productCategory"><b>{product.category} </b>category</p>
                     <p className="productDescription">{product.description}</p>
+                    <p className="productRating"><b>Rating: </b><span class="fa fa-star"></span><span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
 
                     <ShoppingButton btnName={"BUY NOW"} btnClass={'productBtn'}/>
                 </div>

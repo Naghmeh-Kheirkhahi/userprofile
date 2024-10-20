@@ -155,6 +155,15 @@
     color: rgb(59, 18, 62);
 }
 
+.productRating {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.productRating span {
+    color: rgb(255, 106, 0);
+}
+
 .productBtn {
     margin-top: 2rem;
     border: 1px solid rgb(184, 19, 1);
