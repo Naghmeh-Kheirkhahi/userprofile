@@ -4,6 +4,9 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import './ShoppingStuff.css';
 import ShoppingButton from "./ShoppingButton";
+import { useNavigate } from "react-router-dom";
+
+
 
 
 
@@ -23,19 +26,37 @@ function SingleProduct() {
 
 
 
+
+
+
+    const navigate = useNavigate();
+
+    const buySingleProduct = () => {
+        navigate('/cart' , {
+            state: { id: product.id, name: product.title, category: product.category , price: product.price, image: product.image, quantity: 1 }
+        })
+    }
+
+
+
+
+
     return (
         <>
             <div className="singleProduct">
-                <img src={product.image}/>
+                <img src={product.image} />
                 <div className="ps-5">
                     <h1>{product.title}</h1>
                     <p className="productPrice"><b>{product.price} </b>Euro</p>
                     <p className="productCategory"><b>{product.category} </b>category</p>
                     <p className="productDescription">{product.description}</p>
                     <p className="productRating"><b>Rating: </b><span class="fa fa-star"></span><span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+                        <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
 
-                    <ShoppingButton btnName={"BUY NOW"} btnClass={'productBtn'}/>
+                    {/* <ShoppingButton btnName={"BUY NOW"} btnClass={'productBtn'} onClick={}/> */}
+
+                    <button onClick={buySingleProduct}>BUY NOW</button> 
+                    {/* we don't use props here because we want to use this method in this component. */}
                 </div>
             </div>
         </>

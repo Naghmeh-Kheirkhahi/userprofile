@@ -6,7 +6,7 @@ import ShoppingButton from "./ShoppingButton";
 function ShoppingStuffChild(props) {
     return (
         <div className="col-4 product-container">
-            <div className="product" onClick={props.click}> 
+            <div className="product" onClick={props.showProduct}> 
                 {/* we can chose any name for click action after props*/}
                 {/* <div className="card"> */}
                     <img src={props.image} alt="..." />
@@ -21,6 +21,10 @@ function ShoppingStuffChild(props) {
                                 : props.description}
                         </p>
                         <p className="rating"><b>Rating: </b>{props.ratingRate}</p>
+
+                        <button onClick={props.buyProduct}>BUY NOW</button>
+
+                        {/* <ShoppingButton btnName={"BUY NOW"} btnClass={'productBtn'} onClick={props.buyProduct}/> */}
                     </div>
                 {/* </div> */}
             </div>

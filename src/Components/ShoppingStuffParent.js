@@ -34,10 +34,23 @@ function ShoppingStuffParent() {
 
     const navigate = useNavigate();
 
-    const handleProductPage = (productId) => {
-        console.log(productId)
+    const handleSingleProduct = (productId) => {
+        console.log(productId);
 
         navigate(`/product/${productId}`)
+    }
+
+
+
+    const[quantity, setQuantity]=useState(1);
+
+    const handleBuyProduct = (price) => {
+        console.log('price:'+ price);
+
+        setQuantity(quantity + 1);
+        console.log('quantity:' + quantity);
+
+        console.log('total price:' + quantity*price);
     }
 
 
@@ -65,8 +78,12 @@ function ShoppingStuffParent() {
                             category={item.category}
                             description={item.description}
                             ratingRate={item.rating.rate}
-                            click={() => { handleProductPage(item.id) }}
+                            showProduct={() => { handleSingleProduct(item.id) }}
+
+                            buyProduct={() => { handleBuyProduct(item.price) }}
                         />
+
+                        
                     ))}
                 </div>
             </div>

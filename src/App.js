@@ -11,6 +11,7 @@ import Contact from './Pages/Contact';
 import About from './Pages/About';
 import { Route, Routes } from 'react-router-dom';
 import SingleProduct from './Components/SingleProduct';
+import Cart from './Pages/Cart';
 
 
 
@@ -27,6 +28,8 @@ function App() {
         <Route path='/About' element={<About/>}/>
        
         <Route path='/Product/:productId' element={<SingleProduct/>}/>
+
+        <Route path='/Cart' element={<Cart/>}/>
       </Routes>
 
     </>
