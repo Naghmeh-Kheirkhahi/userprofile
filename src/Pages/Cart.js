@@ -86,7 +86,7 @@ function Cart() {
                                                     <div class="row">Category: {item.category}</div>
                                                 </div>
                                                 <div class="col">
-                                                    <p onClick={handleReduceQuantity}>minus</p><p class="border">{quantity}</p><p onClick={handleAddQuantity}>add</p>
+                                                    <p onClick={handleReduceQuantity}>-</p><p class="border">{quantity}</p><p onClick={handleAddQuantity}>+</p>
                                                 </div>
                                                 <div class="col">&euro; {item.price} <span class="close">&#10005;</span></div>
                                             </div>

@@ -74,6 +74,7 @@ function SingleProduct() {
                     <ShoppingButton btnName={"BUY NOW"} btnClass={'singleProductBtn'} btnClick={buySingleProduct} />
 
                     {/* <button onClick={buySingleProduct}>BUY NOW</button> */}
+                    
                     {/* we don't use props here because we want to use this method in this component. */}
                 </div>
             </div>
