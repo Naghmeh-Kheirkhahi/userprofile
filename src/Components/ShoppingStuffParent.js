@@ -42,6 +42,7 @@ function ShoppingStuffParent() {
 
 
 
+    
     const[quantity, setQuantity]=useState(1);
 
     const handleBuyProduct = (price) => {

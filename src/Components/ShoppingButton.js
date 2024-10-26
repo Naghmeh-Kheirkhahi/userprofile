@@ -4,10 +4,10 @@ import React from "react";
 import './ShoppingStuff.css';
 
 
-function ShoppingButton({btnName , btnClass}){
+function ShoppingButton({btnName , btnClass, btnClick}){
     
         return(
-            <button className={btnClass}>{btnName}</button>
+            <button className={btnClass} onClick={btnClick}>{btnName}</button>
         )
 }
 

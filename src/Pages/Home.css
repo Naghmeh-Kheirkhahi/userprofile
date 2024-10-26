@@ -28,6 +28,11 @@
     text-shadow: -3px 3px 7px #fff0bd;
 }
 
+.homePage p:hover {
+    color: #563778;
+    cursor: auto;
+}
+
 
 .homeBtn {
     margin-top: 2rem;

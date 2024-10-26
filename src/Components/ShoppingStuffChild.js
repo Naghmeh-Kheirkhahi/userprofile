@@ -22,9 +22,9 @@ function ShoppingStuffChild(props) {
                         </p>
                         <p className="rating"><b>Rating: </b>{props.ratingRate}</p>
 
-                        <button onClick={props.buyProduct}>BUY NOW</button>
+                        {/* <button onClick={props.buyProduct}>BUY NOW</button> */}
 
-                        {/* <ShoppingButton btnName={"BUY NOW"} btnClass={'productBtn'} onClick={props.buyProduct}/> */}
+                        <ShoppingButton btnName={"BUY NOW"} btnClass={'productBtn'} btnClick={props.buyProduct}/>
                     </div>
                 {/* </div> */}
             </div>

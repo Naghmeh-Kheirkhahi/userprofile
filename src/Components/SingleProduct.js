@@ -32,9 +32,27 @@ function SingleProduct() {
     const navigate = useNavigate();
 
     const buySingleProduct = () => {
-        navigate('/cart' , {
-            state: { id: product.id, name: product.title, category: product.category , price: product.price, image: product.image, quantity: 1 }
+        navigate('/cart', {
+            state: { id: product.id, name: product.title, category: product.category, price: product.price, image: product.image, quantity: 1 }
         })
+
+        // if(getProduct==null){
+        //     books=[]
+        // }
+        // else{
+        //     books.push(book)
+        // }
+
+        // const getProduct = JSON.parse(localStorage.getItem('products')) || []; 
+        // const updateProductStored = [...getProduct, product]; 
+        // localStorage.setItem('products', JSON.stringify(updateProductStored)); 
+
+        const getProduct = JSON.parse(localStorage.getItem('productKey')) || [];
+        // let test=[1,2,3,]
+        // let test2 = [...test,4]
+        // test=[1,2,3,4]
+        const updateProduct = [...getProduct, product]; // Spread Operator makes a copy from the Local Storage meaning from getProduct and adds the new product to the LS. it does in fact the work of Push.
+        localStorage.setItem('productKey', JSON.stringify(updateProduct)); //
     }
 
 
@@ -53,9 +71,9 @@ function SingleProduct() {
                     <p className="productRating"><b>Rating: </b><span class="fa fa-star"></span><span class="fa fa-star"></span>
                         <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
 
-                    {/* <ShoppingButton btnName={"BUY NOW"} btnClass={'productBtn'} onClick={}/> */}
+                    <ShoppingButton btnName={"BUY NOW"} btnClass={'singleProductBtn'} btnClick={buySingleProduct} />
 
-                    <button onClick={buySingleProduct}>BUY NOW</button> 
+                    {/* <button onClick={buySingleProduct}>BUY NOW</button> */}
                     {/* we don't use props here because we want to use this method in this component. */}
                 </div>
             </div>

@@ -165,12 +165,23 @@
 }
 
 .productBtn {
-    margin-top: 2rem;
+    margin: 1rem 8rem;
     border: 1px solid rgb(184, 19, 1);
     border-radius: 10px;
     background-color: rgb(205, 20, 0);
     color:  rgb(255, 255, 255);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 900;
+    padding: 0.5rem 0;
+}
+
+.singleProductBtn {
+    margin: 1rem 0 0 1rem;
+    border: 1px solid rgb(184, 19, 1);
+    border-radius: 10px;
+    background-color: rgb(205, 20, 0);
+    color:  rgb(255, 255, 255);
+    font-size: 1.3rem;
     font-weight: 900;
     padding: 1rem 2rem;
 }

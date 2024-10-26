@@ -10,7 +10,6 @@ import ShoppingButton from "../Components/ShoppingButton";
 function Home() {
     return (
         <>
-
             <div className="homePage">
                 <h1>Producto Shop</h1>
 
@@ -20,7 +19,7 @@ function Home() {
                 <p>YOUR FAVORITE</p>
                 <p>SHOPPING</p>
 
-                <ShoppingButton btnName={"BUY NOW"} btnClass={'homeBtn'}/>
+                <ShoppingButton btnName={"BUY NOW"} btnClass={'homeBtn'} />
             </div>
             <ShoppingStuffParent/>
         </>
