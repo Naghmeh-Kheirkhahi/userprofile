@@ -88,7 +88,7 @@ function Cart() {
                                                 <div class="col">
                                                     <p onClick={handleReduceQuantity}>-</p><p class="border">{quantity}</p><p onClick={handleAddQuantity}>+</p>
                                                 </div>
-                                                <div class="col">&euro; {item.price} <span class="close">&#10005;</span></div>
+                                                <div class="col">&euro; {item.price} <i class="recyclebin fa">&#xf014;</i></div>
                                             </div>
                                         ))
                                     }
@@ -101,13 +101,11 @@ function Cart() {
                                 <hr />
                                 <div class="row">
                                     <div class="col" style={{ paddingLeft: '0' }}>ITEMS 3</div>
-                                    <div class="col text-right">&euro; 132.00</div>
+                                    <div class="col text-right">&euro; ********</div>
                                 </div>
                                 <form>
                                     <p>SHIPPING</p>
                                     <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
-                                    <p>GIVE CODE</p>
-                                    <input id="code" placeholder="Enter your code" />
                                 </form>
                                 <div class="row" style={{ borderTop: '1px solid rgba(0,0,0,.1)', padding: '2vh 0' }}>
                                     <div class="col">TOTAL PRICE</div>
@@ -115,7 +113,7 @@ function Cart() {
                                         {totalPrice}
                                     </div>
                                 </div>
-                                <button class="btn">CHECKOUT</button>
+                                <button class="cartBtn">CHECKOUT</button>
                             </div>
                         </div>
 
