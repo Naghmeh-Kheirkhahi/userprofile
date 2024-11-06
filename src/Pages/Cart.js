@@ -37,19 +37,18 @@ function Cart() {
     useEffect(() => {
 
         // we used useEffect bacause we want to show the products and items of our API automatically without pushing or clicking on something and we added [] to it to be done only one time.
+        
         const getProducts = JSON.parse(localStorage.getItem('productKey')); // before mapping we should get the products from LS and store somewhere
-        // console.log('product in card:' ,getProduct);
+        console.log('product in card:' ,getProducts);
 
-        const productWithQuntity = getProducts.map(product => ({
+        // const   getProducts = getProducts.map(product => ({ // because we added quantity to the products of the LS , we dont need this bellow code.
+        //     ...product, quantity: 1
+        //     // product is an object and we added a new propertu to it called quantity , so we don not need to put them in a [] like the thing we did in SingleProduct
+        // }
+        // ))
 
-            ...product, quantity: 1
-            // product is an object and we added a new propertu to it called quantity , so we don not need to put them in a [] like the thing we did in SingleProduct
-        }
-
-        ))
-
-        setProducts(productWithQuntity); // we have to set it to save in products array in useState we defined above. we need to store this state of the LS including the products with quantity as a property. the new state will be the input of setProducts and the whole will be put in products in the useState. 
-        console.log('product with quantity:', productWithQuntity);
+        setProducts( getProducts); // we have to set it to save in products array in useState we defined above. we need to store this state of the LS including the products with quantity as a property. the new state will be the input of setProducts and the whole will be put in products in the useState. 
+        console.log('product with quantity:',   getProducts);
 
     }, [])
 

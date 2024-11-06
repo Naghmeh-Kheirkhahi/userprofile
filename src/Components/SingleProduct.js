@@ -30,8 +30,7 @@ function SingleProduct() {
 
 
     const navigate = useNavigate();
-
-    const buySingleProduct = () => {
+    const addProductToCart = (productId) => {
         navigate('/cart', {
             state: { id: product.id, name: product.title, category: product.category, price: product.price, image: product.image, quantity: 1 }
         })
@@ -47,14 +46,30 @@ function SingleProduct() {
         // const updateProductStored = [...getProduct, product]; 
         // localStorage.setItem('products', JSON.stringify(updateProductStored)); 
 
+
         const getProduct = JSON.parse(localStorage.getItem('productKey')) || [];
-        // let test=[1,2,3,]
-        // let test2 = [...test,4]
-        // test=[1,2,3,4]
-        const updateProduct = [...getProduct, product]; // Spread Operator makes a copy from the Local Storage meaning from getProduct and adds the new product to the LS. it does in fact the work of Push.
-        localStorage.setItem('productKey', JSON.stringify(updateProduct)); //
+        const existingProduct = getProduct.find(product => product.id === productId); // if the product is already in the LS, it will be updated and if not, it will be added to the LS.
+
+        if (existingProduct) { // we need to add a property called quantity to each product in the LS to save it in th LS. in the Cart part, we added quantity to each product we chose but  we did not save it in the LS.
+
+            const updateProduct = getProduct.map(product =>
+                product.id === productId
+                    ? { ...product, quantity: product.quantity + 1 }
+                    : product
+            )
+
+            localStorage.setItem('productKey', JSON.stringify(updateProduct));
+        }
+
+        else {
+            const updateProduct = [...getProduct, { ...product, quantity: 1 }]; // Spread Operator makes a copy from the Local Storage meaning from getProduct and adds the new product to the LS. it does in fact the work of Push.
+
+            localStorage.setItem('productKey', JSON.stringify(updateProduct)); // update the LS
+        }
     }
 
+ 
+    
 
 
 
@@ -71,10 +86,10 @@ function SingleProduct() {
                     <p className="productRating"><b>Rating: </b><span class="fa fa-star"></span><span class="fa fa-star"></span>
                         <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
 
-                    <ShoppingButton btnName={"BUY NOW"} btnClass={'singleProductBtn'} btnClick={buySingleProduct} />
+                    <ShoppingButton btnName={"BUY NOW"} btnClass={'singleProductBtn'} btnClick={()=> addProductToCart(product.id)} />
 
                     {/* <button onClick={buySingleProduct}>BUY NOW</button> */}
-                    
+
                     {/* we don't use props here because we want to use this method in this component. */}
                 </div>
             </div>
