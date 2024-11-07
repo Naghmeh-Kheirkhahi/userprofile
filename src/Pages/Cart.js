@@ -128,58 +128,56 @@ function Cart() {
         <>
 
             {state ? (
-                <div className="mainClass cart">
-                    <div class="card">
+                <div className="mainClass">
+                    <div class="cardClass">
                         <div class="row">
-                            <div class="col-md-8 cart">
-                                <div class="title">
+                            <div class="col-md-8 shoppingCart">
+                                <div class="cartTitle">
                                     <div class="row">
-                                        <div class="col"><h4><b>Shopping Cart</b></h4></div>
-                                        <div class="col align-self-center text-right text-muted">{totalQuantity} Items</div>
+                                        <div class="col-6"><h3><b>Shopping Cart</b></h3></div>
+                                        <div class="col-6"><p><b>{totalQuantity} Items</b></p></div>
                                     </div>
                                 </div>
-                                <div class="row border-top border-bottom">
+                                <div class="row productsList">
                                     {
                                         products.map(item => (
 
-                                            <div class="row main align-items-center">
-                                                <div class="col-2"><img class="img-fluid" src={item.image} /></div>
-                                                <div class="col">
-                                                    <div class="row text-muted">Name: {item.name}</div>
-                                                    <div class="row">Category: {item.category}</div>
+                                            <div class="row productItem">
+                                                <div class="col-3"><img class="img-thumbnail" src={item.image} /></div>
+                                                <div class="col-3 productDetail">
+                                                    <div><p><b>Name:</b> {item.title}</p></div>
+                                                    <div><p><b>Category:</b> {item.category}</p></div>
                                                 </div>
-                                                <div class="col">
-                                                    <p onClick={() => updateQuantity(item.id, -1)}>-</p><p class="border"></p>{item.quantity}<p onClick={() => updateQuantity(item.id, 1)} >+</p>
+                                                <div class="col-3 productQuantity">
+                                                    <p onClick={() => updateQuantity(item.id, -1)}>-</p><p></p>{item.quantity}<p onClick={() => updateQuantity(item.id, 1)} >+</p>
                                                 </div>
-                                                <div class="col">&euro; {item.price} <i class="recyclebin fa" onClick={() => deleteProductFromCart(item.id)}>&#xf014;</i></div>
+                                                <div class="col-3 productsPrice">&euro; {item.price} <i class="recyclebin fa" onClick={() => deleteProductFromCart(item.id)}>&#xf014;</i></div>
                                             </div>
                                         ))
                                     }
                                 </div>
-
-                                <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
                             </div>
+
                             <div class="col-md-4 summary">
                                 <div><h5><b>Summary</b></h5></div>
-                                <hr />
-                                <div class="row">
-                                    <div class="col" style={{ paddingLeft: '0' }}>{totalQuantity} Items</div>
-                                    <div class="col text-right">&euro; {totalPrice}</div>
+
+                                <div class="row totalPrice">
+                                    <div class="col-6"><p>{totalQuantity} Items</p></div>
+                                    <div class="col-6"><p>&euro; {totalPrice}</p></div>
                                 </div>
+
                                 <form>
                                     <p>SHIPPING</p>
-                                    <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
+                                    <select><option>Standard-Delivery: &euro; 5.00</option></select>
                                 </form>
-                                <div class="row" style={{ borderTop: '1px solid rgba(0,0,0,.1)', padding: '2vh 0' }}>
-                                    <div class="col">TOTAL PRICE</div>
-                                    <div class="col text-right">&euro;
-                                        {totalPriceWithShipping}
-                                    </div>
+
+                                <div class="row finalPrice">
+                                    <div class="col-6"><p><b>TOTAL PRICE:</b></p></div>
+                                    <div class="col-6"><p>&euro; {totalPriceWithShipping}</p></div>
                                 </div>
                                 <button class="cartBtn">CHECKOUT</button>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
