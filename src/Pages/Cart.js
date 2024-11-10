@@ -138,20 +138,20 @@ function Cart() {
                                         <div class="col-6"><p><b>{totalQuantity} Items</b></p></div>
                                     </div>
                                 </div>
-                                <div class="row productsList">
+                                <div class="row pt-4 pb-0 ps-2 pe-2 m-0">
                                     {
                                         products.map(item => (
 
                                             <div class="row productItem">
-                                                <div class="col-3"><img class="img-thumbnail" src={item.image} /></div>
-                                                <div class="col-3 productDetail">
-                                                    <div><p><b>Name:</b> {item.title}</p></div>
-                                                    <div><p><b>Category:</b> {item.category}</p></div>
+                                                <div class="col-4"><img class="img-thumbnail" src={item.image} /></div>
+                                                <div class="col-4">
+                                                    <div className="productName"><p><b>Name:</b> {item.title}</p></div>
+                                                    <div className="productCategory"><p><b>Category:</b> {item.category}</p></div>
                                                 </div>
-                                                <div class="col-3 productQuantity">
-                                                    <p onClick={() => updateQuantity(item.id, -1)}>-</p><p></p>{item.quantity}<p onClick={() => updateQuantity(item.id, 1)} >+</p>
+                                                <div class="col-2 productQuantity">
+                                                    <p onClick={() => updateQuantity(item.id, -1)}>-</p> <p style={{border: '1px solid gray' , padding: '0 0.5rem' , color: 'rgb(209, 0, 157)'}}>{item.quantity}</p> <p onClick={() => updateQuantity(item.id, 1)}>+</p>
                                                 </div>
-                                                <div class="col-3 productsPrice">&euro; {item.price} <i class="recyclebin fa" onClick={() => deleteProductFromCart(item.id)}>&#xf014;</i></div>
+                                                <div class="col-2 productsPrice">&euro; {item.price} <i class="recyclebin fa" onClick={() => deleteProductFromCart(item.id)}>&#xf014;</i></div>
                                             </div>
                                         ))
                                     }

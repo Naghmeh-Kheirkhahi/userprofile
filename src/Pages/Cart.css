@@ -45,24 +45,51 @@ body {
 
 
 
-.productsList {
+/* .productsList {
 
-}
+} */
 
 .productItem {
-
+    padding: 4rem 0;
+    margin: 0;
+    border-bottom: 1px dotted rgb(230, 0, 255);
+    align-items: center;
 }
 
-.productDetail {
+.productName {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    
+}
 
+.productCategory {
+    color: rgb(81, 81, 81);
+    font-size: 1rem;
+    padding: 0 1rem;
 }
 
 .productQuantity {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
 
+.productQuantity p {
+    margin-left: 0.8rem;
+    cursor: pointer;
 }
 
 .productsPrice {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
 
+.productsPrice i {
+    color: rgb(214, 0, 0);
+    cursor: pointer;
 }
 
 
@@ -70,7 +97,8 @@ body {
 
 
 .summary {
-    padding: 3rem 0 0 0;
+    padding-top: 3rem;
+    align-items: center;
 }
 
 .summary h5 {
@@ -82,125 +110,49 @@ body {
 
 
 .totalPrice {
-
+    padding: 5rem 0 3rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
+
+.summary form {
+    padding: 2rem 0;
+    font-size: 1.2rem;
+    margin: 0 1rem 0 2rem;
+    border: 1px solid rgb(202, 77, 211);
+    border-radius: 10px;
+    background-color: rgb(250, 177, 255);
+    color: rgb(51, 51, 51);
+}
+
+.summary form p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.summary form select {
+    padding: 0.5rem;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgb(202, 77, 211);
+    background-color: rgb(219, 219, 219);
+}
+
 
 .finalPrice {
-    
-}
-
-
-
-
-
-/* .title {
-    margin-bottom: 5vh;
-}
-
-.title b {
+    padding: 5rem 0 3rem 0;
     font-size: 1.5rem;
-}
-
-.main {
-    margin: 0;
-    padding: 2rem 0;
-    width: 100%;
-}
-
-p {
-    padding: 0 1vh;
-}
-
-.close {
-    margin-left: auto;
-    font-size: 0.7rem;
-}
-
-img {
-    width: 3.5rem;
-}
-
-.back-to-shop {
-    margin-top: 4.5rem;
-}
-
-h5 {
-    margin-top: 4vh;
-}
-
-hr {
-    margin-top: 1.25rem;
-}
-
-form {
-    padding: 2vh 0;
-}
-
-select {
-    border: 1px solid rgba(0, 0, 0, 0.137);
-    padding: 1.5vh 1vh;
-    margin-bottom: 4vh;
-    outline: none;
-    width: 100%;
-    background-color: rgb(247, 247, 247);
-}
-
-input {
-    border: 1px solid rgba(0, 0, 0, 0.137);
-    padding: 1vh;
-    margin-bottom: 4vh;
-    outline: none;
-    width: 100%;
-    background-color: rgb(247, 247, 247);
-}
-
-input:focus::-webkit-input-placeholder {
-    color: transparent;
-}
-
-.cartBtn {
-    background-color: #000;
-    border-color: #000;
-    color: white;
-    width: 100%;
-    font-size: 0.7rem;
-    margin-top: 4vh;
-    padding: 1vh;
-    border-radius: 0;
-}
-
-.cartBtn:focus {
-    box-shadow: none;
-    outline: none;
-    box-shadow: none;
-    color: white;
-    transition: none;
-}
-
-.cartBtn:hover {
-    color: white;
-}
-
-p {
-    color: black;
-    cursor: pointer;
-}
-
-p:hover {
-    color: black;
-    text-decoration: none;
-}
-
-#code {
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    font-weight: bold;
 }
 
 
-.recyclebin {
-    font-size: 1.3rem;
-    padding-left: 1rem;
-    cursor: pointer;
-    color: rgb(181, 0, 0);
-} */
+.summary button {
+    border: 1px solid rgb(136, 0, 146);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    background-color: rgb(243, 80, 255);
+    margin-left: 1rem;
+    font-family: 1.5rem;
+    font-weight: bold;
+}
+

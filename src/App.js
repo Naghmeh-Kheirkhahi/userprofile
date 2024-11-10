@@ -12,6 +12,7 @@ import About from './Pages/About';
 import { Route, Routes } from 'react-router-dom';
 import SingleProduct from './Components/SingleProduct';
 import Cart from './Pages/Cart';
+import Checkout from './Pages/Checkout';
 
 
 
@@ -30,6 +31,8 @@ function App() {
         <Route path='/Product/:productId' element={<SingleProduct/>}/>
 
         <Route path='/Cart' element={<Cart/>}/>
+
+        <Route path='/Checkout' element={<Checkout/>}/>
       </Routes>
 
     </>
