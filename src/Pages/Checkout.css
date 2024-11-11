@@ -6,91 +6,141 @@ body {
     box-sizing: border-box;
 }
 
-.row {
-    display: -ms-flexbox;
-    /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap;
-    /* IE10 */
-    flex-wrap: wrap;
-    margin: 0 -16px;
+
+.title {
+    text-align: center;
 }
 
-.col-3 {
-    -ms-flex: 25%;
-    /* IE10 */
-    flex: 25%;
+.title p {
+    font-size: 1.5rem;
+    color: rgb(51, 51, 51);
+    font-weight: 800;
 }
 
-.col-6 {
-    -ms-flex: 50%;
-    /* IE10 */
-    flex: 50%;
-}
-
-.col-9 {
-    -ms-flex: 75%;
-    /* IE10 */
-    flex: 75%;
-}
-
-.col-3,
-.col-6,
-.col-9 {
-    padding: 0 16px;
+.title h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgb(126, 0, 161);
+    padding-bottom: 2rem;
 }
 
 .container {
-    background-color: #f2f2f2;
-    padding: 5px 20px 15px 20px;
-    border: 1px solid lightgrey;
-    border-radius: 3px;
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid rgb(255, 255, 255);
 }
+
+.container form {
+    border: 2px solid rgb(195, 80, 227);
+    border-radius: 10px;
+    padding: 2rem;
+    background-color: rgb(220, 184, 230);
+}
+
+
+h3 {
+    font-size: 2rem;
+    color: rgb(102, 0, 131);
+}
+
+
+img {
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-left: -9rem;
+}
+
+
+.checkbox {
+    width: 50%;
+}
+
+.checkbox input {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+}
+
 
 input[type=text] {
     width: 100%;
-    margin-bottom: 20px;
-    padding: 12px;
+    margin-bottom: 2rem;
+    padding: 1rem;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 label {
-    margin-bottom: 10px;
     display: block;
 }
 
-.icon-container {
-    margin-bottom: 20px;
-    padding: 7px 0;
-    font-size: 24px;
+.productList {
+    padding: 2rem;
+    border: 2px solid rgb(142, 142, 142);
+    border-radius: 10px;
+    background-color: rgb(212, 212, 212);
+    margin-right: 2rem;
 }
 
-.btn {
-    background-color: #04AA6D;
+.container button {
+    background-color: rgb(248, 161, 0);
+    border: 1px solid rgb(230, 149, 0);
+    border-radius: 10px;
     color: white;
-    padding: 12px;
-    margin: 10px 0;
-    border: none;
-    width: 100%;
-    border-radius: 3px;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 1.5rem;
+    margin-left: 25rem;
 }
 
-.btn:hover {
-    background-color: #45a049;
+.container button:hover {
+    background-color: rgb(233, 151, 0);
 }
 
-a {
-    color: #2196F3;
-}
 
-hr {
-    border: 1px solid lightgrey;
-}
-
-span.price {
+.productList span {
     float: right;
-    color: grey;
+    color: rgb(59, 59, 59);
 }
+
+.productList h4 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+}
+
+.itemNumber {
+    border:1px solid rgb(233, 114, 71);
+    background-color: white;
+    padding: 0 0.3rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.productList p {
+    margin-bottom: 1.5rem;
+}
+
+.productList a {
+    text-decoration: none;
+    color: rgb(136, 0, 174);
+}
+
+.productList hr {
+    border-top: 2px solid rgb(55, 55, 55);
+}
+
+
+
+.totalPrice p {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.totalPrice span {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgb(218, 84, 35);
+    float: right;
+}
+
+

@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import './Checkout.css';
+import cards from '../Assets/images/cards.JPG';
 
 
 
@@ -8,48 +9,45 @@ import './Checkout.css';
 function Checkout() {
     return (
         <>
-            <h2>Responsive Checkout Form</h2>
-            <p>Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p>
 
-            <div class="row">
-                <div class="col-9">
-                    <div class="container">
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <div className="title">
+                <h2>Responsive Checkout Form</h2>
+                <p>Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p>
+            </div>
+
+            <div className="row">
+                <div className="col-9 pe-0">
+                    <div className="container">
                         <form action="/action_page.php">
-                            <div class="row">
-                                <div class="col-6">
+                            <div className="row">
+                                <div className="col-6 pe-5">
                                     <h3>Billing Address</h3>
-                                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                    <label for="fname"><i className="fa fa-user"></i> Full Name</label>
                                     <input type="text" id="fname" name="firstname" placeholder="John M. Doe" />
-                                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+
+                                    <label for="email"><i className="fa fa-envelope"></i> Email</label>
                                     <input type="text" id="email" name="email" placeholder="john@example.com" />
-                                    <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+
+                                    <label for="adr"><i className="fa fa-address-card"></i> Address</label>
                                     <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" />
-                                    <label for="city"><i class="fa fa-institution"></i> City</label>
+
+                                    <label for="city"><i className="fa fa-institution"></i> City</label>
                                     <input type="text" id="city" name="city" placeholder="New York" />
-                                    <label for="country"><i class="fa fa-flag-o"></i> Country</label>
+
+                                    <label for="country"><i className="fa fa-flag"></i> Country</label>
                                     <input type="text" id="country" name="country" placeholder="The USA" />
 
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <label for="state">State</label>
-                                            <input type="text" id="state" name="state" placeholder="NY" />
-                                        </div>
-                                        <div class="col-6">
-                                            <label for="zip">Zip Code</label>
-                                            <input type="text" id="zip" name="zip" placeholder="10001" />
-                                        </div>
-                                    </div>
+                                    <label for="zip"> Zip Code</label>
+                                    <input type="text" id="zip" name="zip" placeholder="10001" />
                                 </div>
 
-                                <div class="col-6">
+                                <div className="col-6 ps-5 pe-5">
                                     <h3>Payment</h3>
                                     <label for="fname">Accepted Cards</label>
-                                    <div class="icon-container">
-                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
-                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
-                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
-                                    </div>
+                                    <img src={cards} alt="cards" />
+
+                                    <br/><br/>
 
                                     <label for="cname">Name on Card</label>
                                     <input type="text" id="cname" name="cardname" placeholder="John More Doe" />
@@ -65,25 +63,28 @@ function Checkout() {
                                 </div>
                             </div>
 
-                            <label>
-                                <input type="checkbox" checked="checked" name="sameadr" /> Shipping address same as billing
-                            </label>
-                            
-                            <input type="submit" value="Continue to checkout" class="btn" />
+                            <br/>
+                            <label className="checkbox"><input type="checkbox" checked="checked" name="sameadr" /> Shipping address same as billing</label>
+                            <br/>
+                            <button>Continue to Check Out</button>
                         </form>
                     </div>
                 </div>
 
 
-                <div class="col-3">
-                    <div class="container">
-                        <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-                        <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-                        <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-                        <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-                        <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-                        <hr/>
-                        <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                <div className="col-3 ps-0">
+                    <div className="container">
+                        <div className="productList">
+                            <h4>Cart <span><i className="fa fa-shopping-cart"></i> <b className="itemNumber">4</b></span></h4>
+                            <p><a href="#">Product 1</a> <span>$15</span></p>
+                            <p><a href="#">Product 2</a> <span>$5</span></p>
+                            <p><a href="#">Product 3</a> <span>$8</span></p>
+                            <p><a href="#">Product 4</a> <span>$2</span></p>
+                            <hr/>
+                            <div className="totalPrice p-0 mt-5">
+                                <p>Total <span><b>$30</b></span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
