@@ -18,6 +18,7 @@ import { useNavigate } from "react-router-dom";
 
 function ShoppingStuffParent() {
 
+
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -56,12 +57,21 @@ function ShoppingStuffParent() {
 
 
 
-    
+
+
+
 
     const [category, setCategory] = useState([]);
 
+    const handleCategoryClick = (category) =>{
+        console.log(category);
+
+        setCategory(category);
+    }
+
+
     useEffect(() => {
-        if (category) {
+        if (category) { 
             let filterProducts = data.filter(
                 item => {
                     return item.category == category
@@ -71,15 +81,15 @@ function ShoppingStuffParent() {
             setData(filterProducts);
     
         }
-    }, [category])
+    }, [category]) // why here we wrote category????
+
+    // we have all the API products in the data of the useState, then we filter the data and 
+    // take the products having the same category with the category we chose by clicking one of the four buttons on the home page
+    // after filtering we put the filtered products into the filterProducts and put it into the setData to put into the data and update the array of the data.
 
 
 
-    const handleCategoryClick = (category) =>{
-        console.log(category);
-
-        setCategory(category);
-    }
+    
 
 
 

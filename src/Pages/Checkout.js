@@ -15,8 +15,9 @@ function Checkout() {
     console.log(state);
 
 
-    const productsList= location.state?.products || [];
-    const totalPrice = location.state?.totalPriceWithShipping || 0;
+    const productsList= location.state?.products || []; // if state is true, we put all the products we bought in to the productList, otherwise put nothing into it
+    const totalPrice = location.state?.totalPriceWithShipping || 0; // if state is true, we put all the price of our shopping in to the totalPrice, otherwise put nothing into it
+    const totalQuantity = location.state?.totalQuantity || 0; // if state is true, we put all the quantity of the items we bought in to the totalQuantity, otherwise put nothing into it
 
 
 
@@ -89,7 +90,7 @@ function Checkout() {
                 <div className="col-3 ps-0">
                     <div className="container">
                         <div className="productList">
-                            <h4>Cart <span><i className="fa fa-shopping-cart"></i> <b className="itemNumber">{state.totalQuantity}</b></span></h4>
+                            <h4>Cart <span><i className="fa fa-shopping-cart"></i> <b className="itemNumber">{totalQuantity}</b></span></h4>
 
                             {
                                 productsList.map(item => (
