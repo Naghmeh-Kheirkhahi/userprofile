@@ -15,12 +15,16 @@
 
 import React, { useEffect, useState } from "react";
 import './Cart.css';
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import Checkout from "./Checkout";
+
 
 
 
 
 function Cart() {
+
+    const navigate = useNavigate();
 
     // const [quantity, setQuantity] = useState(1); // we dont need to use it because we have to define and consider a special quantity for each product
 
@@ -121,6 +125,13 @@ function Cart() {
 
 
 
+    const checkoutHandle = () => {
+        navigate('/checkout' , {state:{totalPriceWithShipping , totalQuantity , products}})
+    }
+
+
+
+
 
 
     return (
@@ -143,7 +154,7 @@ function Cart() {
                                         products.map(item => (
 
                                             <div class="row productItem">
-                                                <div class="col-4"><img class="img-thumbnail" src={item.image} /></div>
+                                                <div class="col-4"><img src={item.image} /></div>
                                                 <div class="col-4">
                                                     <div className="productName"><p><b>Name:</b> {item.title}</p></div>
                                                     <div className="productCategory"><p><b>Category:</b> {item.category}</p></div>
@@ -175,7 +186,7 @@ function Cart() {
                                     <div class="col-6"><p><b>TOTAL PRICE:</b></p></div>
                                     <div class="col-6"><p>&euro; {totalPriceWithShipping}</p></div>
                                 </div>
-                                <button class="cartBtn">CHECKOUT</button>
+                                <button class="cartBtn" onClick={() => checkoutHandle()}>CHECKOUT</button>
                             </div>
                         </div>
                     </div>

@@ -45,15 +45,19 @@ body {
 
 
 
-/* .productsList {
 
-} */
 
 .productItem {
     padding: 4rem 0;
     margin: 0;
     border-bottom: 1px dotted rgb(230, 0, 255);
     align-items: center;
+}
+
+.productItem img {
+    width: 150px;
+    height: 200px;
+    border-radius: 15px;
 }
 
 .productName {

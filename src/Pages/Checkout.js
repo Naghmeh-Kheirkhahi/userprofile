@@ -2,11 +2,25 @@
 import React, { useEffect, useState } from "react";
 import './Checkout.css';
 import cards from '../Assets/images/cards.JPG';
+import { useLocation } from "react-router-dom";
 
 
 
 
 function Checkout() {
+
+
+    const location = useLocation();
+    const {state} = location;
+    console.log(state);
+
+
+    const productsList= location.state?.products || [];
+    const totalPrice = location.state?.totalPriceWithShipping || 0;
+
+
+
+
     return (
         <>
 
@@ -75,14 +89,17 @@ function Checkout() {
                 <div className="col-3 ps-0">
                     <div className="container">
                         <div className="productList">
-                            <h4>Cart <span><i className="fa fa-shopping-cart"></i> <b className="itemNumber">4</b></span></h4>
-                            <p><a href="#">Product 1</a> <span>$15</span></p>
-                            <p><a href="#">Product 2</a> <span>$5</span></p>
-                            <p><a href="#">Product 3</a> <span>$8</span></p>
-                            <p><a href="#">Product 4</a> <span>$2</span></p>
+                            <h4>Cart <span><i className="fa fa-shopping-cart"></i> <b className="itemNumber">{state.totalQuantity}</b></span></h4>
+
+                            {
+                                productsList.map(item => (
+                                    <p><a href="#">{item.title}</a> <span>{item.price}</span></p>
+                                ))
+                            }
+                            
                             <hr/>
                             <div className="totalPrice p-0 mt-5">
-                                <p>Total <span><b>$30</b></span></p>
+                                <p>Total <span><b>{totalPrice}</b></span></p>
                             </div>
                         </div>
                     </div>

@@ -42,7 +42,7 @@ function ShoppingStuffParent() {
 
 
 
-    
+
     const[quantity, setQuantity]=useState(1);
 
     const handleBuyProduct = (price) => {
@@ -56,6 +56,34 @@ function ShoppingStuffParent() {
 
 
 
+    
+
+    const [category, setCategory] = useState([]);
+
+    useEffect(() => {
+        if (category) {
+            let filterProducts = data.filter(
+                item => {
+                    return item.category == category
+                }
+            )
+
+            setData(filterProducts);
+    
+        }
+    }, [category])
+
+
+
+    const handleCategoryClick = (category) =>{
+        console.log(category);
+
+        setCategory(category);
+    }
+
+
+
+
 
     return (
         <>
@@ -63,10 +91,10 @@ function ShoppingStuffParent() {
                 <h1>Different Products</h1>
 
                 <div class="btns">
-                    <ShoppingButton btnName={"Men's Clothing"} btnClass={'categoryBtn'}/>
-                    <ShoppingButton btnName={"Women's Clothing"} btnClass={'categoryBtn'}/>
-                    <ShoppingButton btnName={"Jewelery"} btnClass={'categoryBtn'}/>
-                    <ShoppingButton btnName={"Electronics"} btnClass={'categoryBtn'}/>
+                    <ShoppingButton btnName={"Men's Clothing"} btnClass={'categoryBtn'} btnClick={() => handleCategoryClick("men's clothing")}/>
+                    <ShoppingButton btnName={"Women's Clothing"} btnClass={'categoryBtn'} btnClick={() => handleCategoryClick("women's clothing")}/>
+                    <ShoppingButton btnName={"Jewelery"} btnClass={'categoryBtn'} btnClick={() => handleCategoryClick("jewelery")}/>
+                    <ShoppingButton btnName={"Electronics"} btnClass={'categoryBtn'} btnClick={() => handleCategoryClick("electronics")}/>
                 </div>
 
 
