@@ -61,7 +61,10 @@ function ShoppingStuffParent() {
 
 
 
-    const [category, setCategory] = useState([]);
+    const [category, setCategory] = useState('');
+
+    const [filterProducts , setFilterProducts] = useState([]);
+
 
     const handleCategoryClick = (category) =>{
         console.log(category);
@@ -78,10 +81,15 @@ function ShoppingStuffParent() {
                 }
             )
 
-            setData(filterProducts);
+            setFilterProducts(filterProducts);
     
         }
-    }, [category]) // why here we wrote category????
+
+        else {
+            setFilterProducts(data);
+        }
+
+    }, [category, data]) // why here we wrote category????
 
     // we have all the API products in the data of the useState, then we filter the data and 
     // take the products having the same category with the category we chose by clicking one of the four buttons on the home page
@@ -109,7 +117,7 @@ function ShoppingStuffParent() {
 
 
                 <div className="row">
-                    {data.map(item => (
+                    {filterProducts.map(item => (
                         <ShoppingStuffChild
                             image={item.image}
                             title={item.title}
