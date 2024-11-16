@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Button from './Components/Button';
-import Form from './Components/Form';
-import Test from './Components/Test';
-import ShoppingStuffChild from './Components/ShoppingStuffChild';
-import ShoppingStuffParent from './Components/ShoppingStuffParent';
+// import Button from './Components/Button';
+// import Form from './Components/Form';
+// import Test from './Components/Test';
+// import ShoppingStuffChild from './Components/ShoppingStuffChild';
+// import ShoppingStuffParent from './Components/ShoppingStuffParent';
 import Nav from './Components/Nav';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
