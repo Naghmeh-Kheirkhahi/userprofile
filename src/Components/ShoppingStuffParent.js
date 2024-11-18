@@ -86,8 +86,18 @@ function ShoppingStuffParent() {
             setFilterProducts(data);
         }
 
-    }, [category, data]) // why here we wrote category????
+    }, [category, data]) 
 
+    // useEffect(() => {
+    // Runs only on the first render
+    // }, []);
+
+    // useEffect(() => {
+    // Runs on the first render
+    // Runs any time that is dependent on the value 'category' and changes any time according to this value 
+    // }, [category]);
+
+    
     // we have all the API products in the data of the useState, then we filter the data and 
     // take the products having the same category with the category we chose by clicking one of the four buttons on the home page
     // after filtering we put the filtered products into the filterProducts and put it into the setData to put into the data and update the array of the data.
