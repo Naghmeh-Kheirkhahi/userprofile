@@ -100,7 +100,7 @@ function Checkout() {
                             
                             <hr/>
                             <div className="totalPrice p-0 mt-5">
-                                <p>Total <span><b>{totalPrice}</b></span></p>
+                                <p>Total <span><b>{totalPrice} &euro; </b></span></p>
                             </div>
                         </div>
                     </div>

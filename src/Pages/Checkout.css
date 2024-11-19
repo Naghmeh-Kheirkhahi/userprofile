@@ -89,7 +89,9 @@ label {
     color: white;
     cursor: pointer;
     font-size: 1.5rem;
+    margin-top: 2rem;
     margin-left: 25rem;
+    padding: 0.5rem 1rem;
 }
 
 .container button:hover {

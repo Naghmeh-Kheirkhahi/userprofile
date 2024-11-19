@@ -1,0 +1,128 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+footer {
+    background-color: #4c31ae;
+    color: white;
+    padding: 5rem 10rem 2rem 10rem;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer-logo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.footer-logo h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.footer-description {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 1.5rem 0 1.5rem 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+
+
+.footer-subscribe h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0 0 2rem 5rem;
+}
+
+.footer-subscribe form {
+    padding-left: 5rem;
+}
+
+.footer-subscribe input {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-weight: 600;
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.175);
+    color: #e1e1e1;
+}
+
+.footer-subscribe input::placeholder {
+    color: #c8c8c8;
+}
+
+.footer-subscribe button {
+    background-color: rgb(242, 0, 255);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.footer-subscribe button:hover {
+    background-color: rgb(205, 0, 216);
+
+}
+
+
+.footer-list h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0 0 1rem 3rem;
+}
+
+.footer-list ul {
+    list-style: none;
+    padding-left: 3rem;
+}
+
+.footer-list li {
+    padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.footer-list a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+
+
+.footer-bottom p {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}

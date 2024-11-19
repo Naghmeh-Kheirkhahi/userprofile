@@ -6,6 +6,7 @@ import './App.css';
 // import ShoppingStuffChild from './Components/ShoppingStuffChild';
 // import ShoppingStuffParent from './Components/ShoppingStuffParent';
 import Nav from './Components/Nav';
+import Footer from './Components/Footer';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
@@ -34,6 +35,9 @@ function App() {
 
         <Route path='/checkout' element={<Checkout/>}/>
       </Routes>
+
+      
+      <Footer/>
 
     </>
   );
