@@ -2,6 +2,7 @@
 import React from "react";
 import './Footer.css';
 import logo from '../Assets/images/logo.jpg';
+import { Link } from "react-router-dom";
 
 
 
@@ -14,10 +15,10 @@ function Footer() {
                     <div className="col-3">
                         <div className="footer-logo">
                             <img src={logo} />
-                            <h3>Crystal</h3>
+                            <h3>Producto Shop</h3>
                         </div>
 
-                        <p className="footer-description">Crystal Blog is a blog about crystals. We love crystals and we want to share our knowledge with you. We hope you enjoy our blog.</p>
+                        <p className="footer-description">Producto Shop is a website about a wide verity of products. We present different products in four categories in detail. We hope you enjoy our shopping website.</p>
 
                         <div className="social-icons">
                             <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
@@ -29,31 +30,31 @@ function Footer() {
 
                     <div className="col-3 footer-subscribe">
                         <h3>Subscribe</h3>
-                        <form>
+
+                        <div className="subscribe-form">
                             <input type="text" placeholder="Your Name" />
                             <br />
                             <input type="email" placeholder="Your Email Address" />
                             <br />
                             <button>Subscribe Now</button>
-                        </form>
+                        </div>
                     </div>
 
                     <div className="col-2 footer-list">
                         <h3>Main Links</h3>
                         <ul>
-                            <li><a href="/About">About Us</a></li>
-                            <li><a href="/Contact">Contact Us</a></li>
-                            <li><a href="/Blog">Blog</a></li>
-                            <li><a href="/">FAQ</a></li>
+                            <li><Link to="/About">About Us</Link></li>
+                            <li><Link to="/Contact">Contact Us</Link></li>
+                            <li><Link to="/FAQ">FAQ</Link></li>
                         </ul>
                     </div>
 
                     <div className="col-2 footer-list">
                         <h3>Sub Links</h3>
                         <ul>
-                            <li><a href="/">Privacy Policy</a></li>
-                            <li><a href="/">Customer Support</a></li>
-                            <li><a href="/">Terms & Conditions</a></li>
+                            <li><Link to="/">Privacy Policy</Link></li>
+                            <li><Link to="/">Customer Support</Link></li>
+                            <li><Link to="/">Terms & Conditions</Link></li>
                         </ul>
                     </div>
 

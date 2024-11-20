@@ -8,8 +8,7 @@
 
 
 footer {
-    background-color: #4c31ae;
-    color: white;
+    background-color: rgb(229, 134, 0);
     padding: 5rem 10rem 2rem 10rem;
 }
 
@@ -21,20 +20,22 @@ footer {
 }
 
 .footer-logo img {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 160px;
     border-radius: 50%;
+    margin-left: 0;
 }
 
 .footer-logo h3 {
-    font-size: 3rem;
-    font-weight: 700;
-    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+    color: rgb(78 50 26);
+    font-size: 2.7rem;
+    font-weight: 800;
+    padding: 3rem 0 0 1.5rem;
 }
 
 .footer-description {
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 700;
     padding: 1.5rem 0 1.5rem 1rem;
 }
 
@@ -45,7 +46,7 @@ footer {
 }
 
 .social-icons a {
-    color: white;
+    color: rgb(50, 50, 50);
     font-size: 1.8rem;
     text-decoration: none;
 }
@@ -53,16 +54,18 @@ footer {
 
 
 .footer-subscribe h3 {
+    color: rgb(78 50 26);
     font-size: 2rem;
     font-weight: 700;
     padding: 0 0 2rem 5rem;
 }
 
-.footer-subscribe form {
+.subscribe-form {
     padding-left: 5rem;
 }
 
-.footer-subscribe input {
+.subscribe-form input[type=text], .subscribe-form input[type=email] {
+    width: 90%;
     padding: 1rem;
     margin-bottom: 1rem;
     border: none;
@@ -70,16 +73,16 @@ footer {
     outline: none;
     font-weight: 600;
     font-size: 1.3rem;
-    background-color: rgba(255, 255, 255, 0.175);
-    color: #e1e1e1;
+    background-color: rgba(255, 255, 255, 0.228);
+    color: rgb(50, 50, 50);
 }
 
-.footer-subscribe input::placeholder {
-    color: #c8c8c8;
+.subscribe-form input::placeholder {
+    color: rgb(80, 80, 80);
 }
 
-.footer-subscribe button {
-    background-color: rgb(242, 0, 255);
+.subscribe-form button {
+    background-color: rgb(204, 0, 215);
     color: white;
     border: none;
     border-radius: 10px;
@@ -90,13 +93,14 @@ footer {
     font-size: 1.3rem;
 }
 
-.footer-subscribe button:hover {
-    background-color: rgb(205, 0, 216);
+.subscribe-form button:hover {
+    background-color: rgb(221, 0, 232);
 
 }
 
 
 .footer-list h3 {
+    color: rgb(78 50 26);
     font-size: 2rem;
     font-weight: 700;
     padding: 0 0 1rem 3rem;
@@ -113,7 +117,7 @@ footer {
 
 .footer-list a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(50, 50, 50);
     font-size: 1.3rem;
     font-weight: 600;
 }
@@ -124,5 +128,5 @@ footer {
     text-align: center;
     padding-top: 2rem;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
 }

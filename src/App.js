@@ -14,6 +14,7 @@ import { Route, Routes } from 'react-router-dom';
 import SingleProduct from './Components/SingleProduct';
 import Cart from './Pages/Cart';
 import Checkout from './Pages/Checkout';
+import FAQ from './Components/FAQ';
 
 
 
@@ -34,9 +35,10 @@ function App() {
         <Route path='/Cart' element={<Cart/>}/>
 
         <Route path='/checkout' element={<Checkout/>}/>
-      </Routes>
 
-      
+        <Route path='/FAQ' element={<FAQ/>}/>
+      </Routes>
+        
       <Footer/>
 
     </>
