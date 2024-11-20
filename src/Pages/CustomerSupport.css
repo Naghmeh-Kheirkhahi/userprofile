@@ -1,0 +1,46 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.customer-support {
+    margin-top: 5rem;
+    padding: 15rem 10rem 10rem 10rem;
+    background-color: #eac9ff;
+}
+
+.customer-support h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #692c8f;
+}
+
+.customer-support h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(60, 60, 60);
+    margin-top: 1rem;
+}
+
+.customer-support h6 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(60, 60, 60);
+    line-height: 2rem;
+}
+
+.customer-support p {
+    font-size: 1.2rem;
+    color: rgb(60, 60, 60);
+    margin-left: 0.5rem;
+    font-weight: 400;
+}
+
+.customer-support i {
+    font-size: 0.5rem;
+    margin-right: 0.5rem;
+}

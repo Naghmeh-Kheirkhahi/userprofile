@@ -16,6 +16,8 @@ import Cart from './Pages/Cart';
 import Checkout from './Pages/Checkout';
 import FAQ from './Pages/FAQ';
 import PrivacyPolicy from './Pages/PrivacyPolicy';
+import CustomerSupport from './Pages/CustomerSupport';
+import TandC from './Pages/TandC';
 
 
 
@@ -38,8 +40,9 @@ function App() {
         <Route path='/checkout' element={<Checkout/>}/>
 
         <Route path='/FAQ' element={<FAQ/>}/>
-
         <Route path='/PrivacyPolicy' element={<PrivacyPolicy/>}/>
+        <Route path='/CustomerSupport' element={<CustomerSupport/>}/>
+        <Route path='/TandC' element={<TandC/>}/> 
       </Routes>
         
       <Footer/>

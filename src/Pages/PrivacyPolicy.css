@@ -1,6 +1,5 @@
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,35 +11,35 @@
     padding: 15rem 10rem 10rem 10rem;
 }
 
-.privacy-policy h1 {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 4rem;
-    color: #692c8f;
-}
-
-.privacy-policy h4 {
+.privacy-policy h4, .privacy-policy h5{
+    text-shadow: none;
     color: rgb(60, 60, 60);
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
-    line-height: 2rem;
-}
-
-.privacy-policy a {
-    color: #6a00ab;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.privacy-policy h3 {
-    color: rgb(60, 60, 60);
+    padding: 0.5rem 0;
     font-size: 1.5rem;
     font-weight: 600;
 }
 
+.privacy-policy h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    padding: 0.5rem 0;
+    color: #692c8f; 
+}
+
+.privacy-policy h5 {
+    margin-bottom: 2rem;
+
+}
+
+.privacy-policy h4 {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
 .privacy-policy p {
-    margin-left: 1.5rem;
+    margin-left: 3rem;
     font-size: 1.2rem;
 }
 
