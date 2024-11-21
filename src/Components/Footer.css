@@ -122,6 +122,10 @@ footer {
     font-weight: 600;
 }
 
+.footer-list a:hover {
+    color: rgb(160, 40, 0);
+}
+
 
 
 .footer-bottom p {

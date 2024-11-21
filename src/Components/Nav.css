@@ -24,9 +24,9 @@ nav img {
 
 nav li {
     font-size: 1.7rem;
-    font-weight: 700;
-    padding-left: 2rem;
-    padding-top: 0.5rem;
+    font-weight: 800;
+    padding: 0.5rem 0 0 2rem; 
+
 }
 
 
@@ -39,3 +39,16 @@ nav li {
 .navLink:hover {
     color: rgb(211, 92, 0);
 } 
+
+.navLogin {
+    color: rgb(139, 60, 0);
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 800;
+    padding: 0.5rem 2rem 0 0; 
+}
+
+.navLogin:hover {
+    color: rgb(211, 92, 0);
+}
+

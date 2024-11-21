@@ -18,6 +18,8 @@ import FAQ from './Pages/FAQ';
 import PrivacyPolicy from './Pages/PrivacyPolicy';
 import CustomerSupport from './Pages/CustomerSupport';
 import TandC from './Pages/TandC';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
 
 
 
@@ -32,6 +34,9 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='/About' element={<About/>}/>
+
+        <Route path='/Login' element={<Login/>}/>
+        <Route path='/Register' element={<Register/>}/>
        
         <Route path='/Product/:productId' element={<SingleProduct/>}/>
 

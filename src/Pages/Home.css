@@ -34,13 +34,22 @@
 }
 
 
-.homeBtn {
-    margin-top: 2rem;
+.login-icon {
+    width: 10%;
+    margin: 3rem auto 0 auto;
+    padding: 1rem;
     border: 1px solid #c0c0c0;
     border-radius: 10px;
     background-color: #ffffff;
-    color:  #563778;
+}
+
+.login-icon a {
+    color:  #652aa3;
+    text-decoration: none;
     font-size: 1.8rem;
-    font-weight: 900;
-    padding: 1rem 2rem;
+    font-weight: 800;
+}
+
+.login-icon a:hover {
+    color: #bc30b2;
 }

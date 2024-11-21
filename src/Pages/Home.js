@@ -2,7 +2,8 @@
 import React from "react";
 import ShoppingStuffParent from "../Components/ShoppingStuffParent";
 import "./Home.css";
-import ShoppingButton from "../Components/ShoppingButton";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -19,7 +20,7 @@ function Home() {
                 <p>YOUR FAVORITE</p>
                 <p>SHOPPING</p>
 
-                <ShoppingButton btnName={"BUY NOW"} btnClass={'homeBtn'} />
+                <div className="login-icon"><Link to={'/Login'}><i class="fa fa-user"></i> Login</Link></div>
             </div>
             <ShoppingStuffParent/>
         </>
