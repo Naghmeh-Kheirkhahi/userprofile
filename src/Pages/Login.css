@@ -5,3 +5,154 @@
     box-sizing: border-box;
 }
 
+.login-main {
+    background-color: #9d00c5;
+}
+
+.login-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 20rem 15rem 15rem 15rem;
+}
+
+
+.login-image img {
+    margin: 25rem auto 0 auto;
+    width: 100%;
+}
+
+.login-form {
+    padding: 3rem 0 5rem 0;
+}
+
+
+.login-heading {
+    text-align: center;
+}
+
+.login-heading h1 {
+    font-size: 3.2rem;
+    color: #8700a9;
+    font-weight: 800;
+    margin: 3rem 0 2rem 0;
+}
+
+.login-heading p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: rgb(55, 55, 55);
+}
+
+.login-logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.login-logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 0;
+}
+
+.login-logo h1 {
+    font-size: 2.5rem;
+    color: #c300d8;
+    font-weight: 800;
+    margin: 2rem 0 0 1rem;
+}
+
+
+
+.login-form form {
+    padding: 2rem 3rem ;
+    margin: 0 5rem;
+    border: 1px solid #c300d8;
+    border-radius: 10px;
+    background-color: #ff96f4;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #c300d8;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: rgb(55, 55, 55);
+    outline: none;
+}
+
+.login-form label {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #72008e;
+    margin-bottom: 0;
+}
+
+.login-form i {
+    color: #72008e;
+    margin: 0 0.3rem -0.3rem 0;
+    padding-top: 0.2rem;
+}
+
+
+.checkBox input {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.5rem;
+}
+
+.checkBox label {
+    color: rgb(55, 55, 55);
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.forget-pass {
+    padding-top: 0.3rem;
+}
+
+.forget-pass a {
+    color: #72008e;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+.login-btn {
+    width: 100%;
+    margin: 0 0 2rem 0;
+    padding: 1rem 3rem;
+    background-color: #ff9100;
+    border: 1px solid #dc7d00;
+    color: #ffffff;
+    font-size: 1.7rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.login-end {
+    text-align: center;
+}
+
+.login-end p {
+    font-size: 1.5rem;
+    color: rgb(55, 55, 55);
+}
+
+.login-end button {
+    font-size: 1.5rem;
+    color: #72008e;
+}
+
+.login-end a {
+    color: #72008e;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
