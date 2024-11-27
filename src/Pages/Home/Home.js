@@ -1,6 +1,6 @@
 
 import React from "react";
-import ShoppingStuffParent from "../Components/ShoppingStuffParent";
+import ShoppingStuffParent from "../../Components/ProductList and SingleProduct/ShoppingStuffParent";
 import "./Home.css";
 import { Link } from "react-router-dom";
 

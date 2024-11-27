@@ -2,10 +2,10 @@
 import React from "react";
 import "./Register.css";
 import { Link } from "react-router-dom";
-import logo from "../Assets/images/logo.jpg";
+import logo from "../../Assets/images/logo.jpg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import register from "../Assets/images/register.JPG";
+import register from "../../Assets/images/register.JPG";
 
 
 

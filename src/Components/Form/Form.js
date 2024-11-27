@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import './Form.css';
 
+
 function Form() {
     const [fname, setFname] = useState('');
     const [lname, setLname] = useState('');

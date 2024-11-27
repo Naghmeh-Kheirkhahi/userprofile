@@ -16,7 +16,7 @@
 import React, { useEffect, useState } from "react";
 import './Cart.css';
 import { useLocation, useNavigate } from "react-router-dom";
-import Checkout from "./Checkout";
+import Checkout from "../Checkout/Checkout";
 
 
 

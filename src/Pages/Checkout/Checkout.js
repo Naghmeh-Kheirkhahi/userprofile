@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import './Checkout.css';
-import cards from '../Assets/images/cards.JPG';
+import cards from '../../Assets/images/cards.JPG';
 import { useLocation } from "react-router-dom";
 
 

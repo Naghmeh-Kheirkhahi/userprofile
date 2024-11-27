@@ -2,10 +2,10 @@
 import React from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
-import logo from "../Assets/images/logo.jpg";
+import logo from "../../Assets/images/logo.jpg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import login from "../Assets/images/login.jpg";
+import login from "../../Assets/images/login.jpg";
 
 
 

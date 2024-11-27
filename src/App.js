@@ -5,21 +5,22 @@ import './App.css';
 // import Test from './Components/Test';
 // import ShoppingStuffChild from './Components/ShoppingStuffChild';
 // import ShoppingStuffParent from './Components/ShoppingStuffParent';
-import Nav from './Components/Nav';
-import Footer from './Components/Footer';
-import Home from './Pages/Home';
-import Contact from './Pages/Contact';
-import About from './Pages/About';
+import Nav from './Components/Nav/Nav';
+import Footer from './Components/Footer/Footer';
+import Home from './Pages/Home/Home';
+import Contact from './Pages/Contact/Contact';
+import About from './Pages/About/About';
 import { Route, Routes } from 'react-router-dom';
-import SingleProduct from './Components/SingleProduct';
-import Cart from './Pages/Cart';
-import Checkout from './Pages/Checkout';
-import FAQ from './Pages/FAQ';
-import PrivacyPolicy from './Pages/PrivacyPolicy';
-import CustomerSupport from './Pages/CustomerSupport';
-import TandC from './Pages/TandC';
-import Login from './Pages/Login';
-import Register from './Pages/Register';
+import SingleProduct from './Components/ProductList and SingleProduct/SingleProduct';
+import Cart from './Pages/Cart/Cart';
+import Checkout from './Pages/Checkout/Checkout';
+import FAQ from './Pages/FAQ/FAQ';
+import PrivacyPolicy from './Pages/PrivacyPolicy/PrivacyPolicy';
+import CustomerSupport from './Pages/CustomerSupport/CustomerSupport';
+import TandC from './Pages/TandC/TandC';
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
+import UserPanel from './Pages/UserPanel/UserPanel';
 
 
 
@@ -37,6 +38,7 @@ function App() {
 
         <Route path='/Login' element={<Login/>}/>
         <Route path='/Register' element={<Register/>}/>
+        <Route path='/UserPanel' element={<UserPanel/>}/> 
        
         <Route path='/Product/:productId' element={<SingleProduct/>}/>
 
