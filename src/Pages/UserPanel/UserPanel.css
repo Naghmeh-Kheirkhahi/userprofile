@@ -7,7 +7,7 @@
 
 .user-panel {
     margin-top: 8rem;
-    background-color: #f0b2ff;
+    background-color: #f5c7ff;
 }
 
 .user-panel-list {
@@ -25,19 +25,83 @@
 
 .user-panel-image {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid #ffffff;
 }
 
 .user-panel-image img {
     width: 40%;
     border-radius: 50%;
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
     margin: auto;
 }
 
 .user-panel-image p {
     color: #ffffff;
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin: 1rem auto 3rem auto;
+}
+
+.user-panel-nav ul {
+    list-style: none;
+    margin-left: 3rem;
+}
+
+.user-panel-nav ul li {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.user-panel-nav ul a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.user-panel-nav ul i {
+    padding: 0.1rem 0.5rem;
+}
+
+
+
+
+.user-panel-dashboard {
+    padding: 10rem 8rem 5rem 8rem;
+}
+
+.dashboard-description {
+    margin-bottom: 8rem;
+}
+
+.dashboard-description h3 {
+    color: #770095;
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.dashboard-description p {
+    font-size: 1.8rem;
+}
+
+
+.user-panel-content {
+    text-align: center;
+}
+
+.user-panel-content a {
+    text-decoration: none;
+}
+
+.user-panel-content a h2 {
     font-size: 2rem;
     font-weight: 600;
-    margin-top: 1rem;
+    color: rgb(72 72 72);
+}
+
+.user-panel-content a i {
+    font-size: 4rem;
+    color: #dd00ca;
+    padding: 1rem 0;
 }

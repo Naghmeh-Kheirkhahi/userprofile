@@ -2,6 +2,7 @@
 import React from "react";
 import "./UserPanel.css";
 import UserImage from "../../Assets/images/user.jpg";
+import { Link } from "react-router-dom";
 
 
 
@@ -22,16 +23,15 @@ function UserPanel() {
 
                             <div className="user-panel-nav">
                                 <ul>
-                                    <li><i class="fa fa-dashboard"></i> My Dashboard</li>
-                                    <li><i class="fa fa-shopping-bag"></i> My Orders</li>
-                                    <li><i class="fa fa-shopping-cart"></i> My Cart</li>
-                                    <li><i class="fa fa-map-marker"></i> My Delivery Address</li>
-                                    <li><i class="fa fa-euro"></i> My Payment List</li>
-
-                                    <li><i class="fa fa-heart"></i> My Interests</li>
-                                    <li><i class='fas fa-user-alt'></i> My Personal Information</li>
-                                    <li><i class="fa fa-lock"></i> Change Password</li>
-                                    <li><i class="fa fa-sign-out"></i> Logout</li>
+                                    <li><Link to='/UserPanel'><i class="fa fa-dashboard"></i> My Dashboard</Link></li>
+                                    <li><Link to='/UserPanel'><i class="fa fa-shopping-bag"></i> My Orders</Link></li>
+                                    <li><Link to='/UserPanel'><i class="fa fa-shopping-cart"></i> My Cart</Link></li>
+                                    <li><Link><i class="fa fa-map-marker-alt"></i> My Delivery Address</Link></li>
+                                    <li><Link to='/UserPanel'><i class="fa fa-euro"></i> My Payment List</Link></li>
+                                    <li><Link><i class="fa fa-heart"></i> My Interests</Link></li>
+                                    <li><Link><i class='fas fa-user-alt'></i> My Personal Information</Link></li>
+                                    <li><Link><i class="fa fa-lock"></i> Change Password</Link></li>
+                                    <li><Link to='/Login'><i class="fa fa-sign-out"></i> Logout</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -39,61 +39,62 @@ function UserPanel() {
 
 
                     <div className="col-9">
-                        <p>Hello Username</p>
+                        <div className="user-panel-dashboard">
+                            <div className="dashboard-description">
+                                <h3>Hello Username!</h3>
 
-                        <p>Welcome to your user panel. Here you can manage all of your personal information and orders. You can also change your password and delivery address. If you have any questions, please feel free to contact us.</p>
-
-                        <br />
-
-                        <div className="user-panel-content">
-                            <div className="row">
-                                <div className="col-3">
-                                    <i class="fa fa-shopping-bag"></i>
-                                    <h2>My Orders</h2>
-                                </div>
-
-                                <div className="col-3">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <h2>My Cart</h2>
-                                </div>
-
-                                <div className="col-3">
-                                    <i class="fa fa-map-marker"></i>
-                                    <h2>My Delivery Address</h2>
-                                </div>
-
-                                <div className="col-3">
-                                    <i class="fa fa-euro"></i>
-                                    <h2>My Payment List</h2>
-                                </div>
+                                <p>Welcome to your user panel. Here you can manage all of your personal information and orders. You can also change your password and delivery address. If you have any questions, please feel free to contact us.</p>
                             </div>
 
 
-                            <div className="row">
-                                <div className="col-3">
-                                    <i class="fa fa-heart"></i>
-                                    <h2>My Interests</h2>
+                            <div className="user-panel-content">
+                                <div className="row mb-5">
+                                    <div className="col-3 mb-5 p-5">
+                                        <Link to='/UserPanel'><i class="fa fa-shopping-bag"></i>
+                                            <h2>My Orders</h2></Link>
+                                    </div>
+
+                                    <div className="col-3 mb-5 p-5">
+                                        <Link to='/UserPanel'><i class="fa fa-shopping-cart"></i>
+                                            <h2>My Cart</h2></Link>
+                                    </div>
+
+                                    <div className="col-3 mb-5 p-5">
+                                        <Link><i class="fa fa-map-marker-alt"></i> 
+                                            <h2>My Delivery Address</h2></Link>
+                                    </div>
+
+                                    <div className="col-3 mb-5 p-5">
+                                        <Link to='/UserPanel'><i class="fa fa-euro"></i>
+                                            <h2>My Payment List</h2></Link>
+                                    </div>
                                 </div>
 
-                                <div className="col-3">
-                                    <i class='fas fa-user-alt'></i>
-                                    <h2>My Personal Information</h2>
-                                </div>
 
-                                <div className="col-3">
-                                    <i class="fa fa-lock"></i>
-                                    <h2>Change Password</h2>
-                                </div>
+                                <div className="row">
+                                    <div className="col-3">
+                                        <Link><i class="fa fa-heart"></i>
+                                            <h2>My Interests</h2></Link>
+                                    </div>
 
-                                <div className="col-3">
-                                    <i class="fa fa-sign-out"></i>
-                                    <h2>Logout</h2>
+                                    <div className="col-3">
+                                        <Link><i class='fas fa-user-alt'></i>
+                                            <h2>My Personal Information</h2></Link>
+                                    </div>
+
+                                    <div className="col-3">
+                                        <Link><i class="fa fa-lock"></i>
+                                            <h2>Change Password</h2></Link>
+                                    </div>
+
+                                    <div className="col-3">
+                                        <Link to='/Login'><i class="fa fa-sign-out"></i>
+                                            <h2>Logout</h2></Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </>
