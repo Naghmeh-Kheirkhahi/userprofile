@@ -16,7 +16,6 @@
 import React, { useEffect, useState } from "react";
 import './Cart.css';
 import { useLocation, useNavigate } from "react-router-dom";
-import Checkout from "../Checkout/Checkout";
 
 
 
@@ -126,7 +125,7 @@ function Cart() {
 
 
     const checkoutHandle = () => {
-        navigate('/checkout' , {state:{totalPriceWithShipping , totalQuantity , products}})
+        navigate('/Checkout' , {state:{totalPriceWithShipping , totalQuantity , products}})
     }
 
 

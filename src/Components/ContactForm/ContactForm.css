@@ -37,3 +37,12 @@ form button {
     background-color: rgb(255, 149, 0);
     color: #5a397d;
 }
+
+
+.dark-form {
+    background-color: #686868;
+    border: 2px solid #3b3b3b;
+}
+
+.dark-form label {
+    color: #ebdaff;}

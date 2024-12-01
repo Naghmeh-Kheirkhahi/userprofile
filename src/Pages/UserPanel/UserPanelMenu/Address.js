@@ -17,25 +17,25 @@ function Address() {
                         <div className="main-container">
                             <h1>My Delivery Address</h1>
 
-                            <p className="give-address">Please enter your available address!</p>
+                            <p className="give-data">Please enter your available address!</p>
 
                             <form className="address-form">
-                                <label for="">Street</label>
+                                <label for="street">Street</label>
                                 <input type="text"/>
 
-                                <label for="">House Number</label>
+                                <label for="house">House Number</label>
                                 <input type="text"/>
 
-                                <label for="">Apartment/Room Number</label>
+                                <label for="room">Apartment/Room Number</label>
                                 <input type="text"/>
 
-                                <label for="">City</label>
+                                <label for="city">City</label>
                                 <input type="text"/>
 
-                                <label for="">Zip Code</label>
+                                <label for="zipcode">Zip Code</label>
                                 <input type="text"/>
 
-                                <label for="">Country</label>
+                                <label for="country">Country</label>
                                 <input type="text"/>
 
                                 <button type="submit">Save Address</button>

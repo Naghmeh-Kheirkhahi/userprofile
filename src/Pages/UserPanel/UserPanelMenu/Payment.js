@@ -7,7 +7,6 @@ import './Menu.css';
 function Payment() {
     return (
         <>
-
             <div className="main-class">
                 <div className="row">
                     <div className="col-3">

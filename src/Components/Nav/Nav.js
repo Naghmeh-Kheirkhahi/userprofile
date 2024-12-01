@@ -1,10 +1,15 @@
-import React from 'react';
+import React , {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../Assets/images/logo.jpg';
 import './Nav.css';
+import { ThemeContext } from '../../Context/ThemeContext';
 
 
 function Nav() {
+
+    const { toggleTheme } = useContext(ThemeContext);
+
+    
     return (
         <div className='mainMenu'>
             <nav class="navbar navbar-expand-lg">
@@ -26,6 +31,8 @@ function Nav() {
                     </div>
 
                     <Link className='navLogin' to={'/Login'}><i class="fa fa-user"></i> Login</Link>
+
+                    <button onClick={toggleTheme}>Theme</button>
                 </div>
             </nav>
         </div>

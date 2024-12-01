@@ -56,3 +56,14 @@ nav li {
     padding-top: 0.5rem;
 }
 
+nav button {
+    background-color: rgb(255, 174, 0);
+    border: 1px solid rgb(220, 151, 0);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(144, 0, 144);
+    padding: 0.5rem 1rem;
+    margin: 1.5rem 2rem 1rem 1rem ;
+}
+

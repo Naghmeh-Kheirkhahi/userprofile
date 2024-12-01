@@ -56,17 +56,15 @@ function App() {
           <Route path='/Login' element={<Login />} />
           <Route path='/UserPanel' element={<UserPanel />} />
             <Route path='/UserPanel/Orders' element={<Orders />} />
-            {/* <Route path='/UserPanel/Cart' element={<Cart />} /> */}
             <Route path='/UserPanel/Address' element={<Address />} />
             <Route path='/UserPanel/Payment' element={<Payment />} />
             <Route path='/UserPanel/Interests' element={<Interests />} />
             <Route path='/UserPanel/PersonalInfo' element={<PersonalInfo />} />
             <Route path='/UserPanel/ChangePass' element={<ChangePass />} />
-            {/* <Route path='/UserPanel/Login' element={<Login />} /> */}
 
           <Route path='/Product/:productId' element={<SingleProduct />} />
           <Route path='/Cart' element={<Cart />} />
-          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/Checkout' element={<Checkout />} />
 
           <Route path='/FAQ' element={<FAQ />} />
           <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />

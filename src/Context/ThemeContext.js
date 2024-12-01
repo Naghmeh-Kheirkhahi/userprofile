@@ -1,5 +1,5 @@
 
-import React, {createContext, useState} from "react";
+import React, {createContext, useEffect, useState} from "react";
 
 
 
@@ -13,6 +13,13 @@ export const ThemeProvider = ({children}) => {
     const toggleTheme = () => {
         setTheme((prevTheme) => prevTheme === 'light' ? 'dark' : 'light');
     }
+
+
+    useEffect(() => {
+        
+        document.body.className = theme==='dark' ? 'dark-mode' : 'light-mode';
+            
+        } , [theme]);
 
 
     return (

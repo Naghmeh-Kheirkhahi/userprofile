@@ -25,7 +25,7 @@ function UserPanel() {
                                 <ul>
                                     <li><Link to='/UserPanel'><i class="fa fa-dashboard"></i> My Dashboard</Link></li>
                                     <li><Link to='/UserPanel/Orders'><i class="fa fa-shopping-bag"></i> My Orders</Link></li>
-                                    <li><Link to='/Cart'><i class="fa fa-shopping-cart"></i> My Cart</Link></li>
+                                    <li><Link to='/'><i class="fa fa-shopping-cart"></i> My Cart</Link></li>
                                     <li><Link to='/UserPanel/Address'><i class="fa fa-map-marker-alt"></i> My Delivery Address</Link></li>
                                     <li><Link to='/UserPanel/Payment'><i class="fa fa-euro"></i> My Payment List</Link></li>
                                     <li><Link to='/UserPanel/Interests'><i class="fa fa-heart"></i> My Interests</Link></li>
@@ -55,7 +55,7 @@ function UserPanel() {
                                     </div>
 
                                     <div className="col-3 mb-5 p-5">
-                                        <Link to='/Cart'><i class="fa fa-shopping-cart"></i>
+                                        <Link to='/'><i class="fa fa-shopping-cart"></i>
                                             <h2>My Cart</h2></Link>
                                     </div>
 

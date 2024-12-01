@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.dark-mode {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
