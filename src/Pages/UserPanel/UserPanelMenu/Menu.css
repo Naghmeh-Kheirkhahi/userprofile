@@ -1,0 +1,163 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-class {
+    margin-top: 8rem;
+    background-color: #f5c7ff;
+}
+
+.empty {
+    background-color: #ffffff;
+    height: 100%;
+}
+
+.main-container {
+    padding: 8rem;
+}
+
+.main-container h1 {
+    color: #770095;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+
+
+/* Orders */
+
+.order-container {
+    background-color: #e16bff;
+    border: 1px solid #770095;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.order {
+    border-right: 1px solid #770095;
+}
+
+.order h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.product-order {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.product-order h3 {
+    font-size: 1.8rem;
+}
+
+.product-order p {
+    font-size: 1.5rem;
+}
+
+.order-date {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-date h4 , .order-price h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.order-date p , .order-price p {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    color: rgb(205 81 0);
+    font-weight: 600;
+}
+
+.order-price {
+    border-left: 1px solid #770095;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Delivery Address */
+
+.give-address {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.address-form {
+    border: 2px solid #770095;
+    background-color: #e16bff;
+    padding: 5rem;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.address-form label {
+    font-size: 1.5rem;
+    color: #430053;
+    font-weight: 600;
+}
+
+.address-form input {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: rgb(48, 48, 48);
+    outline: none;
+    border-radius: 10px;
+}
+
+.address-form button {
+    width: 100%;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 1.5rem auto 0 auto;
+    background-color: #ff9100;
+    border: 1px solid #dc7d00;;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+
+
+/* Payment List */
+
+/* Here, the classes are similar to the Orders' classes. */
+
+
+
+/* Interests */
+
+
+
+
+
+
+/* Personal Information */
+
+
+
+
+
+
+/* Change Password */
+
+

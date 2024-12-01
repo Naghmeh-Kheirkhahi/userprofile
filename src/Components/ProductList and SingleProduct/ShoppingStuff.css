@@ -157,11 +157,12 @@
 
 .productRating {
     font-size: 1.3rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .productRating span {
     color: rgb(255, 106, 0);
+    padding: 0.1rem;
 }
 
 .productBtn {

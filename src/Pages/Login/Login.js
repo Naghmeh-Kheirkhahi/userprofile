@@ -22,7 +22,7 @@ function Login() {
         console.log(email, password);
 
         if (email == "useremail@gmail.com" && password == "userpass") {
-            navigate("/userpanel");
+            navigate("/UserPanel");
             alert("Login has been Successfully done!");
         }
 

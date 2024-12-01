@@ -25,9 +25,19 @@ import UserPanel from './Pages/UserPanel/UserPanel';
 import { ThemeProvider } from './Context/ThemeContext';
 import Test from './Components/Test/Test';
 
+import Orders from './Pages/UserPanel/UserPanelMenu/Orders';
+import Address from './Pages/UserPanel/UserPanelMenu/Address';
+import Payment from './Pages/UserPanel/UserPanelMenu/Payment';
+import Interests from './Pages/UserPanel/UserPanelMenu/Interests';
+import PersonalInfo from './Pages/UserPanel/UserPanelMenu/PersonalInfo';
+import ChangePass from './Pages/UserPanel/UserPanelMenu/ChangePass';
+
+
+
 
 
 function App() {
+  
   return (
 
     <>
@@ -42,14 +52,20 @@ function App() {
           <Route path='/Contact' element={<Contact />} />
           <Route path='/About' element={<About />} />
 
-          <Route path='/Login' element={<Login />} />
           <Route path='/Register' element={<Register />} />
-          <Route path='/UserPanel' element={<UserPanel />}/>
+          <Route path='/Login' element={<Login />} />
+          <Route path='/UserPanel' element={<UserPanel />} />
+            <Route path='/UserPanel/Orders' element={<Orders />} />
+            {/* <Route path='/UserPanel/Cart' element={<Cart />} /> */}
+            <Route path='/UserPanel/Address' element={<Address />} />
+            <Route path='/UserPanel/Payment' element={<Payment />} />
+            <Route path='/UserPanel/Interests' element={<Interests />} />
+            <Route path='/UserPanel/PersonalInfo' element={<PersonalInfo />} />
+            <Route path='/UserPanel/ChangePass' element={<ChangePass />} />
+            {/* <Route path='/UserPanel/Login' element={<Login />} /> */}
 
           <Route path='/Product/:productId' element={<SingleProduct />} />
-
           <Route path='/Cart' element={<Cart />} />
-
           <Route path='/checkout' element={<Checkout />} />
 
           <Route path='/FAQ' element={<FAQ />} />

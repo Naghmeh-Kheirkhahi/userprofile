@@ -24,13 +24,13 @@ function UserPanel() {
                             <div className="user-panel-nav">
                                 <ul>
                                     <li><Link to='/UserPanel'><i class="fa fa-dashboard"></i> My Dashboard</Link></li>
-                                    <li><Link to='/UserPanel'><i class="fa fa-shopping-bag"></i> My Orders</Link></li>
-                                    <li><Link to='/UserPanel'><i class="fa fa-shopping-cart"></i> My Cart</Link></li>
-                                    <li><Link><i class="fa fa-map-marker-alt"></i> My Delivery Address</Link></li>
-                                    <li><Link to='/UserPanel'><i class="fa fa-euro"></i> My Payment List</Link></li>
-                                    <li><Link><i class="fa fa-heart"></i> My Interests</Link></li>
-                                    <li><Link><i class='fas fa-user-alt'></i> My Personal Information</Link></li>
-                                    <li><Link><i class="fa fa-lock"></i> Change Password</Link></li>
+                                    <li><Link to='/UserPanel/Orders'><i class="fa fa-shopping-bag"></i> My Orders</Link></li>
+                                    <li><Link to='/Cart'><i class="fa fa-shopping-cart"></i> My Cart</Link></li>
+                                    <li><Link to='/UserPanel/Address'><i class="fa fa-map-marker-alt"></i> My Delivery Address</Link></li>
+                                    <li><Link to='/UserPanel/Payment'><i class="fa fa-euro"></i> My Payment List</Link></li>
+                                    <li><Link to='/UserPanel/Interests'><i class="fa fa-heart"></i> My Interests</Link></li>
+                                    <li><Link to='/UserPanel/PersonalInfo'><i class='fas fa-user-alt'></i> My Personal Information</Link></li>
+                                    <li><Link to='/UserPanel/ChangePass'><i class="fa fa-lock"></i> Change Password</Link></li>
                                     <li><Link to='/Login'><i class="fa fa-sign-out"></i> Logout</Link></li>
                                 </ul>
                             </div>
@@ -50,22 +50,22 @@ function UserPanel() {
                             <div className="user-panel-content">
                                 <div className="row mb-5">
                                     <div className="col-3 mb-5 p-5">
-                                        <Link to='/UserPanel'><i class="fa fa-shopping-bag"></i>
+                                        <Link to='/UserPanel/Orders'><i class="fa fa-shopping-bag"></i>
                                             <h2>My Orders</h2></Link>
                                     </div>
 
                                     <div className="col-3 mb-5 p-5">
-                                        <Link to='/UserPanel'><i class="fa fa-shopping-cart"></i>
+                                        <Link to='/Cart'><i class="fa fa-shopping-cart"></i>
                                             <h2>My Cart</h2></Link>
                                     </div>
 
                                     <div className="col-3 mb-5 p-5">
-                                        <Link><i class="fa fa-map-marker-alt"></i> 
+                                        <Link to='/UserPanel/Address'><i class="fa fa-map-marker-alt"></i> 
                                             <h2>My Delivery Address</h2></Link>
                                     </div>
 
                                     <div className="col-3 mb-5 p-5">
-                                        <Link to='/UserPanel'><i class="fa fa-euro"></i>
+                                        <Link to='/UserPanel/Payment'><i class="fa fa-euro"></i>
                                             <h2>My Payment List</h2></Link>
                                     </div>
                                 </div>
@@ -73,17 +73,17 @@ function UserPanel() {
 
                                 <div className="row">
                                     <div className="col-3">
-                                        <Link><i class="fa fa-heart"></i>
+                                        <Link to='/UserPanel/Interests'><i class="fa fa-heart"></i>
                                             <h2>My Interests</h2></Link>
                                     </div>
 
                                     <div className="col-3">
-                                        <Link><i class='fas fa-user-alt'></i>
+                                        <Link to='/UserPanel/PersonalInfo'><i class='fas fa-user-alt'></i>
                                             <h2>My Personal Information</h2></Link>
                                     </div>
 
                                     <div className="col-3">
-                                        <Link><i class="fa fa-lock"></i>
+                                        <Link to='/UserPanel/ChangePass'><i class="fa fa-lock"></i>
                                             <h2>Change Password</h2></Link>
                                     </div>
 

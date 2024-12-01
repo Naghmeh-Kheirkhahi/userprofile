@@ -31,7 +31,7 @@ function SingleProduct() {
 
     const navigate = useNavigate();
     const addProductToCart = (productId) => {
-        navigate('/cart', {
+        navigate('/Cart', {
             state: { id: product.id, name: product.title, category: product.category, price: product.price, image: product.image, quantity: 1 }
         })
 
