@@ -39,7 +39,9 @@
 
 
 
-.dark-mode {
+/* we can write the both classes when we want to define a general dark-mode and light-mode classes for the whole app. But in this program we have to define the both classes for each page and component separately. */
+
+/* .dark-mode {
   background-color: #000000;
   color: rgb(255, 255, 255);
 }
@@ -47,4 +49,4 @@
 .light-mode {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
-}
+} */

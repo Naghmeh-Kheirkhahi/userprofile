@@ -3,16 +3,15 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../../Context/ThemeContext";
 
 
+// *** when we want to change the theme of the whole of a special page or component, we can use this code.
 
 
 // function Test() { we can write it in this way as well.
 //     return (
-
 //         <>
 //             <div>
 //             </div>
 //         </>
-    
 //     )
 // }
 // export default Test;
@@ -37,7 +36,6 @@ const Test = ({item}) => {
                 <br />
                 <button onClick={toggleTheme}>Change Theme</button>
             </div>
-
         </>
     )
 }
