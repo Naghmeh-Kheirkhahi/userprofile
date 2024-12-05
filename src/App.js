@@ -25,6 +25,9 @@ import UserPanel from './Pages/UserPanel/UserPanel';
 import { ThemeProvider } from './Context/ThemeContext';
 import Test from './Components/Test/Test';
 
+import { UserProvider } from './Context/UserContext';
+import DisplayUsername from './Components/Test/DisplayUsername';
+
 import Orders from './Pages/UserPanel/UserPanelMenu/Orders';
 import Address from './Pages/UserPanel/UserPanelMenu/Address';
 import Payment from './Pages/UserPanel/UserPanelMenu/Payment';
@@ -37,24 +40,27 @@ import ChangePass from './Pages/UserPanel/UserPanelMenu/ChangePass';
 
 
 function App() {
-  
+
   return (
 
     <>
 
-      <ThemeProvider>        
-        <Nav />
+      <ThemeProvider>
 
-        <Routes>
-          <Route path='/Test' element={<Test />} /> 
+        <UserProvider>
+          <Nav />
 
-          <Route path='/' element={<Home />} />
-          <Route path='/Contact' element={<Contact />} />
-          <Route path='/About' element={<About />} />
+          <Routes>
+            <Route path='/Test' element={<Test />} />
+            <Route path='/DisplayUsername' element={<DisplayUsername />} /> 
 
-          <Route path='/Register' element={<Register />} />
-          <Route path='/Login' element={<Login />} />
-          <Route path='/UserPanel' element={<UserPanel />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/Contact' element={<Contact />} />
+            <Route path='/About' element={<About />} />
+
+            <Route path='/Register' element={<Register />} />
+            <Route path='/Login' element={<Login />} />
+            <Route path='/UserPanel' element={<UserPanel />} />
             <Route path='/UserPanel/Orders' element={<Orders />} />
             <Route path='/UserPanel/Address' element={<Address />} />
             <Route path='/UserPanel/Payment' element={<Payment />} />
@@ -62,17 +68,19 @@ function App() {
             <Route path='/UserPanel/PersonalInfo' element={<PersonalInfo />} />
             <Route path='/UserPanel/ChangePass' element={<ChangePass />} />
 
-          <Route path='/Product/:productId' element={<SingleProduct />} />
-          <Route path='/Cart' element={<Cart />} />
-          <Route path='/Checkout' element={<Checkout />} />
+            <Route path='/Product/:productId' element={<SingleProduct />} />
+            <Route path='/Cart' element={<Cart />} />
+            <Route path='/Checkout' element={<Checkout />} />
 
-          <Route path='/FAQ' element={<FAQ />} />
-          <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
-          <Route path='/CustomerSupport' element={<CustomerSupport />} />
-          <Route path='/TandC' element={<TandC />} />
-        </Routes>
+            <Route path='/FAQ' element={<FAQ />} />
+            <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
+            <Route path='/CustomerSupport' element={<CustomerSupport />} />
+            <Route path='/TandC' element={<TandC />} />
+          </Routes>
 
-        <Footer />
+          <Footer />
+        </UserProvider>
+
       </ThemeProvider>
     </>
   );

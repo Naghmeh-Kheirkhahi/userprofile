@@ -1,12 +1,18 @@
 
-import React from "react";
+import react, {useContext} from 'react';
 import "./UserPanel.css";
 import UserImage from "../../Assets/images/user.jpg";
 import { Link } from "react-router-dom";
+import {UserContext} from '../../Context/UserContext';
+
 
 
 
 function UserPanel() {
+
+    const {username} = useContext(UserContext);
+
+
     return (
         <>
             <div className="user-panel">
@@ -17,7 +23,7 @@ function UserPanel() {
 
                             <div className="user-panel-image">
                                 <img src={UserImage} alt="user image" />
-                                <p>Username</p>
+                                <p>{username}</p>
                             </div>
 
 
@@ -41,7 +47,7 @@ function UserPanel() {
                     <div className="col-9">
                         <div className="user-panel-dashboard">
                             <div className="dashboard-description">
-                                <h3>Hello Username!</h3>
+                                <h3>Hello {username}!</h3>
 
                                 <p>Welcome to your user panel. Here you can manage all of your personal information and orders. You can also change your password and delivery address. If you have any questions, please feel free to contact us.</p>
                             </div>
