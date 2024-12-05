@@ -19,8 +19,8 @@ function ContactForm() {
                     <div>
                         <div class="row justify-content-md-center">
                             <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 pb-5">
-                                <h2 class="mb-4 text-center">Contact Us</h2>
-                                <p class="text-secondary mb-5 text-center">The best way to contact us is to use our contact form below. Please fill out all of the required fields and we will get back to you as soon as possible.</p>
+                                <h2 class="text-center">Contact Us</h2>
+                                <p class="text-center">The best way to contact us is to use our contact form below. Please fill out all of the required fields and we will get back to you as soon as possible.</p>
                                 <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
                             </div>
                         </div>

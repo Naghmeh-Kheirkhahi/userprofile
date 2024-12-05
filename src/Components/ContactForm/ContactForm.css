@@ -8,10 +8,14 @@ section h2 {
     font-size: 3.5rem;
     font-weight: 900;
     color: #66418e;
+    margin: 5rem 0 4rem 0;
 }
 
 section p {
     font-size: 1.5rem;
+    color: #646464;
+    font-weight: 600;
+    margin-bottom: 3rem;
 }
 
 form {
@@ -39,10 +43,27 @@ form button {
 }
 
 
-.dark-form {
-    background-color: #686868;
-    border: 2px solid #3b3b3b;
+/* **************ThemeContext*************** */
+
+.dark-contact {
+    background-color: #313131;
 }
 
-.dark-form label {
-    color: #ebdaff;}
+.dark-contact h2 {
+    color: #c490ff;
+}
+
+.dark-contact p {
+    color: #d2d2d2;
+
+}
+
+.dark-form {
+    border: 1px solid #7954a3;
+    background-color: #bd83ff;
+}
+
+.dark-form button {
+    border: 1px solid rgb(255, 89, 0);
+    background-color: rgb(255, 105, 25);
+}

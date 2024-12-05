@@ -1,5 +1,9 @@
 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
 .homePage {
@@ -16,7 +20,7 @@
 .homePage h1 {
     font-size: 6rem;
     font-weight: 900;
-    margin: 5rem 0 2rem 0;
+    margin: 8rem 0 10rem 0;
     color: #fff3ce;
     text-shadow: -3px 3px 7px #272727;
 }
@@ -57,4 +61,14 @@
 .login-icon i {
     padding: 0.5rem 0;
     margin-bottom: -0.5rem;
+}
+
+/* **************ThemeContext*************** */
+
+.dark-home {
+    background-color: #313131;
+}
+
+.dark-home h1 {
+    color: #f3f3f3;
 }

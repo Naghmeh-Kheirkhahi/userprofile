@@ -1,8 +1,18 @@
 
-.aboutUs {
-    align-items: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main-aboutUs {
     background-color: rgb(234, 192, 255);
+}
+
+.aboutUs {
     padding: 5rem 8rem 10rem 8rem;
+    margin-top: 8rem;
 }
 
 .aboutUs h1 {
@@ -13,7 +23,7 @@
 
 .aboutUs h2 {
     font-size: 2.5rem;
-    color: rgb(98, 65, 113);
+    color: rgb(94, 62, 109);
     font-weight: 600;
 }
 
@@ -28,3 +38,26 @@
     list-style-type: circle; /* Add this line to show circle bullet points */
 }
 
+
+
+/* **************ThemeContext*************** */
+
+.dark-about {
+    background-color: #313131;
+}
+
+.dark-about h1 {
+    color: #c490ff;
+}
+
+.dark-about h2 {
+    color: #cda1ff;
+}
+
+.dark-about p {
+    color: #dfdfdf;
+}
+
+.dark-about ul {
+    color: #dfdfdf;
+}

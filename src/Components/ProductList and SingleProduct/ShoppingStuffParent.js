@@ -1,7 +1,8 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 import ShoppingStuffChild from "./ShoppingStuffChild";
 import ShoppingButton from "./ShoppingButton";
@@ -41,15 +42,15 @@ function ShoppingStuffParent() {
 
 
 
-    const[quantity, setQuantity]=useState(1);
+    const [quantity, setQuantity] = useState(1);
 
     const handleBuyProduct = (price) => {
-        console.log('price:'+ price);
+        console.log('price:' + price);
 
         setQuantity(quantity + 1);
         console.log('quantity:' + quantity);
 
-        console.log('total price:' + quantity*price);
+        console.log('total price:' + quantity * price);
     }
 
 
@@ -60,10 +61,10 @@ function ShoppingStuffParent() {
 
     const [category, setCategory] = useState('');
 
-    const [filterProducts , setFilterProducts] = useState([]);
+    const [filterProducts, setFilterProducts] = useState([]);
 
 
-    const handleCategoryClick = (category) =>{
+    const handleCategoryClick = (category) => {
         console.log(category);
 
         setCategory(category);
@@ -71,7 +72,7 @@ function ShoppingStuffParent() {
 
 
     useEffect(() => {
-        if (category) { 
+        if (category) {
             let filterProducts = data.filter(
                 item => {
                     return item.category == category
@@ -79,14 +80,14 @@ function ShoppingStuffParent() {
             )
 
             setFilterProducts(filterProducts);
-    
+
         }
 
         else {
             setFilterProducts(data);
         }
 
-    }, [category, data]) 
+    }, [category, data])
 
     // useEffect(() => {
     // Runs only on the first render
@@ -97,15 +98,15 @@ function ShoppingStuffParent() {
     // Runs any time that is dependent on the value 'category' and changes any time according to this value 
     // }, [category]);
 
-    
+
     // we have all the API products in the data of the useState, then we filter the data and 
     // take the products having the same category with the category we chose by clicking one of the four buttons on the home page
     // after filtering we put the filtered products into the filterProducts and put it into the setData to put into the data and update the array of the data.
 
 
 
-    
 
+    const { theme } = useContext(ThemeContext);
 
 
 
@@ -116,10 +117,10 @@ function ShoppingStuffParent() {
                 <h1>Different Products</h1>
 
                 <div class="btns">
-                    <ShoppingButton btnName={"Men's Clothing"} btnClass={'categoryBtn'} btnClick={() => handleCategoryClick("men's clothing")}/>
-                    <ShoppingButton btnName={"Women's Clothing"} btnClass={'categoryBtn'} btnClick={() => handleCategoryClick("women's clothing")}/>
-                    <ShoppingButton btnName={"Jewelery"} btnClass={'categoryBtn'} btnClick={() => handleCategoryClick("jewelery")}/>
-                    <ShoppingButton btnName={"Electronics"} btnClass={'categoryBtn'} btnClick={() => handleCategoryClick("electronics")}/>
+                    <ShoppingButton btnName={"Men's Clothing"} btnClass={theme === 'dark' ? 'themeCatBtn' : 'categoryBtn'} btnClick={() => handleCategoryClick("men's clothing")} />
+                    <ShoppingButton btnName={"Women's Clothing"} btnClass={theme === 'dark' ? 'themeCatBtn' : 'categoryBtn'} btnClick={() => handleCategoryClick("women's clothing")} />
+                    <ShoppingButton btnName={"Jewelery"} btnClass={theme === 'dark' ? 'themeCatBtn' : 'categoryBtn'} btnClick={() => handleCategoryClick("jewelery")} />
+                    <ShoppingButton btnName={"Electronics"} btnClass={theme === 'dark' ? 'themeCatBtn' : 'categoryBtn'} btnClick={() => handleCategoryClick("electronics")} />
                 </div>
 
 
@@ -137,7 +138,7 @@ function ShoppingStuffParent() {
                             buyProduct={() => { handleBuyProduct(item.price) }}
                         />
 
-                        
+
                     ))}
                 </div>
             </div>

@@ -1,9 +1,16 @@
-import React from "react";
+import React , {useContext} from "react";
 import './ShoppingStuff.css';
 import ShoppingButton from "./ShoppingButton";
+import { ThemeContext } from "../../Context/ThemeContext";
+
+
 
 
 function ShoppingStuffChild(props) {
+
+    const { theme } = useContext(ThemeContext);
+
+
     return (
         <div className="col-4 product-container">
             <div className="product" onClick={props.showProduct}> 
@@ -24,7 +31,7 @@ function ShoppingStuffChild(props) {
 
                         {/* <button onClick={props.buyProduct}>BUY NOW</button> */}
 
-                        <ShoppingButton btnName={"BUY NOW"} btnClass={'productBtn'} btnClick={props.buyProduct}/>
+                        <ShoppingButton btnName={"BUY NOW"} btnClass={theme === 'dark' ? 'themeProBtn' : 'productBtn'} btnClick={props.buyProduct}/>
                     </div>
                 {/* </div> */}
             </div>

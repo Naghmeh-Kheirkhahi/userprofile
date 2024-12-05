@@ -1,11 +1,16 @@
-body {
-    font-family: sans-serif;
-    font-weight: bold;
+* {
     top: 0;
     left: 0;
     box-sizing: border-box;
 }
 
+
+
+/* ***ThemeContext*** */
+
+.dark-mainClass {
+    background-color: #313131;
+}
 
 
 .mainClass {
@@ -18,8 +23,18 @@ body {
     border-radius: 10px;
     background: rgb(245, 198, 255);
     text-align: center;
-
 }
+
+/* ***ThemeContext*** */
+
+.dark-cardClass {
+    padding: 2rem 5rem;
+    border: 2px solid rgb(188, 138, 196);
+    border-radius: 10px;
+    background: rgb(220, 192, 225);
+    text-align: center;
+}
+
 
 .shoppingCart {
     padding: 3rem 0;
@@ -33,13 +48,14 @@ body {
 
 .cartTitle h3 {
     font-size: 2rem;
-    color: rgb(43, 43, 43);
+    color: rgb(87, 0, 113);
 }
 
 .cartTitle p {
     padding-top: 0.3rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: rgb(71, 71, 71);
+    font-weight: 800;
 }
 
 
@@ -106,8 +122,8 @@ body {
 }
 
 .summary h5 {
-    font-size: 1.3rem;
-    color: rgb(43, 43, 43);
+    font-size: 1.6rem;
+    color: rgb(87, 0, 113);
     border-bottom: 1px solid rgb(163, 163, 163);
     padding: 0.5rem 0 2.2rem 0;
 }
@@ -147,6 +163,7 @@ body {
     padding: 5rem 0 3rem 0;
     font-size: 1.5rem;
     font-weight: bold;
+    color: rgb(186, 68, 0);
 }
 
 

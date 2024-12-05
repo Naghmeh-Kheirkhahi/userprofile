@@ -34,8 +34,8 @@
 
 .categoryBtn {
     margin: 1rem 2rem;
-    border: 1px solid rgb(50, 50, 50);
     border-radius: 10px;
+    border: 1px solid rgb(50, 50, 50);
     background-color: rgb(50, 50, 50);
     color:  rgb(255, 149, 0);
     font-size: 1.5rem;
@@ -43,8 +43,22 @@
     padding: 1rem 2rem;
 }
 
+/* ***Theme Button*** */
+
+.themeCatBtn {
+    margin: 1rem 2rem;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 149, 0);
+    background-color: rgb(255, 149, 0);
+    color:  #532187;
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 1rem 2rem;
+}
 
 
+
+/* ------------------------ */
 
 
 .product-container {
@@ -110,7 +124,13 @@
 
 
 
+/* ------------------------ */
 
+/* ***ThemeContext*** */
+
+.dark-singleProduct {
+    background-color: #313131;
+}
 
 
 .singleProduct {
@@ -118,19 +138,29 @@
     align-items: center;
     display: flex;
     padding: 2rem 4rem;
-    border: 2px solid rgb(185, 119, 194);
     border-radius: 10px;
+    border: 2px solid rgb(185, 119, 194);
     background-color: rgb(215, 170, 221);
 }
 
-.singleProduct img {
+.light-singleProduct {
+    margin: 20rem 25rem;
+    align-items: center;
+    display: flex;
+    padding: 2rem 4rem;
+    border-radius: 10px;
+    border: 2px solid rgb(143, 119, 147);
+    background-color: rgb(253, 234, 255);
+}
+
+.singleProduct img , .light-singleProduct img {
     width: 800px;
     height: 400px;
     border-radius: 20px;
     margin: 2rem auto;
 }
 
-.singleProduct h1 {
+.singleProduct h1 , .light-singleProduct h1 {
     font-size: 2rem;
     color: rgb(184, 19, 1);
     font-weight: 900;
@@ -161,27 +191,57 @@
 }
 
 .productRating span {
-    color: rgb(255, 106, 0);
+    color: rgb(246, 102, 0);
     padding: 0.1rem;
 }
 
 .productBtn {
     margin: 1rem 8rem;
-    border: 1px solid rgb(184, 19, 1);
     border-radius: 10px;
-    background-color: rgb(205, 20, 0);
+    border: 1px solid rgb(185, 18, 0);
+    background-color: rgb(185, 18, 0);
     color:  rgb(255, 255, 255);
     font-size: 1.3rem;
     font-weight: 900;
     padding: 0.5rem 0;
 }
 
+/* ***Theme Button*** */
+
+.themeProBtn {
+    margin: 1rem 8rem;
+    border-radius: 10px;
+    border: 1px solid rgb(40, 40, 40);
+    background-color: rgb(40, 40, 40);
+    color: rgb(255, 25, 0);
+    font-size: 1.3rem;
+    font-weight: 900;
+    padding: 0.5rem 0;
+}
+
+
+
+/* ------------------------ */
+
 .singleProductBtn {
     margin: 1rem 0 0 1rem;
-    border: 1px solid rgb(184, 19, 1);
     border-radius: 10px;
-    background-color: rgb(205, 20, 0);
+    border: 1px solid rgb(185, 18, 0);
+    background-color: rgb(185, 18, 0);
     color:  rgb(255, 255, 255);
+    font-size: 1.3rem;
+    font-weight: 900;
+    padding: 1rem 2rem;
+}
+
+/* ***Theme Button*** */
+
+.themeSingleProBtn {
+    margin: 1rem 0 0 1rem;
+    border-radius: 10px;
+    border: 1px solid rgb(40, 40, 40);
+    background-color: rgb(40, 40, 40);
+    color: rgb(255, 25, 0);
     font-size: 1.3rem;
     font-weight: 900;
     padding: 1rem 2rem;

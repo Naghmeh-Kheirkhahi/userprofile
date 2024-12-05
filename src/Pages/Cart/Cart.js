@@ -13,9 +13,10 @@
 
 
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import './Cart.css';
 import { useLocation, useNavigate } from "react-router-dom";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 
 
@@ -40,9 +41,9 @@ function Cart() {
     useEffect(() => {
 
         // we used useEffect bacause we want to show the products and items of our API automatically without pushing or clicking on something and we added [] to it to be done only one time.
-        
+
         const getProducts = JSON.parse(localStorage.getItem('productKey')); // before mapping we should get the products from LS and store somewhere
-        console.log('product in card:' ,getProducts);
+        console.log('product in card:', getProducts);
 
         // const   getProducts = getProducts.map(product => ({ // because we added quantity to the products of the LS , we dont need this bellow code.
         //     ...product, quantity: 1
@@ -50,8 +51,8 @@ function Cart() {
         // }
         // ))
 
-        setProducts( getProducts); // we have to set it to save in products array in useState we defined above. we need to store this state of the LS including the products with quantity as a property. the new state will be the input of setProducts and the whole will be put in products in the useState. 
-        console.log('product with quantity:',   getProducts);
+        setProducts(getProducts); // we have to set it to save in products array in useState we defined above. we need to store this state of the LS including the products with quantity as a property. the new state will be the input of setProducts and the whole will be put in products in the useState. 
+        console.log('product with quantity:', getProducts);
 
     }, [])
 
@@ -125,79 +126,80 @@ function Cart() {
 
 
     const checkoutHandle = () => {
-        navigate('/Checkout' , {state:{totalPriceWithShipping , totalQuantity , products}})
+        navigate('/Checkout', { state: { totalPriceWithShipping, totalQuantity, products } })
     }
 
 
 
 
+    const { theme } = useContext(ThemeContext);
 
 
     return (
 
         <>
+            <div className={theme === 'dark' ? 'dark-mainClass' : ''}>
+                {state ? (
+                    <div className='mainClass'>
+                        <div className={theme === 'dark' ? 'dark-cardClass' : 'cardClass'}>
+                            <div class="row">
+                                <div class="col-md-8 shoppingCart">
+                                    <div class="cartTitle">
+                                        <div class="row">
+                                            <div class="col-6"><h3><b>Shopping Cart</b></h3></div>
+                                            <div class="col-6"><p><b>{totalQuantity} Items</b></p></div>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-4 pb-0 ps-2 pe-2 m-0">
+                                        {
+                                            products.map(item => (
 
-            {state ? (
-                <div className="mainClass">
-                    <div class="cardClass">
-                        <div class="row">
-                            <div class="col-md-8 shoppingCart">
-                                <div class="cartTitle">
-                                    <div class="row">
-                                        <div class="col-6"><h3><b>Shopping Cart</b></h3></div>
-                                        <div class="col-6"><p><b>{totalQuantity} Items</b></p></div>
+                                                <div class="row productItem">
+                                                    <div class="col-4"><img src={item.image} /></div>
+                                                    <div class="col-4">
+                                                        <div className="productName"><p><b>Name:</b> {item.title}</p></div>
+                                                        <div className="productCategory"><p><b>Category:</b> {item.category}</p></div>
+                                                    </div>
+                                                    <div class="col-2 productQuantity">
+                                                        <p onClick={() => updateQuantity(item.id, -1)}>-</p> <p style={{ border: '1px solid gray', padding: '0 0.5rem', color: 'rgb(209, 0, 157)' }}>{item.quantity}</p> <p onClick={() => updateQuantity(item.id, 1)}>+</p>
+                                                    </div>
+                                                    <div class="col-2 productsPrice">&euro; {item.price} <i class="recyclebin fa" onClick={() => deleteProductFromCart(item.id)}>&#xf014;</i></div>
+                                                </div>
+                                            ))
+                                        }
                                     </div>
                                 </div>
-                                <div class="row pt-4 pb-0 ps-2 pe-2 m-0">
-                                    {
-                                        products.map(item => (
 
-                                            <div class="row productItem">
-                                                <div class="col-4"><img src={item.image} /></div>
-                                                <div class="col-4">
-                                                    <div className="productName"><p><b>Name:</b> {item.title}</p></div>
-                                                    <div className="productCategory"><p><b>Category:</b> {item.category}</p></div>
-                                                </div>
-                                                <div class="col-2 productQuantity">
-                                                    <p onClick={() => updateQuantity(item.id, -1)}>-</p> <p style={{border: '1px solid gray' , padding: '0 0.5rem' , color: 'rgb(209, 0, 157)'}}>{item.quantity}</p> <p onClick={() => updateQuantity(item.id, 1)}>+</p>
-                                                </div>
-                                                <div class="col-2 productsPrice">&euro; {item.price} <i class="recyclebin fa" onClick={() => deleteProductFromCart(item.id)}>&#xf014;</i></div>
-                                            </div>
-                                        ))
-                                    }
+                                <div class="col-md-4 summary">
+                                    <div><h5><b>Summary</b></h5></div>
+
+                                    <div class="row totalPrice">
+                                        <div class="col-6"><p>{totalQuantity} Items</p></div>
+                                        <div class="col-6"><p>&euro; {totalPrice}</p></div>
+                                    </div>
+
+                                    <form>
+                                        <p>SHIPPING</p>
+                                        <select><option>Standard-Delivery: &euro; 5.00</option></select>
+                                    </form>
+
+                                    <div class="row finalPrice">
+                                        <div class="col-6"><p><b>TOTAL PRICE:</b></p></div>
+                                        <div class="col-6"><p>&euro; {totalPriceWithShipping}</p></div>
+                                    </div>
+                                    <button class="cartBtn" onClick={() => checkoutHandle()}>CHECKOUT</button>
                                 </div>
-                            </div>
-
-                            <div class="col-md-4 summary">
-                                <div><h5><b>Summary</b></h5></div>
-
-                                <div class="row totalPrice">
-                                    <div class="col-6"><p>{totalQuantity} Items</p></div>
-                                    <div class="col-6"><p>&euro; {totalPrice}</p></div>
-                                </div>
-
-                                <form>
-                                    <p>SHIPPING</p>
-                                    <select><option>Standard-Delivery: &euro; 5.00</option></select>
-                                </form>
-
-                                <div class="row finalPrice">
-                                    <div class="col-6"><p><b>TOTAL PRICE:</b></p></div>
-                                    <div class="col-6"><p>&euro; {totalPriceWithShipping}</p></div>
-                                </div>
-                                <button class="cartBtn" onClick={() => checkoutHandle()}>CHECKOUT</button>
                             </div>
                         </div>
                     </div>
-                </div>
+                )
 
 
-            )
+                    : (
+                        <div><p>Your Cart is empty.</p></div>
+                    )}
+            </div>
 
-
-                : (
-                    <div><p>Your Cart is empty.</p></div>
-                )}
         </>
 
     )
