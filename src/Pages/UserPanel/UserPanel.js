@@ -10,7 +10,7 @@ import {UserContext} from '../../Context/UserContext';
 
 function UserPanel() {
 
-    const {username} = useContext(UserContext);
+    const { username } = useContext(UserContext); // here we are using the username from the UserContext because we want to display the username in the User Panel.
 
 
     return (

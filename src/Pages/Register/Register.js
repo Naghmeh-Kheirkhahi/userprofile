@@ -1,19 +1,25 @@
 
-import React from "react";
+import React, {useContext, useState } from "react";
 import "./Register.css";
 import { Link } from "react-router-dom";
 import logo from "../../Assets/images/logo.jpg";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import register from "../../Assets/images/register.JPG";
+import { ThemeContext } from "../../Context/ThemeContext";
+import { UserContext } from "../../Context/UserContext";
 
 
 
 
 function Register() {
 
+    const { theme } = useContext(ThemeContext);
+
+    const { setUsername } = useContext(UserContext);
+
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [formUsername, setFormUsername] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -21,9 +27,14 @@ function Register() {
 
 
     const handleRegister = (e) => {
-        console.log(name, email, password, confirmPassword);
+
+        e.preventDefault();
+
+        console.log(name, email, formUsername, password, confirmPassword);
 
         if (password == confirmPassword) {
+
+            setUsername(formUsername);
             alert("Your Registration has been Successfully done!");
             navigate("/Login");
         }
@@ -32,8 +43,6 @@ function Register() {
             alert("Passwords do not match. Please try again!");
         }
 
-
-        e.preventDefault();
     }
 
 
@@ -43,7 +52,7 @@ function Register() {
     return (
         <>
 
-            <div className="register-main">
+            <div className={theme === 'dark' ? 'dark-register-main' : 'register-main'}>
                 <div className="register-container">
                     <div className="row">
 
@@ -65,16 +74,21 @@ function Register() {
                                 <p>Please create an account to register in our website.</p>
                             </div>
 
-                            <form onSubmit={handleRegister}>
+                            <form onSubmit={handleRegister} className={theme === 'dark' ? 'dark-form' : 'light-form'}>
 
                                 <div data-mdb-input-init class="flex-fill mb-4">
-                                    <label class="form-label" for="formName"><i class="fa fa-user"></i> Your Name</label>
+                                    <label class="form-label" for="formName"><i class="fa fa-user"></i> Name</label>
                                     <input type="text" id="formName" value={name} onChange={(e) => setName(e.target.value)} />
                                 </div>
 
                                 <div data-mdb-input-init class="flex-fill mb-4">
-                                    <label class="form-label" for="formEmail"><i class="fa fa-envelope"></i> Your Email</label>
+                                    <label class="form-label" for="formEmail"><i class="fa fa-envelope"></i> Email Address</label>
                                     <input type="email" id="formEmail" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                </div>
+
+                                <div data-mdb-input-init class="flex-fill mb-4">
+                                    <label class="form-label" for="formUsername"><i class="fa fa-envelope"></i> Username</label>
+                                    <input type="text" id="formUsername" value={formUsername} onChange={(e) => setFormUsername(e.target.value)} />
                                 </div>
 
                                 <div data-mdb-input-init class="flex-fill mb-4">

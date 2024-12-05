@@ -7,7 +7,7 @@ export const UserContext = createContext();
 export const UserProvider = ({ children }) => {
 
     const [username, setUsername] = useState(() => {
-        return localStorage.getItem("username") || "";
+        return localStorage.getItem("username") || ""; // If there is a username in the local storage, return it, otherwise return an empty string.
     })
 
     useEffect(() => {

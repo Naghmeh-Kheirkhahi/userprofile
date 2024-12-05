@@ -9,6 +9,13 @@
     background-color: #9d00c5;
 }
 
+/* ThemeContext */
+.dark-register-main {
+    background-color: #350042;
+}
+
+
+
 .register-container {
     background-color: #ffffff;
     border-radius: 10px;
@@ -67,7 +74,7 @@
 
 
 
-.register-form form {
+.light-form {
     padding: 2rem 3rem ;
     margin: 0 5rem;
     border: 1px solid #c300d8;
@@ -75,7 +82,17 @@
     background-color: #ff96f4;
 }
 
-.register-form input {
+/* ThemeContext */
+.dark-form {
+    padding: 2rem 3rem ;
+    margin: 0 5rem;
+    border: 1px solid #c300d8;
+    border-radius: 10px;
+    background-color: #d680cd;
+}
+
+
+.light-form input, .dark-form input {
     width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -86,18 +103,19 @@
     outline: none;
 }
 
-.register-form label {
+.light-form label, .dark-form label {
     font-size: 1.7rem;
     font-weight: 700;
     color: #72008e;
     margin-bottom: 0;
 }
 
-.register-form i {
+.light-form i, .dark-form i {
     color: #72008e;
     margin: 0 0.3rem -0.4rem 0;
     padding: 0.2rem;
 }
+
 
 
 .checkBox {
@@ -115,10 +133,16 @@
     font-size: 1.5rem;
 }
 
+.checkBox a {
+    color: #72008e;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 
 .register-btn  {
     width: 100%;
-    margin: 1rem 0;
+    margin: 2rem 0;
     padding: 1rem 3rem;
     background-color: #ff9100;
     border: 1px solid #dc7d00;

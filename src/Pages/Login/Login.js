@@ -6,15 +6,17 @@ import logo from "../../Assets/images/logo.jpg";
 import { useNavigate } from "react-router-dom";
 import login from "../../Assets/images/login.jpg";
 import { UserContext } from "../../Context/UserContext";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 
 
 function Login() {
 
-    const { setUsername } = useContext(UserContext);
-    
+    const { theme } = useContext(ThemeContext);
+
+    const { setUsername } = useContext(UserContext); // here we are using the setUsername from the UserContext because we want to set the username when the user logs in.
+
     const [formUsername, setFormUsername] = useState("");
-    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const navigate = useNavigate();
@@ -23,27 +25,23 @@ function Login() {
 
         e.preventDefault();
 
-        console.log(formUsername, email, password);
+        console.log(formUsername, password);
 
         // We can use this code block when we want to check the username, email and password, but here we have no API of user data to search and check through it. So, we have to either consider a constant data for the condition like the following code or write no condition and make the Login free as the user enter any data they like.
 
-        // if (formUsername === "admin" && email === "useremail@gmail.com" && password === "userpass") {
+        // if (formUsername === "admin" && password === "userpass") {
+
         //     setUsername(formUsername);
-
-        //     console.log("Logged in as: " + formUsername);
-
         //     alert("Login has been successfully done!");
+        //     navigate("/UserPanel");  // navigate("/DisplayUsername"); when we want to navigate to this page
 
-        //     // navigate("/DisplayUsername"); when we want to navigate to this page
-        //     navigate("/UserPanel");
-            
         // } else {
         //     alert("Your Email or Password is invalid. Please try again!");
         // }
 
 
         // This code block is for the case when we don't want to check the username, email and password and make the Login free as the user enter any data they like.
-        
+
         setUsername(formUsername);
 
         alert("Login has been successfully done!");
@@ -53,9 +51,10 @@ function Login() {
 
 
 
+
     return (
         <>
-            <div className="login-main">
+            <div className={theme === 'dark' ? 'dark-login-main' : 'login-main'}>
                 <div className="login-container">
                     <div className="row">
                         <div className="login-image col-6">
@@ -73,20 +72,14 @@ function Login() {
 
                                 <h1>Login Form</h1>
 
-                                <p>Please enter your email address and password.</p>
+                                <p>Please enter your Username and Password.</p>
                             </div>
 
-                            <form onSubmit={handleLogin}>
+                            <form onSubmit={handleLogin} className={theme === 'dark' ? 'dark-form' : 'light-form'}>
                                 {/* Username input */}
                                 <div data-mdb-input-init class="flex-fill mb-4">
                                     <label class="form-label" for="formEmail"><i class="fa fa-envelope"></i> Username</label>
                                     <input type="text" id="formUsername" value={formUsername} onChange={(e) => setFormUsername(e.target.value)} />
-                                </div>
-
-                                {/* Email input */}
-                                <div data-mdb-input-init class="flex-fill mb-4">
-                                    <label class="form-label" for="formEmail"><i class="fa fa-envelope"></i> Email address</label>
-                                    <input type="email" id="formEmail" value={email} onChange={(e) => setEmail(e.target.value)} />
                                 </div>
 
                                 {/* Password input */}
@@ -112,27 +105,20 @@ function Login() {
                                 </div>
 
                                 {/* Submit button */}
-                                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="login-btn">Login</button>
+                                <button type="submit" data-mdb-button-init data-mdb-ripple-init className="login-btn">Login</button>
+
 
                                 {/* Register buttons */}
-                                <div class="login-end">
+                                <div className="login-socialmedia">
                                     <p>Don't have an account? <Link to={'/Register'}>Register</Link></p>
                                     <p>or sign up with:</p>
-                                    <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </button>
 
-                                    <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                                        <i class="fab fa-google"></i>
-                                    </button>
-
-                                    <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                                        <i class="fab fa-twitter"></i>
-                                    </button>
-
-                                    <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                                        <i class="fab fa-github"></i>
-                                    </button>
+                                    <div className="socialmedia-icon">
+                                        <a><i class="fab fa-facebook-f"></i></a>
+                                        <a><i class="fab fa-google"></i></a>
+                                        <a><i class="fab fa-twitter"></i></a>
+                                        <a><i class="fab fa-github"></i></a>
+                                    </div>
                                 </div>
                             </form>
                         </div>

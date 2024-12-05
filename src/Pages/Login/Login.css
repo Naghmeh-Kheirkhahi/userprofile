@@ -9,6 +9,12 @@
     background-color: #9d00c5;
 }
 
+/* ThemeContext */
+.dark-login-main {
+    background-color: #350042;
+}
+
+
 .login-container {
     background-color: #ffffff;
     border-radius: 10px;
@@ -67,7 +73,7 @@
 
 
 
-.login-form form {
+.light-form {
     padding: 2rem 3rem ;
     margin: 0 5rem;
     border: 1px solid #c300d8;
@@ -75,7 +81,16 @@
     background-color: #ff96f4;
 }
 
-.login-form input {
+/* ThemeContext */
+.dark-form {
+    padding: 2rem 3rem ;
+    margin: 0 5rem;
+    border: 1px solid #c300d8;
+    border-radius: 10px;
+    background-color: #d680cd;
+}
+
+.light-form input, .dark-form input {
     width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -86,14 +101,14 @@
     outline: none;
 }
 
-.login-form label {
+.light-form label, .dark-form label {
     font-size: 1.7rem;
     font-weight: 700;
     color: #72008e;
     margin-bottom: 0;
 }
 
-.login-form i {
+.light-form i, .dark-form i {
     color: #72008e;
     margin: 0 0.3rem -0.3rem 0;
     padding-top: 0.2rem;
@@ -138,22 +153,32 @@
     cursor: pointer;
 }
 
-.login-end {
+.login-socialmedia {
     text-align: center;
 }
 
-.login-end p {
+.login-socialmedia p {
     font-size: 1.5rem;
     color: rgb(55, 55, 55);
 }
 
-.login-end button {
+.login-socialmedia button {
     font-size: 1.5rem;
     color: #72008e;
 }
 
-.login-end a {
+.login-socialmedia a {
     color: #72008e;
     font-size: 1.6rem;
     font-weight: 700;
+}
+
+.socialmedia-icon {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 1rem 0;
+}
+
+.socialmedia-icon a {
+    margin: 0 2rem;
 }
