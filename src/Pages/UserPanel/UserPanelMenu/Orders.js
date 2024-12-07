@@ -1,15 +1,22 @@
 
-import React from "react";
+import React, {useContext} from "react";
 import './Menu.css';
+import UserPanelNav from './../UserPanelNav';
+import { ThemeContext } from "../../../Context/ThemeContext";
+
 
 
 function Orders() {
+
+    const { theme } = useContext(ThemeContext);
+
+
     return (
         <>
-            <div className="main-class">
+            <div className={theme === 'dark' ? 'dark-main-class' : 'main-class'}>
                 <div className="row">
                     <div className="col-3">
-                        <div className="empty"></div>
+                        <UserPanelNav />
                     </div>
 
 

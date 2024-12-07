@@ -1,18 +1,24 @@
 
 
-
-import React from "react";
+import React, {useContext} from "react";
 import './Menu.css';
+import UserPanelNav from './../UserPanelNav';
+import { ThemeContext } from "../../../Context/ThemeContext";
+
 
 
 function PersonalInfo() {
+
+    const { theme } = useContext(ThemeContext);
+
+
     return (
         <>
 
-            <div className="main-class">
+            <div className={theme === 'dark' ? 'dark-main-class' : 'main-class'}>
                 <div className="row">
                     <div className="col-3">
-                        <div className="empty"></div>
+                        <UserPanelNav />
                     </div>
 
 
@@ -43,11 +49,11 @@ function PersonalInfo() {
                                 <br />
                                 <label for="phone">Phone Number</label>
                                 <input type="text" />
-                                <br />  
+                                <br />
                                 <label for="address">Address</label>
                                 <input type="text" />
                                 <br />
-                                <button type="submit">Save Address</button>
+                                <button className={theme === 'dark' ? 'dark-btn' : 'light-btn'} type="submit">Save Address</button>
                             </form>
                         </div>
                     </div>

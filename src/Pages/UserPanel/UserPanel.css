@@ -5,17 +5,36 @@
     box-sizing: border-box;
 }
 
+
 .user-panel {
     margin-top: 8rem;
     background-color: #f5c7ff;
 }
 
+/* ThemeContext */
+.dark-user-panel {
+    margin-top: 8rem;
+    background-color: #d9afe2;
+}
+
+
+/* userpanel navbar (the left side) */
+
 .user-panel-list {
     background-color: #9d00c5;
     padding: 5rem 2rem;
+    height: 100%;
 }
 
-.user-panel-list h1 {
+/* ThemeContext */
+.dark-list {
+    background-color: #350042;
+    padding: 5rem 2rem;
+    height: 100%;
+}
+
+
+.user-panel-list h1, .dark-list h1 {
     color: #ffffff;
     font-size: 3rem;
     font-weight: 700;
@@ -65,7 +84,7 @@
 }
 
 
-
+/* userpanel dashboard (the right side) */
 
 .user-panel-dashboard {
     padding: 10rem 8rem 5rem 8rem;

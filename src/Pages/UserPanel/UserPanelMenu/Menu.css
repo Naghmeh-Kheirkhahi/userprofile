@@ -10,10 +10,12 @@
     background-color: #f5c7ff;
 }
 
-.empty {
-    background-color: #ffffff;
-    height: 100%;
+/* ThemeContext */
+.dark-main-class {
+    margin-top: 8rem;
+    background-color: #d9afe2;
 }
+
 
 .main-container {
     padding: 8rem;
@@ -126,18 +128,6 @@
     width: 100%;
 }
 
-.address-form button {
-    width: 100%;
-    padding: 1rem 3rem;
-    font-size: 1.7rem;
-    font-weight: 600;
-    margin: 1.5rem auto 0 auto;
-    background-color: #ff9100;
-    border: 1px solid #dc7d00;;
-    color: #ffffff;
-    border-radius: 10px;
-}
-
 
 
 /* Payment List */
@@ -210,18 +200,6 @@
     width: 100%;
 }
 
-.info-form button {
-    width: 100%;
-    padding: 1rem 3rem;
-    font-size: 1.7rem;
-    font-weight: 600;
-    margin: 1.5rem auto 0 auto;
-    background-color: #ff9100;
-    border: 1px solid #dc7d00;;
-    color: #ffffff;
-    border-radius: 10px;
-}
-
 
 
 /* Change Password */
@@ -251,7 +229,10 @@
     width: 100%;
 }
 
-.pass-form button {
+
+/* This button is for Address, Personal Info, and Change Password */
+
+.light-btn {
     width: 100%;
     padding: 1rem 3rem;
     font-size: 1.7rem;
@@ -259,6 +240,19 @@
     margin: 1.5rem auto 0 auto;
     background-color: #ff9100;
     border: 1px solid #dc7d00;;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+/* ThemeContext */
+.dark-btn {
+    width: 100%;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 1.5rem auto 0 auto;
+    background-color: #ff6200;
+    border: 1px solid #dc4d00;
     color: #ffffff;
     border-radius: 10px;
 }

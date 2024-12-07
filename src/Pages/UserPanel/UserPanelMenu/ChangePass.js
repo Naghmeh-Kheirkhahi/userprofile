@@ -1,18 +1,24 @@
 
 
-
-import React from "react";
+import React, {useContext} from "react";
 import './Menu.css';
+import UserPanelNav from './../UserPanelNav';
+import { ThemeContext } from "../../../Context/ThemeContext";
+
 
 
 function ChangePass() {
+
+    const { theme } = useContext(ThemeContext);
+
+
     return (
         <>
 
-            <div className="main-class">
+            <div className={theme === 'dark' ? 'dark-main-class' : 'main-class'}>
                 <div className="row">
                     <div className="col-3">
-                        <div className="empty"></div>
+                        <UserPanelNav />
                     </div>
 
 
@@ -33,7 +39,7 @@ function ChangePass() {
                                 <label for="rPass">Repeat New Password</label>
                                 <input type="text" />
 
-                                <button type="submit">Save</button>
+                                <button className={theme === 'dark' ? 'dark-btn' : 'light-btn'} type="submit">Save</button>
                             </form>
                         </div>
                     </div>

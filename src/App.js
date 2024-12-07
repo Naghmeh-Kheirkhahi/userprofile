@@ -51,8 +51,9 @@ function App() {
           <Nav />
 
           <Routes>
-            <Route path='/Test' element={<Test />} />
-            <Route path='/DisplayUsername' element={<DisplayUsername />} /> 
+            {/* The Test and DisplayUsername components defined as a Route, have been used for testing useContext */}
+            {/* <Route path='/Test' element={<Test />} />
+            <Route path='/DisplayUsername' element={<DisplayUsername />} /> */}
 
             <Route path='/' element={<Home />} />
             <Route path='/Contact' element={<Contact />} />
@@ -60,7 +61,7 @@ function App() {
 
             <Route path='/Register' element={<Register />} />
             <Route path='/Login' element={<Login />} />
-            <Route path='/UserPanel' element={<UserPanel />} />
+            <Route path='/UserPanel' element={<UserPanel />} />            
             <Route path='/UserPanel/Orders' element={<Orders />} />
             <Route path='/UserPanel/Address' element={<Address />} />
             <Route path='/UserPanel/Payment' element={<Payment />} />
