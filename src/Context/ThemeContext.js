@@ -8,7 +8,9 @@ export const ThemeContext = createContext();
 
 export const ThemeProvider = ({children}) => {
 
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState(() => {
+        return localStorage.getItem('theme') || 'light';
+    })
 
     const toggleTheme = () => {
         setTheme((prevTheme) => prevTheme === 'light' ? 'dark' : 'light');
@@ -19,8 +21,10 @@ export const ThemeProvider = ({children}) => {
     useEffect(() => {
 
         document.body.className = theme ==='dark' ? 'dark-mode' : 'light-mode';
+
+        localStorage.setItem('theme', theme);
             
-        } , [theme]); 
+        } , [theme]);
 
         // we can write useEffect when we want to define a general dark-mode and light-mode classes for the whole app. But in this program we have to define the both classes for each page and component separately.
         
