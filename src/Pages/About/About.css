@@ -19,12 +19,14 @@
     font-size: 3.5rem;
     color: rgb(86, 56, 99);
     font-weight: 900;
+    padding: 1rem 0;
 }
 
 .aboutUs h2 {
     font-size: 2.5rem;
     color: rgb(94, 62, 109);
-    font-weight: 600;
+    font-weight: 700;
+    padding: 0.5rem 0;
 }
 
 .aboutUs p {
@@ -35,7 +37,6 @@
 .aboutUs ul {
     font-size: 1.5rem;
     color: rgb(61, 61, 61);
-    list-style-type: circle; /* Add this line to show circle bullet points */
 }
 
 
@@ -48,16 +49,24 @@
 
 .dark-about h1 {
     color: #c490ff;
+    font-size: 3.5rem;
+    font-weight: 900;
+    padding: 1rem 0;
 }
 
 .dark-about h2 {
     color: #cda1ff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 0.5rem 0;
 }
 
 .dark-about p {
     color: #dfdfdf;
+    font-size: 1.5rem;
 }
 
 .dark-about ul {
     color: #dfdfdf;
+    font-size: 1.5rem;
 }

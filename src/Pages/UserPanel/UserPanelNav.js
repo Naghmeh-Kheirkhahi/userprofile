@@ -5,6 +5,7 @@ import UserImage from "../../Assets/images/user.jpg";
 import { Link } from "react-router-dom";
 import { UserContext } from '../../Context/UserContext';
 import { ThemeContext } from "../../Context/ThemeContext";
+import Logout from "../../Components/Logout/Logout";
 
 
 
@@ -35,7 +36,7 @@ function UserPanelNav() {
                         <li><Link to='/UserPanel/Interests'><i class="fa fa-heart"></i> My Interests</Link></li>
                         <li><Link to='/UserPanel/PersonalInfo'><i class='fas fa-user-alt'></i> My Personal Information</Link></li>
                         <li><Link to='/UserPanel/ChangePass'><i class="fa fa-lock"></i> Change Password</Link></li>
-                        <li><Link to='/Login'><i class="fa fa-sign-out"></i> Logout</Link></li>
+                        <li><Logout/></li>
                     </ul>
                 </div>
             </div>

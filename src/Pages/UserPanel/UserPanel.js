@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { UserContext } from '../../Context/UserContext';
 import UserPanelNav from './UserPanelNav';
 import { ThemeContext } from "../../Context/ThemeContext";
+import Logout from '../../Components/Logout/Logout';
 
 
 
@@ -75,8 +76,7 @@ function UserPanel() {
                                     </div>
 
                                     <div className="col-3">
-                                        <Link to='/Login'><i class="fa fa-sign-out"></i>
-                                            <h2>Logout</h2></Link>
+                                        <Logout/>
                                     </div>
                                 </div>
                             </div>

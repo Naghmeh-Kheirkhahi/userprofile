@@ -7,7 +7,7 @@ import { ThemeContext } from '../../Context/ThemeContext';
 
 function Nav() {
 
-    const { toggleTheme } = useContext(ThemeContext);
+    const { theme , toggleTheme } = useContext(ThemeContext);
 
     
     return (
@@ -32,7 +32,9 @@ function Nav() {
 
                     <Link className='navLogin' to={'/Login'}><i class="fa fa-user"></i> Login</Link>
 
-                    <button onClick={toggleTheme}>Theme</button>
+                    <button id='navBtn' onClick={toggleTheme} className={theme === 'dark' ? 'dark-navBtn' : 'navBtn'}>
+                        {theme === 'dark' ? <i class='fas fa-moon'></i> : <i class='fas fa-sun'></i>} Theme
+                    </button>
                 </div>
             </nav>
         </div>

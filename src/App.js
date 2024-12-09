@@ -35,6 +35,8 @@ import Interests from './Pages/UserPanel/UserPanelMenu/Interests';
 import PersonalInfo from './Pages/UserPanel/UserPanelMenu/PersonalInfo';
 import ChangePass from './Pages/UserPanel/UserPanelMenu/ChangePass';
 
+import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
+
 
 
 
@@ -61,13 +63,14 @@ function App() {
 
             <Route path='/Register' element={<Register />} />
             <Route path='/Login' element={<Login />} />
-            <Route path='/UserPanel' element={<UserPanel />} />            
-            <Route path='/UserPanel/Orders' element={<Orders />} />
-            <Route path='/UserPanel/Address' element={<Address />} />
-            <Route path='/UserPanel/Payment' element={<Payment />} />
-            <Route path='/UserPanel/Interests' element={<Interests />} />
-            <Route path='/UserPanel/PersonalInfo' element={<PersonalInfo />} />
-            <Route path='/UserPanel/ChangePass' element={<ChangePass />} />
+
+            <Route path='/UserPanel' element={<ProtectedRoute><UserPanel /></ProtectedRoute>} />            
+            <Route path='/UserPanel/Orders' element={<ProtectedRoute><Orders /></ProtectedRoute>} />
+            <Route path='/UserPanel/Address' element={<ProtectedRoute><Address /></ProtectedRoute>} />
+            <Route path='/UserPanel/Payment' element={<ProtectedRoute><Payment /></ProtectedRoute>}/>
+            <Route path='/UserPanel/Interests' element={<ProtectedRoute><Interests /></ProtectedRoute>}/>
+            <Route path='/UserPanel/PersonalInfo' element={<ProtectedRoute><PersonalInfo /></ProtectedRoute>}/>
+            <Route path='/UserPanel/ChangePass' element={<ProtectedRoute><ChangePass /></ProtectedRoute>}/>
 
             <Route path='/Product/:productId' element={<SingleProduct />} />
             <Route path='/Cart' element={<Cart />} />
