@@ -39,22 +39,22 @@ function UserPanel() {
                                 <div className="row mb-5">
                                     <div className="col-3 mb-5 p-5">
                                         <Link to='/UserPanel/Orders'><i class="fa fa-shopping-bag"></i>
-                                            <h2>My Orders</h2></Link>
+                                            <p>My Orders</p></Link>
                                     </div>
 
                                     <div className="col-3 mb-5 p-5">
                                         <Link to='/'><i class="fa fa-shopping-cart"></i>
-                                            <h2>My Cart</h2></Link>
+                                            <p>My Cart</p></Link>
                                     </div>
 
                                     <div className="col-3 mb-5 p-5">
                                         <Link to='/UserPanel/Address'><i class="fa fa-map-marker-alt"></i> 
-                                            <h2>My Delivery Address</h2></Link>
+                                            <p>My Delivery Address</p></Link>
                                     </div>
 
                                     <div className="col-3 mb-5 p-5">
                                         <Link to='/UserPanel/Payment'><i class="fa fa-euro"></i>
-                                            <h2>My Payment List</h2></Link>
+                                            <p>My Payment List</p></Link>
                                     </div>
                                 </div>
 
@@ -62,17 +62,17 @@ function UserPanel() {
                                 <div className="row">
                                     <div className="col-3">
                                         <Link to='/UserPanel/Interests'><i class="fa fa-heart"></i>
-                                            <h2>My Interests</h2></Link>
+                                            <p>My Interests</p></Link>
                                     </div>
 
                                     <div className="col-3">
                                         <Link to='/UserPanel/PersonalInfo'><i class='fas fa-user-alt'></i>
-                                            <h2>My Personal Information</h2></Link>
+                                            <p>My Personal Information</p></Link>
                                     </div>
 
                                     <div className="col-3">
                                         <Link to='/UserPanel/ChangePass'><i class="fa fa-lock"></i>
-                                            <h2>Change Password</h2></Link>
+                                            <p>Change Password</p></Link>
                                     </div>
 
                                     <div className="col-3">

@@ -28,14 +28,14 @@ function UserPanelNav() {
 
                 <div className="user-panel-nav">
                     <ul>
-                        <li><Link to='/UserPanel'><i class="fa fa-dashboard"></i> My Dashboard</Link></li>
-                        <li><Link to='/UserPanel/Orders'><i class="fa fa-shopping-bag"></i> My Orders</Link></li>
-                        <li><Link to='/'><i class="fa fa-shopping-cart"></i> My Cart</Link></li>
-                        <li><Link to='/UserPanel/Address'><i class="fa fa-map-marker-alt"></i> My Delivery Address</Link></li>
-                        <li><Link to='/UserPanel/Payment'><i class="fa fa-euro"></i> My Payment List</Link></li>
-                        <li><Link to='/UserPanel/Interests'><i class="fa fa-heart"></i> My Interests</Link></li>
-                        <li><Link to='/UserPanel/PersonalInfo'><i class='fas fa-user-alt'></i> My Personal Information</Link></li>
-                        <li><Link to='/UserPanel/ChangePass'><i class="fa fa-lock"></i> Change Password</Link></li>
+                        <li><Link to='/UserPanel'><i class="fa fa-dashboard"></i> <p>My Dashboard</p></Link></li>
+                        <li><Link to='/UserPanel/Orders'><i class="fa fa-shopping-bag"></i> <p>My Orders</p></Link></li>
+                        <li><Link to='/'><i class="fa fa-shopping-cart"></i> <p>My Cart</p></Link></li>
+                        <li><Link to='/UserPanel/Address'><i class="fa fa-map-marker-alt"></i> <p>My Delivery Address</p></Link></li>
+                        <li><Link to='/UserPanel/Payment'><i class="fa fa-euro"></i> <p>My Payment List</p></Link></li>
+                        <li><Link to='/UserPanel/Interests'><i class="fa fa-heart"></i> <p>My Interests</p></Link></li>
+                        <li><Link to='/UserPanel/PersonalInfo'><i class='fas fa-user-alt'></i> <p>My Personal Information</p></Link></li>
+                        <li><Link to='/UserPanel/ChangePass'><i class="fa fa-lock"></i> <p>Change Password</p></Link></li>
                         <li><Logout/></li>
                     </ul>
                 </div>
