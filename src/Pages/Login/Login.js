@@ -75,7 +75,7 @@ function Login() {
                                 <p>Please enter your Username and Password.</p>
                             </div>
 
-                            <form onSubmit={handleLogin} className={theme === 'dark' ? 'dark-form' : 'light-form'}>
+                            <form onSubmit={handleLogin} className={theme === 'dark' ? 'dark-login-form' : 'light-login-form'}>
                                 {/* Username input */}
                                 <div data-mdb-input-init class="flex-fill mb-4">
                                     <label class="form-label" for="formEmail"><i class="fa fa-envelope"></i> Username</label>
@@ -89,10 +89,10 @@ function Login() {
                                 </div>
 
                                 {/* 2 column grid layout for inline styling */}
-                                <div class="row mb-4 text-center">
+                                <div class="row text-center">
                                     <div class="col-6 d-flex justify-content-center">
                                         {/* Checkbox */}
-                                        <div class="checkBox">
+                                        <div class="lg-checkBox">
                                             <input class="form-check-input" type="checkbox" value="" id="formCheck" />
                                             <label class="form-check-label" for="formCheck"> Remember me </label>
                                         </div>

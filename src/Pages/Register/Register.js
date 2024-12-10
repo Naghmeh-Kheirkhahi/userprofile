@@ -74,7 +74,7 @@ function Register() {
                                 <p>Please create an account to register in our website.</p>
                             </div>
 
-                            <form onSubmit={handleRegister} className={theme === 'dark' ? 'dark-form' : 'light-form'}>
+                            <form onSubmit={handleRegister} className={theme === 'dark' ? 'dark-register-form' : 'light-register-form'}>
 
                                 <div data-mdb-input-init class="flex-fill mb-4">
                                     <label class="form-label" for="formName"><i class="fa fa-user"></i> Name</label>
@@ -101,14 +101,14 @@ function Register() {
                                     <input type="password" id="formRePass" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                                 </div>
 
-                                <div class="checkBox">
+                                <div class="rgs-checkBox">
                                     <input class="form-check-input" type="checkbox" value="" id="formCheck" />
                                     <label class="form-check-label" for="formCheck">
                                         I agree all statements in <a href="#!">Terms of service</a>
                                     </label>
                                 </div>
 
-                                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="register-btn">Register</button>
+                                <button type="submit" data-mdb-button-init data-mdb-ripple-init className="register-btn">Register</button>
                             </form>
                         </div>
                     </div>
