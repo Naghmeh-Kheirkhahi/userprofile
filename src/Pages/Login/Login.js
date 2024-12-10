@@ -41,11 +41,14 @@ function Login() {
 
 
         // This code block is for the case when we don't want to check the username, email and password and make the Login free as the user enter any data they like.
+        
+        if (formUsername === "" || password === "") {
+            alert("Please fill in all the fields!");
+            return;
+        }
 
         setUsername(formUsername);
-
         alert("Login has been successfully done!");
-
         navigate("/UserPanel");
     };
 

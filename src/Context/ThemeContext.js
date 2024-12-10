@@ -16,6 +16,8 @@ export const ThemeProvider = ({children}) => {
         setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
     }
 
+    // children are used  to wrap the components that will be used in the app. It is used to connect the components to the ThemeContext.
+    // we need to save the last state of theme in the local storage to keep the theme when the page is refreshed. We can use the localStorage.setItem method to save the theme in the local storage and the localStorage.getItem method to get the theme from the local storage.
 
 
     useEffect(() => {

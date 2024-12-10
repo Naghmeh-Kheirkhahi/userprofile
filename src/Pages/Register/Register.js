@@ -32,17 +32,19 @@ function Register() {
 
         console.log(name, email, formUsername, password, confirmPassword);
 
-        if (password == confirmPassword) {
+        if (name !== "" && email !== "" &&  formUsername !== "" && password !== "" && confirmPassword !== "") {
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match. Please try again!");
+                    return;
+                }
 
             setUsername(formUsername);
             alert("Your Registration has been Successfully done!");
             navigate("/Login");
         }
-
         else {
-            alert("Passwords do not match. Please try again!");
+            alert("Please fill in all the fields!");
         }
-
     }
 
 
@@ -51,7 +53,6 @@ function Register() {
 
     return (
         <>
-
             <div className={theme === 'dark' ? 'dark-register-main' : 'register-main'}>
                 <div className="register-container">
                     <div className="row">
