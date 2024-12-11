@@ -65,7 +65,8 @@ function App() {
             <Route path='/Login' element={<Login />} />
 
 
-            <Route path='/UserPanel' element={<ProtectedRoute />}>
+            {/* here Userpanel and all the pages included it will be protected */}
+            <Route path='/UserPanel' element={<ProtectedRoute />}> 
               <Route path='/UserPanel' element={<UserPanel />} />
               <Route path='Orders' element={<Orders />} />
               <Route path='Address' element={<Address />} />

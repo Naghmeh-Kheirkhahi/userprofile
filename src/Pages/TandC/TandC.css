@@ -14,10 +14,11 @@
 .TandC h1 {
     text-align: center;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 3rem;
     padding: 0.5rem 0;
     color: #692c8f;
+    padding: 1rem 0;
 }
 
 /* .TandC h3 , .TandC h5 {
@@ -40,7 +41,7 @@
 }
 
 .TandC p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: rgb(60, 60, 60);
     margin-left: 2rem;
 }

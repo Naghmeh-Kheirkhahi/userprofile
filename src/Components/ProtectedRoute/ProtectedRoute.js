@@ -4,7 +4,7 @@ import { UserContext } from "../../Context/UserContext";
 import { Navigate, Outlet } from "react-router-dom";
 
 
-// protected route component used in the UserPanel page, checks if there is a username in the local storage. If there is no username, it will redirect to the Login page and in this way, it protects the userpanel or any page we wanna protect. also, children are used to wrap the UserPanel component or more than one components in the App.js file and they will be covered and protected by ProtectedRoute component.
+// protected route component used in the UserPanel page, checks if there is a username in the local storage. If there is no username, it will redirect to the Login page and in this way, it protects the userpanel or any page we wanna protect. also, children are used to wrap the UserPanel component or more than one components in the App.js file and they will be covered and protected by ProtectedRoute component. (with the help of Outlet)
 
 // function ProtectedRoute({children}) {  
 
@@ -22,7 +22,9 @@ import { Navigate, Outlet } from "react-router-dom";
 
 
 
-// 
+
+// we use Outlet instead of children to wrap more than one component in the App.js file and they will be covered and protected by ProtectedRoute component.
+
 function ProtectedRoute() {
 
     const { username } = useContext(UserContext);
