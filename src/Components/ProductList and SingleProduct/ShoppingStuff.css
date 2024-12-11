@@ -100,26 +100,26 @@
 }
 
 .price, .category, .description, .rating {
-    font-size: 1.2rem;
     color: rgb(47, 47, 47);
+}
+
+.price {
+    font-size: 1.3rem;
     margin: 1rem 0;
 }
 
 .category {
     font-size: 1.4rem;
-    color: rgb(47, 47, 47);
     margin: 1rem 0;
 }
 
 .description {
     font-size: 1.2rem;
-    color: rgb(47, 47, 47);
     margin: 2rem 0 1rem 0;
 }
 
 .rating {
     font-size: 1.3rem;
-    color: rgb(47, 47, 47);
     margin: 1rem 0;
 }
 
@@ -176,7 +176,7 @@
 
 }
 
-.productCategory {
+.productCat {
     font-size: 1.3rem;
     color: rgb(67, 14, 73);
     margin-bottom: 2rem;
@@ -190,6 +190,8 @@
 .productRating {
     font-size: 1.3rem;
     margin-top: 1.5rem;
+    color: rgb(67, 14, 73);
+
 }
 
 .productRating span {

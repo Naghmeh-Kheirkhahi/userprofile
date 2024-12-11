@@ -64,13 +64,17 @@ function App() {
             <Route path='/Register' element={<Register />} />
             <Route path='/Login' element={<Login />} />
 
-            <Route path='/UserPanel' element={<ProtectedRoute><UserPanel /></ProtectedRoute>} />            
-            <Route path='/UserPanel/Orders' element={<ProtectedRoute><Orders /></ProtectedRoute>} />
-            <Route path='/UserPanel/Address' element={<ProtectedRoute><Address /></ProtectedRoute>} />
-            <Route path='/UserPanel/Payment' element={<ProtectedRoute><Payment /></ProtectedRoute>}/>
-            <Route path='/UserPanel/Interests' element={<ProtectedRoute><Interests /></ProtectedRoute>}/>
-            <Route path='/UserPanel/PersonalInfo' element={<ProtectedRoute><PersonalInfo /></ProtectedRoute>}/>
-            <Route path='/UserPanel/ChangePass' element={<ProtectedRoute><ChangePass /></ProtectedRoute>}/>
+
+            <Route path='/UserPanel' element={<ProtectedRoute />}>
+              <Route path='/UserPanel' element={<UserPanel />} />
+              <Route path='Orders' element={<Orders />} />
+              <Route path='Address' element={<Address />} />
+              <Route path='Payment' element={<Payment />}/>
+              <Route path='Interests' element={<Interests />}/>
+              <Route path='PersonalInfo' element={<PersonalInfo />}/>
+              <Route path='ChangePass' element={<ChangePass />}/>
+            </Route>
+
 
             <Route path='/Product/:productId' element={<SingleProduct />} />
             <Route path='/Cart' element={<Cart />} />
