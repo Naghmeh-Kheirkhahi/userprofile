@@ -1,0 +1,155 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-main {
+    background-color: #9d00c5;
+}
+
+/* ThemeContext */
+.dark-login-main {
+    background-color: #350042;
+}
+
+
+.login-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 20rem 15rem 15rem 15rem;
+}
+
+
+.login-image img {
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.login-form {
+    padding: 3rem 0 5rem 0;
+}
+
+
+.login-heading {
+    text-align: center;
+}
+
+.login-heading h1 {
+    font-size: 3.2rem;
+    color: #8700a9;
+    font-weight: 800;
+    margin: 3rem 0 2rem 0;
+    padding: 0.5rem 0;
+}
+
+.login-heading p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: rgb(55, 55, 55);
+}
+
+.login-logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.login-logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 0;
+}
+
+.login-logo h1 {
+    font-size: 2.5rem;
+    color: #c300d8;
+    font-weight: 800;
+    margin: 2rem 0 0 1rem;
+    padding: 0.5rem 0;
+}
+
+
+
+.light-pass-form {
+    padding: 3rem ;
+    margin: 0 5rem;
+    border: 1px solid #c300d8;
+    border-radius: 10px;
+    background-color: #ff96f4;
+}
+
+/* ThemeContext */
+.dark-pass-form {
+    padding: 3rem ;
+    margin: 0 5rem;
+    border: 1px solid #c300d8;
+    border-radius: 10px;
+    background-color: #d680cd;
+}
+
+.light-pass-form i , .dark-pass-form i {
+    color: #a8009d;
+    padding: 0.5rem 0;
+    font-size: 7rem;
+}
+
+.light-pass-form h2 , .dark-pass-form h2 {
+    color: #680082;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 0.5rem 0 1.5rem 0;
+}
+
+.light-pass-form p , .dark-pass-form p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    color: rgb(40, 40, 40);
+}
+
+
+.light-pass-form label, .dark-pass-form label {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #72008e;
+    margin-bottom: 0;
+}
+
+.light-pass-form label i, .dark-pass-form label i {
+    color: #72008e;
+    font-size: 2rem;
+    margin: 0 0.3rem -0.3rem 0;
+    padding: 0;
+}
+
+.light-pass-form input, .dark-pass-form input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #c300d8;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: rgb(55, 55, 55);
+    outline: none;
+}
+
+
+.pass-btn {
+    width: 100%;
+    margin: 2rem auto 3rem auto;
+    padding: 1rem;
+    background-color: #ff9100;
+    border: 1px solid #dc7d00;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+}
+

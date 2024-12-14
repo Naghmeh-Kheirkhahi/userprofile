@@ -103,7 +103,7 @@ function Login() {
 
                                     <div class="col-6 forget-pass">
                                         {/* Simple link */}
-                                        <a href="#!">Forgot password?</a>
+                                        <a href="/ForgotPass">Forgot password?</a>
                                     </div>
                                 </div>
 

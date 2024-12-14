@@ -20,7 +20,7 @@ import CustomerSupport from './Pages/CustomerSupport/CustomerSupport';
 import TandC from './Pages/TandC/TandC';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
-import UserPanel from './Pages/UserPanel/UserPanel';
+import ForgotPass from './Pages/ForgotPass/ForgotPass';
 
 import { ThemeProvider } from './Context/ThemeContext';
 import Test from './Components/Test/Test';
@@ -28,6 +28,8 @@ import Test from './Components/Test/Test';
 import { UserProvider } from './Context/UserContext';
 import DisplayUsername from './Components/Test/DisplayUsername';
 
+import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
+import UserPanel from './Pages/UserPanel/UserPanel';
 import Orders from './Pages/UserPanel/UserPanelMenu/Orders';
 import Address from './Pages/UserPanel/UserPanelMenu/Address';
 import Payment from './Pages/UserPanel/UserPanelMenu/Payment';
@@ -35,7 +37,6 @@ import Interests from './Pages/UserPanel/UserPanelMenu/Interests';
 import PersonalInfo from './Pages/UserPanel/UserPanelMenu/PersonalInfo';
 import ChangePass from './Pages/UserPanel/UserPanelMenu/ChangePass';
 
-import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 
 
 
@@ -63,6 +64,7 @@ function App() {
 
             <Route path='/Register' element={<Register />} />
             <Route path='/Login' element={<Login />} />
+            <Route path='/ForgotPass' element={<ForgotPass />} /> 
 
 
             {/* here Userpanel and all the pages included it will be protected */}
