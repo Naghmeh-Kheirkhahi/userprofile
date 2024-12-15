@@ -14,24 +14,26 @@ nav {
     background-color: rgb(255, 240, 216);
 }
 
+.navLogo {
+    width: 6%;
+    margin-left: 2rem;
+}
+
 nav img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
     border-radius: 50%;
-    margin-left: 0;
-    margin-top: 0;
 }
 
 nav li {
     font-size: 1.5rem;
     font-weight: 800;
-    padding: 0.5rem 0 0 2rem; 
+    padding: 1rem 1rem 0 2rem; 
 
 }
 
 
 .navLink {
-    color: rgb(176, 76, 0);
+    color: rgb(150, 65, 0);
     text-decoration: none;
 } 
 
@@ -41,7 +43,7 @@ nav li {
 } 
 
 .navLogin {
-    color: rgb(176, 76, 0);
+    color: rgb(150, 65, 0);
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 800;

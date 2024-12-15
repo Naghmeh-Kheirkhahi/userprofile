@@ -14,7 +14,7 @@ function Nav() {
         <div className='mainMenu'>
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <Link class="navbar-brand" to="/"><img src={logo} alt="Logo"/></Link>
+                    <Link class="navbar-brand navLogo" to="/"><img src={logo} alt="Logo"/></Link>
                     
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
