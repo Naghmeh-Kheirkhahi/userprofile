@@ -48,12 +48,11 @@ function ShoppingStuffParent() {
         console.log('price:' + price);
 
         setQuantity(quantity + 1);
+
         console.log('quantity:' + quantity);
 
         console.log('total price:' + quantity * price);
     }
-
-
 
 
 
@@ -119,7 +118,7 @@ function ShoppingStuffParent() {
                 <div class="btns">
                     <ShoppingButton btnName={"Men's Clothing"} btnClass={theme === 'dark' ? 'themeCatBtn' : 'categoryBtn'} btnClick={() => handleCategoryClick("men's clothing")} />
                     <ShoppingButton btnName={"Women's Clothing"} btnClass={theme === 'dark' ? 'themeCatBtn' : 'categoryBtn'} btnClick={() => handleCategoryClick("women's clothing")} />
-                    <ShoppingButton btnName={"Jewelery"} btnClass={theme === 'dark' ? 'themeCatBtn' : 'categoryBtn'} btnClick={() => handleCategoryClick("jewelery")} />
+                    <ShoppingButton btnName={"Jewelry"} btnClass={theme === 'dark' ? 'themeCatBtn' : 'categoryBtn'} btnClick={() => handleCategoryClick("jewelery")} />
                     <ShoppingButton btnName={"Electronics"} btnClass={theme === 'dark' ? 'themeCatBtn' : 'categoryBtn'} btnClick={() => handleCategoryClick("electronics")} />
                 </div>
 
@@ -137,8 +136,6 @@ function ShoppingStuffParent() {
 
                             buyProduct={() => { handleBuyProduct(item.price) }}
                         />
-
-
                     ))}
                 </div>
             </div>

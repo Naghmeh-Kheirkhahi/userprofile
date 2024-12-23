@@ -36,6 +36,7 @@ import Payment from './Pages/UserPanel/UserPanelMenu/Payment';
 import Interests from './Pages/UserPanel/UserPanelMenu/Interests';
 import PersonalInfo from './Pages/UserPanel/UserPanelMenu/PersonalInfo';
 import ChangePass from './Pages/UserPanel/UserPanelMenu/ChangePass';
+import Category from './Components/Footer/Category';
 
 
 
@@ -87,6 +88,8 @@ function App() {
             <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
             <Route path='/CustomerSupport' element={<CustomerSupport />} />
             <Route path='/TandC' element={<TandC />} />
+
+            <Route path='/Category/:category' element= {<Category />} />  
           </Routes>
 
           <Footer />

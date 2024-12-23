@@ -137,3 +137,37 @@ footer {
     font-size: 1.2rem;
     font-weight: 700;
 }
+
+
+
+/* CSS for Category Componenet */
+
+
+
+.mainClassCategory {
+    align-items: center;
+    text-align: center;
+    margin: 20rem 5rem 10rem 5rem;
+}
+
+.lightTitle {
+    margin: 2rem 0 4rem 0;
+    padding: 1rem 0;
+    font-size: 4rem;
+    color: rgb(98, 0, 128);
+    font-weight: 900;
+}
+
+/* themeContext */
+
+.darkClassCategory {
+    background-color: rgb(50, 50, 50);
+}
+
+.darkTitle {
+    margin: 2rem 0 4rem 0;
+    padding: 1rem 0;
+    font-size: 4rem;
+    color: rgb(162, 91, 184);
+    font-weight: 900;
+}

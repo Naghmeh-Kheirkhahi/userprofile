@@ -82,10 +82,9 @@
 
 
 .product img {
-    width: 70%;
-    height: 40%;
+    width: 60%;
     border-radius: 20px;
-    margin: 3rem auto; /* Center the image horizontally */
+    margin: 4rem auto; /* Center the image horizontally */
 }
 
 .productInfo {
@@ -96,32 +95,29 @@
 }
 
 .product h2 {
-    margin-bottom: 2rem;
     font-size: 1.7rem;
+    margin-bottom: 2rem;
 }
 
 .price, .category, .description, .rating {
     color: rgb(47, 47, 47);
+    margin-bottom: 3rem;
 }
 
 .price {
     font-size: 1.3rem;
-    margin: 1rem 0;
 }
 
 .category {
     font-size: 1.4rem;
-    margin: 1rem 0;
 }
 
 .description {
     font-size: 1.2rem;
-    margin: 2rem 0 1rem 0;
 }
 
 .rating {
     font-size: 1.3rem;
-    margin: 1rem 0;
 }
 
 
@@ -200,7 +196,7 @@
 }
 
 .productBtn {
-    margin: 1rem 10rem;
+    margin: 1rem 10rem 4rem 10rem;
     border-radius: 10px;
     border: 1px solid rgb(185, 18, 0);
     background-color: rgb(185, 18, 0);

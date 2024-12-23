@@ -3,14 +3,19 @@ import React from "react";
 import './Footer.css';
 import logo from '../../Assets/images/logo.jpg';
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
 function Footer() {
+
+    const navigate = useNavigate();
+
+
     return (
         <>
 
-        <footer>
+            <footer>
                 <div className="row">
                     <div className="col-3">
                         <div className="footer-logo">
@@ -61,10 +66,10 @@ function Footer() {
                     <div className="col-2 footer-list">
                         <h3>Categories</h3>
                         <ul>
-                            <li><a href="/">Men's Clothing</a></li>
-                            <li><a href="/">Women's Clothing</a></li>
-                            <li><a href="/">Jewerly</a></li>
-                            <li><a href="/">Electronics</a></li>
+                            <li><Link to="/Category/Men-clothing">Men's Clothing</Link></li>
+                            <li><Link to="/Category/Women-clothing">Women's Clothing</Link></li>
+                            <li><Link to="/Category/Jewelery">Jewelry</Link></li>
+                            <li><Link to="/Category/Electronics">Electronics</Link></li>
                         </ul>
                     </div>
                 </div>
