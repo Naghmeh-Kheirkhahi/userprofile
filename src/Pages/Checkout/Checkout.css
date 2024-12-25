@@ -99,6 +99,8 @@
 .checkout-form img, .dark-checkout-form img {
     border-radius: 10px;
     margin-right: 10rem;
+    background-color: transparent;
+    mix-blend-mode: multiply;
 }
 
 
@@ -147,6 +149,7 @@
 }
 
 .checkout-form button {
+    width: 100%;
     background-color: rgb(247, 156, 0);
     border: 1px solid rgb(235, 150, 0);
     border-radius: 10px;
@@ -155,15 +158,14 @@
     font-size: 1.6rem;
     font-weight: 700;
     padding: 1rem 2rem;
-    width: 50%;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin:  1rem auto 2rem auto; 
 }
 
 
 /* ***ThemeContext*** */
 
 .dark-checkout-form button {
+    width: 100%;
     border: 1px solid rgb(255, 89, 0);
     background-color: rgb(255, 105, 25);
     border-radius: 10px;
@@ -172,9 +174,7 @@
     font-size: 1.6rem;
     font-weight: 700;
     padding: 1rem 2rem;
-    width: 50%;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin:  1rem auto 2rem auto; 
 }
 
 

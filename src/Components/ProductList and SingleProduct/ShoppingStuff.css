@@ -85,6 +85,8 @@
     width: 60%;
     border-radius: 20px;
     margin: 4rem auto; /* Center the image horizontally */
+    background-color: transparent;
+    mix-blend-mode: multiply;
 }
 
 .productInfo {
@@ -155,6 +157,8 @@
     width: 80%;
     border-radius: 20px;
     margin: 2rem auto;
+    background-color: transparent;
+    mix-blend-mode: multiply;
 }
 
 .singleProduct h1 , .light-singleProduct h1 {

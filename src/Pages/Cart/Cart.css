@@ -74,6 +74,8 @@
     width: 150px;
     height: 200px;
     border-radius: 15px;
+    background-color: transparent;
+    mix-blend-mode: multiply;
 }
 
 .productName {
@@ -177,3 +179,12 @@
     font-weight: bold;
 }
 
+
+
+.emptyCard {
+    margin: 20rem 10rem;
+    text-align: center;
+    font-size: 5rem;
+    color: rgb(91, 20, 121);
+    font-weight: 700;
+}

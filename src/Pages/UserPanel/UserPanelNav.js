@@ -30,7 +30,7 @@ function UserPanelNav() {
                     <ul>
                         <li><Link to='/UserPanel'><i class="fa fa-dashboard"></i> <p>My Dashboard</p></Link></li>
                         <li><Link to='/UserPanel/Orders'><i class="fa fa-shopping-bag"></i> <p>My Orders</p></Link></li>
-                        <li><Link to='/'><i class="fa fa-shopping-cart"></i> <p>My Cart</p></Link></li>
+                        <li><Link to='/Cart'><i class="fa fa-shopping-cart"></i> <p>My Cart</p></Link></li>
                         <li><Link to='/UserPanel/Address'><i class="fa fa-map-marker-alt"></i> <p>My Delivery Address</p></Link></li>
                         <li><Link to='/UserPanel/Payment'><i class="fa fa-euro"></i> <p>My Payment List</p></Link></li>
                         <li><Link to='/UserPanel/Interests'><i class="fa fa-heart"></i> <p>My Interests</p></Link></li>

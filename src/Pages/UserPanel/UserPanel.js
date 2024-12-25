@@ -43,7 +43,7 @@ function UserPanel() {
                                     </div>
 
                                     <div className="col-3 mb-5 p-5">
-                                        <Link to='/'><i class="fa fa-shopping-cart"></i>
+                                        <Link to='/Cart'><i class="fa fa-shopping-cart"></i>
                                             <p>My Cart</p></Link>
                                     </div>
 
