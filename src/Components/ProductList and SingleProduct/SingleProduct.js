@@ -32,9 +32,11 @@ function SingleProduct() {
 
     const navigate = useNavigate();
     const addProductToCart = (productId) => {
-        navigate('/Cart', {
-            state: { id: product.id, name: product.title, category: product.category, price: product.price, image: product.image, quantity: 1 }
-        })
+        navigate('/Cart')
+
+        // navigate('/Cart', {
+        //     state: { id: product.id, name: product.title, category: product.category, price: product.price, image: product.image, quantity: 1 }
+        // }) I use it when we have no LS and we want to pass the data to the Cart page. But now we use LS to store the data and pass it to the Cart page.
 
         // if(getProduct==null){
         //     books=[]

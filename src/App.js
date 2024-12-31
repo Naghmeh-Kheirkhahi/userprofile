@@ -65,31 +65,35 @@ function App() {
 
             <Route path='/Register' element={<Register />} />
             <Route path='/Login' element={<Login />} />
-            <Route path='/ForgotPass' element={<ForgotPass />} /> 
+            <Route path='/ForgotPass' element={<ForgotPass />} />
 
 
             {/* here Userpanel and all the pages included it will be protected */}
-            <Route path='/UserPanel' element={<ProtectedRoute />}> 
+            <Route path='/UserPanel' element={<ProtectedRoute />} >
               <Route path='/UserPanel' element={<UserPanel />} />
               <Route path='Orders' element={<Orders />} />
               <Route path='Address' element={<Address />} />
-              <Route path='Payment' element={<Payment />}/>
-              <Route path='Interests' element={<Interests />}/>
-              <Route path='PersonalInfo' element={<PersonalInfo />}/>
-              <Route path='ChangePass' element={<ChangePass />}/>
+              <Route path='Payment' element={<Payment />} />
+              <Route path='Interests' element={<Interests />} />
+              <Route path='PersonalInfo' element={<PersonalInfo />} />
+              <Route path='ChangePass' element={<ChangePass />} />
             </Route>
 
 
             <Route path='/Product/:productId' element={<SingleProduct />} />
-            <Route path='/Cart' element={<Cart />} />
-            <Route path='/Checkout' element={<Checkout />} />
+
+            <Route path="/Cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
+            <Route path="/Checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
+
+
+
 
             <Route path='/FAQ' element={<FAQ />} />
             <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
             <Route path='/CustomerSupport' element={<CustomerSupport />} />
             <Route path='/TandC' element={<TandC />} />
 
-            <Route path='/Category/:category' element= {<Category />} />  
+            <Route path='/Category/:category' element={<Category />} />
           </Routes>
 
           <Footer />

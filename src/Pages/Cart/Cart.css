@@ -188,3 +188,12 @@
     color: rgb(91, 20, 121);
     font-weight: 700;
 }
+
+/* theme context */
+.dark-emptyCard {
+    margin: 20rem 10rem;
+    text-align: center;
+    font-size: 5rem;
+    color: rgb(182 90 221);
+    font-weight: 700;
+}

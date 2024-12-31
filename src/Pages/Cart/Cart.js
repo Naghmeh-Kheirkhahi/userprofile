@@ -31,7 +31,8 @@ function Cart() {
     const [products, setProducts] = useState([]) // when we use useState , we can store different states of a property or variable and store the last state of it. Whereas when we define a variable in this way: var name = 'Ali' and it changes and when we run and want to use it, it will use the first input not the one put after changing.
 
     const location = useLocation(); // useNavigate sends something like id or any data/parameter to somewhere else and we can determine a url and send/pass something like id to the url by useNavigate
-    //const { state } = location; // useParams gets only one parameter like id sent by useNavigate but useLocation does something like this but can get more than one parameters in an Object form from useNavigate, so useLocation is useful for website security. Also useLocation can determine the location we are in and where we were and where we are going.
+    
+    //const { state } = location; // useParams gets only one parameter like id sent by useNavigate but useLocation does something like this but can get more than one parameters in an Object form from useNavigate, so useLocation is useful for website security. Also useLocation can determine the location we are in and where we were and where we are going. we commented it because we dont need it here when we used LS.
     // console.log(state);
     // console.log(state.name, state.price, state.category, state.image);
 
@@ -196,7 +197,7 @@ function Cart() {
 
 
                     : (
-                        <div className="emptyCard"><p>Your Cart is empty ! &#128577; </p></div>
+                        <div className={theme === 'dark' ? 'dark-emptyCard' : 'emptyCard'}><p>Your Cart is empty ! &#128577; </p></div>
                     )}
             </div>
 
