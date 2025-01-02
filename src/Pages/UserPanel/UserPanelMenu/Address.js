@@ -52,9 +52,7 @@ function Address() {
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </>
     )
 }

@@ -125,7 +125,7 @@
     color: rgb(48, 48, 48);
     outline: none;
     border-radius: 10px;
-    border: 1px solid #a0a0a0;
+    border: none;
     width: 100%;
 }
 
@@ -198,7 +198,7 @@
     color: rgb(48, 48, 48);
     outline: none;
     border-radius: 10px;
-    border: 1px solid #a0a0a0;
+    border: none;
     width: 100%;
 }
 
@@ -228,7 +228,7 @@
     color: rgb(48, 48, 48);
     outline: none;
     border-radius: 10px;
-    border: 1px solid #a0a0a0;
+    border: none;
     width: 100%;
 }
 
