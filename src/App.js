@@ -50,7 +50,6 @@ function App() {
     <>
 
       <ThemeProvider>
-
         <UserProvider>
           <Nav />
 
@@ -67,7 +66,6 @@ function App() {
             <Route path='/Login' element={<Login />} />
             <Route path='/ForgotPass' element={<ForgotPass />} />
 
-
             {/* here Userpanel and all the pages included it will be protected */}
             <Route path='/UserPanel' element={<ProtectedRoute />} >
               <Route path='/UserPanel' element={<UserPanel />} />
@@ -79,14 +77,10 @@ function App() {
               <Route path='ChangePass' element={<ChangePass />} />
             </Route>
 
-
             <Route path='/Product/:productId' element={<SingleProduct />} />
 
             <Route path="/Cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
             <Route path="/Checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
-
-
-
 
             <Route path='/FAQ' element={<FAQ />} />
             <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
@@ -98,7 +92,6 @@ function App() {
 
           <Footer />
         </UserProvider>
-
       </ThemeProvider>
     </>
   );

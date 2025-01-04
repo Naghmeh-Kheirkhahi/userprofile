@@ -1,5 +1,5 @@
 
-import React, {useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Register.css";
 import { Link } from "react-router-dom";
 import logo from "../../Assets/images/logo.jpg";
@@ -32,18 +32,17 @@ function Register() {
 
         console.log(name, email, formUsername, password, confirmPassword);
 
-        if (name !== "" && email !== "" &&  formUsername !== "" && password !== "" && confirmPassword !== "") {
-                if (password !== confirmPassword) {
-                    alert("Passwords do not match. Please try again!");
-                    return;
-                }
+        if (name !== "" && email !== "" && formUsername !== "" && password !== "" && confirmPassword !== "") {
+            if (password !== confirmPassword) {
+                alert("The Passwords do not match. Please try again!");
+                return;
+            }
 
             setUsername(formUsername);
             alert("Your Registration has been Successfully done!");
             navigate("/Login");
-        }
-        else {
-            alert("Please fill in all the fields!");
+        } else {
+            alert("Please fill all the fields!");
         }
     }
 
