@@ -15,7 +15,7 @@ function Register() {
 
     const { theme } = useContext(ThemeContext);
 
-    const { setUsername } = useContext(UserContext);
+    const { username, setUsername } = useContext(UserContext);
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -54,64 +54,72 @@ function Register() {
         <>
             <div className={theme === 'dark' ? 'dark-register-main' : 'register-main'}>
                 <div className="register-container">
-                    <div className="row">
 
-                        <div className="register-image col-6">
-                            <img src={register} />
+                    {username ? (
+                        <div className={theme === 'dark' ? 'dark-prelogged' : 'prelogged'}>
+                            <p>You have already Logged in as a User.</p>
+                            <p>To access the Login Form, please Log out first.</p>
                         </div>
-
-
-                        <div className="register-form col-6">
-                            <div className="register-heading">
-                                <div className="register-logo">
-                                    <Link to="/"><img src={logo} alt="Logo" />
-                                        <h1>Producto Shop</h1>
-                                    </Link>
-                                </div>
-
-                                <h1>Register Form</h1>
-
-                                <p>Please create an account to register in our website.</p>
+                    ) : (
+                        <div className="row">
+                            <div className="register-image col-6">
+                                <img src={register} />
                             </div>
 
-                            <form onSubmit={handleRegister} className={theme === 'dark' ? 'dark-register-form' : 'light-register-form'}>
 
-                                <div data-mdb-input-init class="flex-fill mb-4">
-                                    <label class="form-label" for="formName"><i class="fa fa-user"></i> Name</label>
-                                    <input type="text" id="formName" value={name} onChange={(e) => setName(e.target.value)} />
+                            <div className="register-form col-6">
+                                <div className="register-heading">
+                                    <div className="register-logo">
+                                        <Link to="/"><img src={logo} alt="Logo" />
+                                            <h1>Producto Shop</h1>
+                                        </Link>
+                                    </div>
+
+                                    <h1>Register Form</h1>
+
+                                    <p>Please create an account to register in our website.</p>
                                 </div>
 
-                                <div data-mdb-input-init class="flex-fill mb-4">
-                                    <label class="form-label" for="formEmail"><i class="fa fa-envelope"></i> Email Address</label>
-                                    <input type="email" id="formEmail" value={email} onChange={(e) => setEmail(e.target.value)} />
-                                </div>
+                                <form onSubmit={handleRegister} className={theme === 'dark' ? 'dark-register-form' : 'light-register-form'}>
 
-                                <div data-mdb-input-init class="flex-fill mb-4">
-                                    <label class="form-label" for="formUsername"><i class="fa fa-envelope"></i> Username</label>
-                                    <input type="text" id="formUsername" value={formUsername} onChange={(e) => setFormUsername(e.target.value)} />
-                                </div>
+                                    <div data-mdb-input-init class="flex-fill mb-4">
+                                        <label class="form-label" for="formName"><i class="fa fa-user"></i> Name</label>
+                                        <input type="text" id="formName" value={name} onChange={(e) => setName(e.target.value)} />
+                                    </div>
 
-                                <div data-mdb-input-init class="flex-fill mb-4">
-                                    <label class="form-label" for="formPass"><i class='fas fa-lock'></i> Password</label>
-                                    <input type="password" id="formPass" value={password} onChange={(e) => setPassword(e.target.value)} />
-                                </div>
+                                    <div data-mdb-input-init class="flex-fill mb-4">
+                                        <label class="form-label" for="formEmail"><i class="fa fa-envelope"></i> Email Address</label>
+                                        <input type="email" id="formEmail" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                    </div>
 
-                                <div data-mdb-input-init class="flex-fill mb-4">
-                                    <label class="form-label" for="formRePass"><i class='fas fa-key'></i> Repeat your password</label>
-                                    <input type="password" id="formRePass" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-                                </div>
+                                    <div data-mdb-input-init class="flex-fill mb-4">
+                                        <label class="form-label" for="formUsername"><i class="fa fa-envelope"></i> Username</label>
+                                        <input type="text" id="formUsername" value={formUsername} onChange={(e) => setFormUsername(e.target.value)} />
+                                    </div>
 
-                                <div class="rgs-checkBox">
-                                    <input class="form-check-input" type="checkbox" value="" id="formCheck" />
-                                    <label class="form-check-label" for="formCheck">
-                                        I agree all statements in <a href="#!">Terms of service</a>
-                                    </label>
-                                </div>
+                                    <div data-mdb-input-init class="flex-fill mb-4">
+                                        <label class="form-label" for="formPass"><i class='fas fa-lock'></i> Password</label>
+                                        <input type="password" id="formPass" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                    </div>
 
-                                <button type="submit" data-mdb-button-init data-mdb-ripple-init className="register-btn">Register</button>
-                            </form>
+                                    <div data-mdb-input-init class="flex-fill mb-4">
+                                        <label class="form-label" for="formRePass"><i class='fas fa-key'></i> Repeat your password</label>
+                                        <input type="password" id="formRePass" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                                    </div>
+
+                                    <div class="rgs-checkBox">
+                                        <input class="form-check-input" type="checkbox" value="" id="formCheck" />
+                                        <label class="form-check-label" for="formCheck">
+                                            I agree all statements in <a href="#!">Terms of service</a>
+                                        </label>
+                                    </div>
+
+                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init className="register-btn">Register</button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
+                    )}
+
                 </div>
             </div>
         </>

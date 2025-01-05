@@ -22,6 +22,21 @@
     margin: 20rem 15rem 15rem 15rem;
 }
 
+.prelogged {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #e24400;
+    margin: 10rem 5rem;
+}
+/* ThemeContext */
+.dark-prelogged {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ba3800;
+    margin: 10rem 5rem;
+}
 
 .register-image img {
     width: 100%;
