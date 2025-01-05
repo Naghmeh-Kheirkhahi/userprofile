@@ -14,7 +14,7 @@ function Login() {
 
     const { theme } = useContext(ThemeContext);
 
-    const { setUsername } = useContext(UserContext); // here we are using the setUsername from the UserContext because we want to set the username when the user logs in.
+    const { username, setUsername } = useContext(UserContext); // here we are using the setUsername from the UserContext because we want to set the username when the user logs in.
 
     const [formUsername, setFormUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -41,7 +41,7 @@ function Login() {
 
 
         // This code block is for the case when we don't want to check the username, email and password and make the Login free as the user enter any data they like.
-        
+
         if (formUsername === "" || password === "") {
             alert("Please fill all the fields!");
             return;
@@ -59,73 +59,81 @@ function Login() {
         <>
             <div className={theme === 'dark' ? 'dark-login-main' : 'login-main'}>
                 <div className="login-container">
-                    <div className="row">
-                        <div className="login-image col-6">
-                            <img src={login} />
+
+                    {username ? (
+                        <div className={theme === 'dark' ? 'dark-prelogged' : 'prelogged'}>
+                            <p>You have already Logged in as a User.</p>
+                            <p>To access the Login Form, please Log out first.</p>
                         </div>
-
-
-                        <div className="login-form col-6">
-                            <div className="login-heading">
-                                <div className="login-logo">
-                                    <Link to="/"><img src={logo} alt="Logo" />
-                                        <h1>Producto Shop</h1>
-                                    </Link>
-                                </div>
-
-                                <h1>Login Form</h1>
-
-                                <p>Please enter your Username and Password.</p>
+                    ) : (
+                        <div className="row">
+                            <div className="login-image col-6">
+                                <img src={login} />
                             </div>
 
-                            <form onSubmit={handleLogin} className={theme === 'dark' ? 'dark-login-form' : 'light-login-form'}>
-                                {/* Username input */}
-                                <div data-mdb-input-init class="flex-fill mb-4">
-                                    <label class="form-label" for="formEmail"><i class="fa fa-envelope"></i> Username</label>
-                                    <input type="text" id="formUsername" value={formUsername} onChange={(e) => setFormUsername(e.target.value)} />
+                            <div className="login-form col-6">
+                                <div className="login-heading">
+                                    <div className="login-logo">
+                                        <Link to="/"><img src={logo} alt="Logo" />
+                                            <h1>Producto Shop</h1>
+                                        </Link>
+                                    </div>
+
+                                    <h1>Login Form</h1>
+
+                                    <p>Please enter your Username and Password.</p>
                                 </div>
 
-                                {/* Password input */}
-                                <div data-mdb-input-init class="flex-fill mb-4">
-                                    <label class="form-label" for="formPass"><i class='fas fa-lock'></i> Password</label>
-                                    <input type="password" id="formPass" value={password} onChange={(e) => setPassword(e.target.value)} />
-                                </div>
+                                <form onSubmit={handleLogin} className={theme === 'dark' ? 'dark-login-form' : 'light-login-form'}>
+                                    {/* Username input */}
+                                    <div data-mdb-input-init class="flex-fill mb-4">
+                                        <label class="form-label" for="formEmail"><i class="fa fa-envelope"></i> Username</label>
+                                        <input type="text" id="formUsername" value={formUsername} onChange={(e) => setFormUsername(e.target.value)} />
+                                    </div>
 
-                                {/* 2 column grid layout for inline styling */}
-                                <div class="row text-center">
-                                    <div class="col-6 d-flex justify-content-center">
-                                        {/* Checkbox */}
-                                        <div class="lg-checkBox">
-                                            <input class="form-check-input" type="checkbox" value="" id="formCheck" />
-                                            <label class="form-check-label" for="formCheck"> Remember me </label>
+                                    {/* Password input */}
+                                    <div data-mdb-input-init class="flex-fill mb-4">
+                                        <label class="form-label" for="formPass"><i class='fas fa-lock'></i> Password</label>
+                                        <input type="password" id="formPass" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                    </div>
+
+                                    {/* 2 column grid layout for inline styling */}
+                                    <div class="row text-center">
+                                        <div class="col-6 d-flex justify-content-center">
+                                            {/* Checkbox */}
+                                            <div class="lg-checkBox">
+                                                <input class="form-check-input" type="checkbox" value="" id="formCheck" />
+                                                <label class="form-check-label" for="formCheck"> Remember me </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 forget-pass">
+                                            {/* Simple link */}
+                                            <a href="/ForgotPass">Forgot password?</a>
                                         </div>
                                     </div>
 
-                                    <div class="col-6 forget-pass">
-                                        {/* Simple link */}
-                                        <a href="/ForgotPass">Forgot password?</a>
+                                    {/* Submit button */}
+                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init className="login-btn">Login</button>
+
+
+                                    {/* Register buttons */}
+                                    <div className="login-socialmedia">
+                                        <p>Don't have an account? <Link to={'/Register'}>Register</Link></p>
+                                        <p>or sign up with:</p>
+
+                                        <div className="socialmedia-icon">
+                                            <a><i class="fab fa-facebook-f"></i></a>
+                                            <a><i class="fab fa-google"></i></a>
+                                            <a><i class="fab fa-twitter"></i></a>
+                                            <a><i class="fab fa-github"></i></a>
+                                        </div>
                                     </div>
-                                </div>
-
-                                {/* Submit button */}
-                                <button type="submit" data-mdb-button-init data-mdb-ripple-init className="login-btn">Login</button>
-
-
-                                {/* Register buttons */}
-                                <div className="login-socialmedia">
-                                    <p>Don't have an account? <Link to={'/Register'}>Register</Link></p>
-                                    <p>or sign up with:</p>
-
-                                    <div className="socialmedia-icon">
-                                        <a><i class="fab fa-facebook-f"></i></a>
-                                        <a><i class="fab fa-google"></i></a>
-                                        <a><i class="fab fa-twitter"></i></a>
-                                        <a><i class="fab fa-github"></i></a>
-                                    </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
-                    </div>
+                    )}
+
                 </div>
             </div>
         </>

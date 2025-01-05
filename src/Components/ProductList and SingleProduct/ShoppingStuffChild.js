@@ -16,6 +16,8 @@ function ShoppingStuffChild(props) {
             <div className="product" onClick={props.showProduct}> 
                 {/* we can chose any name for click action after props*/}
                 {/* <div className="card"> */}
+
+                    <i class="fa fa-heart"></i>
                     <img src={props.image} alt="..." />
                     <div className="productInfo">
                         <h2>{props.title}</h2>
