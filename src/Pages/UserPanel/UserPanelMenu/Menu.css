@@ -153,9 +153,10 @@
 
 .choose-category i {
     margin-bottom: -0.3rem;
+    padding: 0.1rem;
 }
 
-.favourite-category {
+/* .favourite-category {
     display: flex;
     justify-content: center;
 }
@@ -169,7 +170,7 @@
     border: 1px solid #a000ab;;
     color: #ffffff;
     border-radius: 10px;
-}
+} */
 
 
 

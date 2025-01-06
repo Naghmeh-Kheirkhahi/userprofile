@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import logo from '../../Assets/images/logo.jpg';
 import './Nav.css';
 import { ThemeContext } from '../../Context/ThemeContext';
+import { UserContext } from '../../Context/UserContext';
 
 
 function Nav() {
 
     const { theme , toggleTheme } = useContext(ThemeContext);
+    const { username } = useContext(UserContext);
 
     
     return (
@@ -30,7 +32,8 @@ function Nav() {
                         </ul>
                     </div>
 
-                    <Link className='navLogin' to={'/Login'}><i class="fa fa-user"></i> Login</Link>
+                    {username ? <Link className='navLogin' to='/UserPanel'><i class="fa fa-user"></i> {username}</Link> : 
+                    <Link className='navLogin' to='/Login'><i class="fa fa-user"></i> Login</Link>}
 
                     <button id='navBtn' onClick={toggleTheme} className={theme === 'dark' ? 'dark-navBtn' : 'navBtn'}>
                         {theme === 'dark' ? <i class='fas fa-moon'></i> : <i class='fas fa-sun'></i>} Theme

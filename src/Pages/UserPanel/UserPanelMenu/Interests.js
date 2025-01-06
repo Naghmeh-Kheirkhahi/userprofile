@@ -24,14 +24,14 @@ function Interests() {
                         <div className="main-container">
                             <h1>My Interests</h1>
 
-                            <p className="choose-category">Please Choose your <span><i class="fa fa-heart"></i> favourite <i class="fa fa-heart"></i></span> Category or Categories.</p>
+                            <p className="choose-category">Here you can see your <span><i class="fa fa-heart"></i> favourite <i class="fa fa-heart"></i></span> Products.</p>
 
-                            <div className="favourite-category">
+                            {/* <div className="favourite-category">
                                 <button>Men's Clothing</button>
                                 <button>Women's Clothing</button>
                                 <button>Jewelry</button>
                                 <button>Electronics</button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

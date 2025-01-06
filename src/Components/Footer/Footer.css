@@ -14,22 +14,24 @@ footer {
 
 .footer-logo {
     display: flex;
-    justify-content: space-around;
+    text-align: center;
     align-items: center;
-    cursor: pointer;
+}
+
+.footer-logo a {
+    text-decoration: none;
 }
 
 .footer-logo img {
-    width: 40%;
+    width: 60%;
     border-radius: 50%;
-    margin-left: 0;
 }
 
 .footer-logo h3 {
     color: rgb(133, 57, 0);
     font-size: 2.5rem;
     font-weight: 800;
-    padding: 2rem 0 1rem 2rem;
+    padding: 2rem 0 1rem 0; 
 }
 
 .footer-description {

@@ -19,8 +19,8 @@ function Footer() {
                 <div className="row">
                     <div className="col-3">
                         <div className="footer-logo">
-                            <img src={logo} />
-                            <h3>Producto Shop</h3>
+                            <Link to="/"><img src={logo} alt="Logo" /></Link>
+                            <Link to="/"><h3>Producto Shop</h3></Link>
                         </div>
 
                         <p className="footer-description">Producto Shop is a website about a wide verity of products. We present different products in four categories in detail. We hope you enjoy our shopping website.</p>
