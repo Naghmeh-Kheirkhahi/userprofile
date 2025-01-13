@@ -3,7 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ThemeContext } from "../../Context/ThemeContext";
-
+import { UserContext } from "../../Context/UserContext";
 import ShoppingStuffChild from "./ShoppingStuffChild";
 import ShoppingButton from "./ShoppingButton";
 import './ShoppingStuff.css';
@@ -12,12 +12,12 @@ import './ShoppingStuff.css';
 
 
 
-
-
 function ShoppingStuffParent() {
 
-
+    const navigate = useNavigate();
+    const { theme } = useContext(ThemeContext);
     const [data, setData] = useState([]);
+
 
     useEffect(() => {
         axios.get('https://fakestoreapi.com/products/')
@@ -29,16 +29,11 @@ function ShoppingStuffParent() {
 
 
 
-
-
-    const navigate = useNavigate();
-
     const handleSingleProduct = (productId) => {
         console.log(productId);
 
         navigate(`/product/${productId}`)
     }
-
 
 
 
@@ -56,8 +51,6 @@ function ShoppingStuffParent() {
 
 
 
-
-
     const [category, setCategory] = useState('');
 
     const [filterProducts, setFilterProducts] = useState([]);
@@ -70,6 +63,7 @@ function ShoppingStuffParent() {
     }
 
 
+
     useEffect(() => {
         if (category) {
             let filterProducts = data.filter(
@@ -79,7 +73,6 @@ function ShoppingStuffParent() {
             )
 
             setFilterProducts(filterProducts);
-
         }
 
         else {
@@ -97,16 +90,43 @@ function ShoppingStuffParent() {
     // Runs any time that is dependent on the value 'category' and changes any time according to this value 
     // }, [category]);
 
-
     // we have all the API products in the data of the useState, then we filter the data and 
     // take the products having the same category with the category we chose by clicking one of the four buttons on the home page
     // after filtering we put the filtered products into the filterProducts and put it into the setData to put into the data and update the array of the data.
 
 
 
+    const [favorites, setFavorites] = useState([]);
 
-    const { theme } = useContext(ThemeContext);
+    useEffect(() => {
+        const savedFavorite = JSON.parse(localStorage.getItem('favorite')) || [];
+        setFavorites(savedFavorite);
+    }, [])
 
+
+
+    const { username } = useContext(UserContext);
+
+    const handleFavoriteClick = (product) => {
+
+        if (username) {
+            let updatedFavorites;
+
+            if (favorites.some(favorite => favorite.id === product.id)) {
+                updatedFavorites = favorites.filter(favorite => favorite.id !== product.id);
+            }
+            else {
+                updatedFavorites = [...favorites, product];
+            }
+
+            localStorage.setItem('favorite', JSON.stringify(updatedFavorites));
+            setFavorites(updatedFavorites);
+        }
+        else {
+            alert('You need to Login first to add your Favorites');
+            navigate('/login');
+        }
+    };
 
 
 
@@ -124,19 +144,29 @@ function ShoppingStuffParent() {
 
 
                 <div className="row">
-                    {filterProducts.map(item => (
-                        <ShoppingStuffChild
-                            image={item.image}
-                            title={item.title}
-                            price={item.price}
-                            category={item.category}
-                            description={item.description}
-                            ratingRate={item.rating.rate}
-                            showProduct={() => { handleSingleProduct(item.id) }}
+                    {filterProducts.map(product => {
+                        const isFavorite = favorites.some(favorite => favorite.id === product.id);
+                        return (
+                            <ShoppingStuffChild
+                                image={product.image}
+                                title={product.title}
+                                price={product.price}
+                                category={product.category}
+                                description={product.description}
+                                ratingRate={product.rating.rate}
+                                showProduct={() => { handleSingleProduct(product.id) }}
 
-                            buyProduct={() => { handleBuyProduct(item.price) }}
-                        />
-                    ))}
+                                buyProduct={() => { handleBuyProduct(product.price) }}
+
+                                heartIcon={<i
+                                    className="fa fa-heart"
+                                    onClick={() => handleFavoriteClick(product)}
+                                ></i>}
+                                isFavorite = {isFavorite}
+                                isLogin = {username}
+                            />
+                        )
+                    })}
                 </div>
             </div>
         </>

@@ -88,7 +88,7 @@ function SingleProduct() {
                         <p className="productPrice"><b>{product.price} </b>Euro</p>
                         <p className="productCat"><b>{product.category} </b>Category</p>
                         <p className="productDescription">{product.description}</p>
-                        <p className="productRating"><b>Rating: </b><span class="fa fa-star"></span><span class="fa fa-star"></span>
+                        <p className="productRating"><b>Rating: {product.ratingRate} </b><span class="fa fa-star"></span><span class="fa fa-star"></span>
                             <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
 
                         <ShoppingButton btnName={"BUY NOW"} btnClass={theme === 'dark' ? 'themeSingleProBtn' : 'singleProductBtn'} btnClick={() => addProductToCart(product.id)} />

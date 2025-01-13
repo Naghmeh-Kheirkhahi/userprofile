@@ -89,13 +89,16 @@
     mix-blend-mode: multiply;
 }
 
-.product i {
+.heart-icon {
     text-align: right;
-    color: rgb(180, 180, 180);
-    /* color: rgb(220, 22, 0); */
     font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.heart-icon i {
     padding: 0.5rem 0.5rem 0.5rem 0;
 }
+
 
 .productInfo {
     flex: 1; /* Make productInfo take up remaining space */

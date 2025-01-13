@@ -139,38 +139,92 @@
 
 /* Interests */
 
-.choose-category {
+.see-interests {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 3rem;
     text-align: center;
 }
 
-.choose-category span {
+.see-interests span {
     font-size: 2rem;
     color: rgb(169, 0, 0);
 }
 
-.choose-category i {
+.see-interests i {
     margin-bottom: -0.3rem;
     padding: 0.1rem;
 }
 
-/* .favourite-category {
+.interests-container {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.favourite-category button {
-    padding: 1rem 3rem;
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin: 2rem;
-    background-color: #c000ce;
-    border: 1px solid #a000ab;;
-    color: #ffffff;
+.fav-product {
+    border: 2px solid #b39dc9;
     border-radius: 10px;
-} */
+    background-color: rgb(241, 241, 241);
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is spaced evenly */
+    padding: 1rem; /* Add some padding for better spacing */
+    margin: 1rem; /* Add margin to separate the products */
+    cursor: pointer;
+}
+
+
+.fav-product img {
+    width: 60%;
+    border-radius: 20px;
+    margin: 4rem auto; /* Center the image horizontally */
+    background-color: transparent;
+    mix-blend-mode: multiply;
+}
+
+.fav-productInfo {
+    flex: 1; /* Make productInfo take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.fav-product h2 {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.fav-price, .fav-category, .fav-description, .fav-rating {
+    color: rgb(47, 47, 47);
+    margin-bottom: 3rem;
+}
+
+.fav-price {
+    font-size: 1.3rem;
+}
+
+.fav-category {
+    font-size: 1.4rem;
+}
+
+.fav-description {
+    font-size: 1.2rem;
+}
+
+.fav-rating {
+    font-size: 1.3rem;
+}
+
+.notSee-interests {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(231, 50, 0);
+    padding-top: 10rem;
+}
+
 
 
 
