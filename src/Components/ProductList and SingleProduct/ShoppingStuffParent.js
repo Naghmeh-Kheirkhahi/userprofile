@@ -31,7 +31,6 @@ function ShoppingStuffParent() {
 
     const handleSingleProduct = (productId) => {
         console.log(productId);
-
         navigate(`/product/${productId}`)
     }
 
@@ -41,24 +40,18 @@ function ShoppingStuffParent() {
 
     const handleBuyProduct = (price) => {
         console.log('price:' + price);
-
         setQuantity(quantity + 1);
-
         console.log('quantity:' + quantity);
-
         console.log('total price:' + quantity * price);
     }
 
 
 
     const [category, setCategory] = useState('');
-
-    const [filterProducts, setFilterProducts] = useState([]);
-
+    const [filteredProducts, setFilteredProducts] = useState([]);
 
     const handleCategoryClick = (category) => {
         console.log(category);
-
         setCategory(category);
     }
 
@@ -66,17 +59,10 @@ function ShoppingStuffParent() {
 
     useEffect(() => {
         if (category) {
-            let filterProducts = data.filter(
-                item => {
-                    return item.category == category
-                }
-            )
-
-            setFilterProducts(filterProducts);
-        }
-
-        else {
-            setFilterProducts(data);
+            const filtered = data.filter(item => item.category === category);
+            setFilteredProducts(filtered);
+        } else {
+            setFilteredProducts(data);
         }
 
     }, [category, data])
@@ -93,7 +79,6 @@ function ShoppingStuffParent() {
     // we have all the API products in the data of the useState, then we filter the data and 
     // take the products having the same category with the category we chose by clicking one of the four buttons on the home page
     // after filtering we put the filtered products into the filterProducts and put it into the setData to put into the data and update the array of the data.
-
 
 
     const [favorites, setFavorites] = useState([]);
@@ -113,16 +98,14 @@ function ShoppingStuffParent() {
             let updatedFavorites;
 
             if (favorites.some(favorite => favorite.id === product.id)) {
-                updatedFavorites = favorites.filter(favorite => favorite.id !== product.id);
-            }
-            else {
+                updatedFavorites = favorites.filter(favorite => favorite.id !== product.id); // it means that we remove the product from the favorites
+            } else {
                 updatedFavorites = [...favorites, product];
             }
 
             localStorage.setItem('favorite', JSON.stringify(updatedFavorites));
             setFavorites(updatedFavorites);
-        }
-        else {
+        } else {
             alert('You need to Login first to add your Favorites');
             navigate('/login');
         }
@@ -144,7 +127,7 @@ function ShoppingStuffParent() {
 
 
                 <div className="row">
-                    {filterProducts.map(product => {
+                    {filteredProducts.map(product => {
                         const isFavorite = favorites.some(favorite => favorite.id === product.id);
                         return (
                             <ShoppingStuffChild
@@ -162,8 +145,8 @@ function ShoppingStuffParent() {
                                     className="fa fa-heart"
                                     onClick={() => handleFavoriteClick(product)}
                                 ></i>}
-                                isFavorite = {isFavorite}
-                                isLogin = {username}
+                                isFavorite={isFavorite}
+                                isLogin={username}
                             />
                         )
                     })}

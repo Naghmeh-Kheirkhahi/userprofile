@@ -17,6 +17,13 @@ function Interests() {
     }, [])
 
 
+    const handleDeleteClick = (product) => {
+        const updatedInterests = interests.filter(interest => interest.id !== product.id);
+        setInterests(updatedInterests);
+        localStorage.setItem('favorite', JSON.stringify(updatedInterests));
+    }
+
+
     return (
         <>
             <div className={theme === 'dark' ? 'dark-main-class' : 'main-class'}>
@@ -37,6 +44,8 @@ function Interests() {
                                     interests.map(interest => (
                                         <div className="col-4 interests-container">
                                             <div className="fav-product">
+                                                <div className="delete-icon"><i class="fa fa-close" onClick={() => handleDeleteClick(interest)}></i></div>
+
                                                 <img src={interest.image} alt="..." />
                                                 <div className="fav-productInfo">
                                                     <h2>{interest.title}</h2>
