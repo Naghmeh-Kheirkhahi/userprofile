@@ -166,17 +166,14 @@
     border: 2px solid #b39dc9;
     border-radius: 10px;
     background-color: rgb(241, 241, 241);
-    flex: 1 1 300px;
-    /* Flex-grow, flex-shrink, and flex-basis */
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Ensure content is spaced evenly */
     padding: 1rem;
-    /* Add some padding for better spacing */
     margin: 1rem;
-    /* Add margin to separate the products */
     cursor: pointer;
+    text-align: center;
 }
 
 
@@ -194,7 +191,7 @@
 .fav-product img {
     width: 60%;
     border-radius: 20px;
-    margin: 4rem auto;
+    margin: 2rem auto 4rem auto;
     /* Center the image horizontally */
     background-color: transparent;
     mix-blend-mode: multiply;
@@ -206,7 +203,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: center;
 }
 
 .fav-product h2 {

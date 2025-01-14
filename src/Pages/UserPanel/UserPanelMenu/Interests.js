@@ -1,6 +1,7 @@
 
 import React, { useState, useContext, useEffect } from "react";
 import './Menu.css';
+import { useNavigate } from "react-router-dom";
 import UserPanelNav from './../UserPanelNav';
 import { ThemeContext } from "../../../Context/ThemeContext";
 
@@ -10,6 +11,7 @@ function Interests() {
 
     const { theme } = useContext(ThemeContext);
     const [interests, setInterests] = useState([]);
+
 
     useEffect(() => {
         const savedInterests = JSON.parse(localStorage.getItem('favorite')) || [];
@@ -21,6 +23,14 @@ function Interests() {
         const updatedInterests = interests.filter(interest => interest.id !== product.id);
         setInterests(updatedInterests);
         localStorage.setItem('favorite', JSON.stringify(updatedInterests));
+    }
+
+
+    const navigate = useNavigate();
+
+    const handleSingleProduct = (interestId) => {
+        console.log(interestId);
+        navigate(`/product/${interestId}`)
     }
 
 
@@ -46,18 +56,20 @@ function Interests() {
                                             <div className="fav-product">
                                                 <div className="delete-icon"><i class="fa fa-close" onClick={() => handleDeleteClick(interest)}></i></div>
 
-                                                <img src={interest.image} alt="..." />
-                                                <div className="fav-productInfo">
-                                                    <h2>{interest.title}</h2>
-                                                    <p className="fav-price"><b>Price: </b>{interest.price} Euros</p>
-                                                    <p className="fav-category"><b>Category: </b>{interest.category}</p>
-                                                    <p className="fav-description">
-                                                        <b>Description: </b>
-                                                        {interest.description.length > 20
-                                                            ? `${interest.description.substring(0, 20)}...`
-                                                            : interest.description}
-                                                    </p>
-                                                    <p className="fav-rating"><b>Rating: </b>{interest.ratingRate}</p>
+                                                <div onClick={() => handleSingleProduct(interest.id)}>
+                                                    <img src={interest.image} alt="..." />
+                                                    <div className="fav-productInfo">
+                                                        <h2>{interest.title}</h2>
+                                                        <p className="fav-price"><b>Price: </b>{interest.price} Euros</p>
+                                                        <p className="fav-category"><b>Category: </b>{interest.category}</p>
+                                                        <p className="fav-description">
+                                                            <b>Description: </b>
+                                                            {interest.description.length > 20
+                                                                ? `${interest.description.substring(0, 20)}...`
+                                                                : interest.description}
+                                                        </p>
+                                                        <p className="fav-rating"><b>Rating: </b>{interest.ratingRate}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

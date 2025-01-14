@@ -137,9 +137,9 @@ function ShoppingStuffParent() {
                                 category={product.category}
                                 description={product.description}
                                 ratingRate={product.rating.rate}
-                                showProduct={() => { handleSingleProduct(product.id) }}
+                                showProduct={() => handleSingleProduct(product.id) }
 
-                                buyProduct={() => { handleBuyProduct(product.price) }}
+                                buyProduct={() => handleBuyProduct(product.price) }
 
                                 heartIcon={<i
                                     className="fa fa-heart"
