@@ -93,16 +93,13 @@ function ShoppingStuffParent() {
     const { username } = useContext(UserContext);
 
     const handleFavoriteClick = (product) => {
-
         if (username) {
             let updatedFavorites;
-
             if (favorites.some(favorite => favorite.id === product.id)) {
                 updatedFavorites = favorites.filter(favorite => favorite.id !== product.id); // it means that we remove the product from the favorites
             } else {
                 updatedFavorites = [...favorites, product];
             }
-
             localStorage.setItem('favorite', JSON.stringify(updatedFavorites));
             setFavorites(updatedFavorites);
         } else {

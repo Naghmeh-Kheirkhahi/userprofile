@@ -40,9 +40,6 @@ import Category from './Components/Footer/Category';
 
 
 
-
-
-
 function App() {
 
   return (

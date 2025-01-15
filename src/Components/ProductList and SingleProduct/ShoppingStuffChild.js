@@ -34,7 +34,7 @@ function ShoppingStuffChild(props) {
 
                         {/* <button onClick={props.buyProduct}>BUY NOW</button> */}
 
-                        <ShoppingButton btnName={"BUY NOW"} btnClass={theme === 'dark' ? 'themeProBtn' : 'productBtn'} btnClick={props.buyProduct} />
+                        <ShoppingButton btnName={"BUY NOW"} btnClass={theme === 'dark' ? 'darkProBtn' : 'productBtn'} btnClick={props.buyProduct} />
                     </div>
                 </div>
             </div>
