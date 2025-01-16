@@ -125,7 +125,7 @@ function ShoppingStuffParent() {
 
                 <div className="row">
                     {filteredProducts.map(product => {
-                        const isFavorite = favorites.some(favorite => favorite.id === product.id);
+                        const isFavorite = favorites.some(favorite => favorite.id === product.id); // we put isFavorite into the return part (not out) when we want to do mapping on the products because if we put it out of it, it could not be understood because product was not already defined.
                         return (
                             <ShoppingStuffChild
                                 image={product.image}
@@ -134,9 +134,9 @@ function ShoppingStuffParent() {
                                 category={product.category}
                                 description={product.description}
                                 ratingRate={product.rating.rate}
-                                showProduct={() => handleSingleProduct(product.id) }
+                                showProduct={() => handleSingleProduct(product.id)}
 
-                                buyProduct={() => handleBuyProduct(product.price) }
+                                buyProduct={() => handleBuyProduct(product.price)}
 
                                 heartIcon={<i
                                     className="fa fa-heart"

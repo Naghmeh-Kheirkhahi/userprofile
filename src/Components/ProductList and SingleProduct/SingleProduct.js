@@ -80,19 +80,19 @@ function SingleProduct() {
 
 
     const { username } = useContext(UserContext);
-    const isFavorite = favorites.some(favorite => favorite.id === product.id);
+    const isFavorite = favorites.some(favorite => favorite.id === product.id); // here we put isFavorite because we are in the sinle product page and it shows only one product already defines. So, when we define isFavorite here, it can be understood.
 
     const addProductToInterest = (product) => {
         if (username) {
             let updatedFavorites;
-            if (favorites.some(favorite => favorite.id === product.id)) {
+            if (isFavorite) {
                 updatedFavorites = favorites.filter(favorite => favorite.id !== product.id);
-                console.log('The product is already in your Favorites');
             } else {
                 updatedFavorites = [...favorites, product];
-                alert('The product has been added to your Favorites');
-                console.log('The product has been added to your Favorites');
+                alert('The product has been added to your Favorites');            
             }
+            localStorage.setItem('favorite', JSON.stringify(updatedFavorites));
+            setFavorites(updatedFavorites);
         } else {
             alert('You need to Login first to add your Favorites');
             navigate('/login');
@@ -118,8 +118,8 @@ function SingleProduct() {
                             <ShoppingButton btnName={"BUY NOW"} btnClass={theme === 'dark' ? 'darkSingleProBtn' : 'singleProductBtn'} btnClick={() => addProductToCart(product.id)} />
 
                             <ShoppingButton
-                                btnName={isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
-                                style={{ color: isFavorite ? 'rgb(255, 255, 255)' : 'rgb(220, 22, 0)' }}
+                                btnName={isFavorite && username ? 'Remove from Favorites' : 'Add to Favorites'}
+                                btnStyle={{ color: isFavorite && username ? 'rgb(255, 255, 255)' : 'rgb(139, 14, 0)' }}
                                 btnClass={theme === 'dark' ? 'darkFavProBtn' : 'favProductBtn'} btnClick={() => addProductToInterest(product)} />
                         </div>
 
