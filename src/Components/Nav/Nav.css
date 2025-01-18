@@ -7,12 +7,16 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     box-shadow: 0px 5px 10px #917c5e;
+    background-color: rgb(255, 240, 216);
     z-index: 99;
 }
 
 
-nav {
+.navbar {
     background-color: rgb(255, 240, 216);
+    padding: 1rem;
+    position: relative;
+    z-index: 100;
 }
 
 .navLogo {
@@ -20,35 +24,37 @@ nav {
     margin-left: 2rem;
 }
 
-nav img {
+.navLogo img {
     width: 100%;
     border-radius: 50%;
 }
 
-nav li {
-    font-size: 1.5rem;
-    font-weight: 800;
-    padding: 1rem 1rem 0 2rem; 
-
+.navbar-nav {
+    display: flex;
+    align-items: center;
 }
 
+.nav-item {
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 1rem 1rem 0 2rem;
+}
 
 .navLink {
     color: rgb(150, 65, 0);
     text-decoration: none;
 } 
 
-
 .navLink:hover {
     color: rgb(211, 92, 0);
-} 
+}
 
 .navLogin {
     color: rgb(150, 65, 0);
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 800;
-    padding: 0.5rem 2rem 0 0; 
+    padding: 0.5rem 2rem 0 0;
 }
 
 .navLogin:hover {
@@ -56,7 +62,8 @@ nav li {
 }
 
 .navLogin i {
-    padding-top: 0.5rem;
+    margin-bottom: -0.2rem;
+    padding: 0.1rem;
 }
 
 .navBtn {
@@ -67,7 +74,7 @@ nav li {
     font-weight: 800;
     color: rgb(144, 0, 144);
     padding: 0.5rem 1rem;
-    margin: 1.5rem 2rem 1rem 1rem ;
+    margin: 1.5rem 2rem 1rem 1rem;
 }
 
 .navBtn i {
@@ -94,5 +101,54 @@ nav li {
     color: rgb(255, 255, 255);
     font-size: 1.6rem;
 }
+
+.navDropdown {
+    position: relative;
+    display: inline-block;
+    /* float: right ; */
+}
+
+.navDropdown ul {
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color: rgb(255, 202, 162);
+    min-width: 10rem;
+    z-index: 1000;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px #917c5e;
+}
+
+.navDropdown:hover ul {
+    display: block;
+}
+
+.navDropdown li {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem; 
+    display: block;
+    border-bottom: 1px solid rgb(238, 103, 0);
+    /* float: none; */
+}
+
+.navDropdown li:last-child {
+    border-bottom: none;
+}
+
+.navDropdown li a {
+    color: rgb(120, 52, 0);
+    text-decoration: none;
+    display: block;
+    /* float: none; */
+}
+
+.navDropdown li a:hover {
+    color: rgb(186, 81, 0); 
+}
+
 
 

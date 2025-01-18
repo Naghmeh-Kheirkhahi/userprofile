@@ -13,7 +13,6 @@ function ContactForm() {
 
     return (
         <>
-
             <div className={theme === 'dark' ? 'dark-contact' : ''}>
                 <section class="py-3 py-md-5">
                     <div>
@@ -29,7 +28,7 @@ function ContactForm() {
                     <div>
                         <div class="row justify-content-lg-center">
                             <div class="col-12 col-lg-9">
-                                {/* <div class="overflow-hidden"> */}
+                                <div class="overflow-hidden">
 
                                     <form action="#!" className={theme === 'dark' ? 'dark-form' : 'light-form' }>
                                         <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
@@ -71,7 +70,7 @@ function ContactForm() {
                                         </div>
                                     </form>
 
-                                {/* </div> */}
+                                </div>
                             </div>
                         </div>
                     </div>

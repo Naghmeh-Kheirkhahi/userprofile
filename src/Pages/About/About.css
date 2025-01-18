@@ -11,8 +11,7 @@
 }
 
 .aboutUs {
-    padding: 5rem 8rem 10rem 8rem;
-    margin-top: 8rem;
+    margin: 15rem 8rem 10rem 8rem;
 }
 
 .aboutUs h1 {
@@ -37,6 +36,7 @@
 .aboutUs ul {
     font-size: 1.5rem;
     color: rgb(61, 61, 61);
+    margin-left: -1rem;
 }
 
 
@@ -69,4 +69,28 @@
 .dark-about ul {
     color: #dfdfdf;
     font-size: 1.5rem;
+}
+
+
+
+@media (max-width: 576px) {
+    .aboutUs {
+        margin: 10rem 3rem 5rem 3rem;
+    }
+    
+    .aboutUs h1 {
+        font-size: 2rem;
+    }
+
+    .aboutUs h2 {
+        font-size: 1.5rem;
+    }
+    
+    .aboutUs p {
+        font-size: 1rem;
+    }
+    
+    .aboutUs ul {
+        font-size: 1rem;
+    }
 }
