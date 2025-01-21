@@ -1,10 +1,4 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 
 .main-aboutUs {
     background-color: rgb(234, 192, 255);
@@ -14,26 +8,26 @@
     margin: 15rem 8rem 10rem 8rem;
 }
 
-.aboutUs h1 {
+.main-aboutUs h1 {
     font-size: 3.5rem;
     color: rgb(86, 56, 99);
-    font-weight: 900;
+    font-weight: 800;
     padding: 1rem 0;
 }
 
-.aboutUs h2 {
+.main-aboutUs h2 {
     font-size: 2.5rem;
     color: rgb(94, 62, 109);
     font-weight: 700;
     padding: 0.5rem 0;
 }
 
-.aboutUs p {
+.main-aboutUs p {
     font-size: 1.5rem;
     color: rgb(61, 61, 61);
 }
 
-.aboutUs ul {
+.main-aboutUs ul {
     font-size: 1.5rem;
     color: rgb(61, 61, 61);
     margin-left: -1rem;
@@ -49,48 +43,40 @@
 
 .dark-about h1 {
     color: #c490ff;
-    font-size: 3.5rem;
-    font-weight: 900;
-    padding: 1rem 0;
 }
 
 .dark-about h2 {
     color: #cda1ff;
-    font-size: 2.5rem;
-    font-weight: 700;
-    padding: 0.5rem 0;
 }
 
 .dark-about p {
     color: #dfdfdf;
-    font-size: 1.5rem;
 }
 
 .dark-about ul {
     color: #dfdfdf;
-    font-size: 1.5rem;
 }
 
 
 
-@media (max-width: 576px) {
+@media (max-width: 1200px) {
     .aboutUs {
         margin: 10rem 3rem 5rem 3rem;
     }
     
-    .aboutUs h1 {
+    .main-aboutUs h1 {
         font-size: 2rem;
     }
 
-    .aboutUs h2 {
+    .main-aboutUs h2 {
         font-size: 1.5rem;
     }
     
-    .aboutUs p {
+    .main-aboutUs p {
         font-size: 1rem;
     }
     
-    .aboutUs ul {
+    .main-aboutUs ul {
         font-size: 1rem;
     }
 }

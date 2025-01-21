@@ -15,7 +15,7 @@ function Nav() {
     return (
         <div className='mainMenu'>
             <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid position-relative">
+                <div class="container-fluid">
                     <Link class="navbar-brand navLogo" to="/"><img src={logo} alt="Logo" /></Link>
 
                     <div class="collapse navbar-collapse" id="navbarNav">
@@ -47,9 +47,11 @@ function Nav() {
                         <Link className='navLogin' to='/Login'><i class="fa fa-user"></i> Login</Link>
                     )}
 
-                    <button id='navBtn' onClick={toggleTheme} className={theme === 'dark' ? 'dark-navBtn' : 'navBtn'}>
-                        {theme === 'dark' ? <i class='fas fa-moon'></i> : <i class='fas fa-sun'></i>} Theme
-                    </button>
+                    <div className='navBtn'>
+                        <button id='navBtn' onClick={toggleTheme} className={theme === 'dark' ? 'dark-navBtn' : 'light-navBtn'}>
+                            {theme === 'dark' ? <i class='fas fa-moon'></i> : <i class='fas fa-sun'></i>}
+                        </button>
+                    </div>
                 </div>
             </nav>
         </div>

@@ -1,14 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 section {
     margin: 10rem 0;
 }
 
-section h2 {
+.contact h2 {
     font-size: 3.5rem;
     font-weight: 900;
     color: #66418e;
@@ -16,28 +11,27 @@ section h2 {
     padding: 1rem 0;
 }
 
-section p {
+.contact p {
     font-size: 1.5rem;
     color: #646464;
     font-weight: 600;
     margin-bottom: 3rem;
 }
 
-.light-form {
+.contact form {
     border: 1px solid #9d78c4;
     background-color: #edddff;
     border-radius: 10px;
 }
 
-.light-form label,
-.dark-form label {
+.contact form label {
     font-size: 1.5rem;
     font-weight: 800;
     padding: 0 0.5rem;
     color: #432a60;
 }
 
-.light-form button {
+.contact button {
     margin: auto 20rem;
     padding: 1rem 0;
     font-size: 1.5rem;
@@ -48,7 +42,6 @@ section p {
     color: #5a397d;
 }
 
-
 /* **************ThemeContext*************** */
 
 .dark-contact {
@@ -57,66 +50,49 @@ section p {
 
 .dark-contact h2 {
     color: #c490ff;
-    font-size: 3.5rem;
-    font-weight: 900;
-    margin: 5rem 0 4rem 0;
-    padding: 1rem 0;
 }
 
 .dark-contact p {
     color: #d2d2d2;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
 }
 
-.dark-form {
+.dark-form form {
     border: 1px solid #7954a3;
     background-color: #bd83ff;
-    border-radius: 10px;
 }
 
 .dark-form button {
     border: 1px solid rgb(255, 89, 0);
     background-color: rgb(255, 105, 25);
-    margin: auto 20rem;
-    padding: 1rem 0;
-    font-size: 1.5rem;
-    font-weight: 800;
-    border-radius: 10px;
     color: #5a397d;
 }
 
 
 
-@media (max-width: 576px) {
+@media (max-width: 1200px) {
 
     section {
         margin: 5rem 3rem;
     }
 
-    section h2,
-    .dark-contact h2 {
+    .contact h2 {
         font-size: 2rem;
         margin: 5rem auto 1rem auto;
         padding: 1rem 0;
     }
 
-    section p,
-    .dark-contact p {
+    .contact p {
         font-size: 1rem;
         margin-bottom: 2rem;
     }
 
-    .light-form label,
-    .dark-form label {
+    .contact form label {
         font-size: 1rem;
     }
 
-    .light-form button , .dark-form button {
+    .contact button {
         margin: 0;
         padding: 0.5rem 0;
         font-size: 1rem;
     }
-
 }

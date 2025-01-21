@@ -1,27 +1,19 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
 .homePage {
     margin-top: 8rem;
     background-image: url('/src/Assets/images/bg1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh; /* Optional: Set the height to cover the viewport */
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
     text-align: center;
 }
-
 
 .homePage h1 {
     font-size: 5.5rem;
     font-weight: 800;
     padding: 1rem 0;
-    margin: 8rem 0;
+    margin: 8rem auto;
     color: #fff3ce;
     text-shadow: -3px 3px 7px #272727;
 }
@@ -48,10 +40,11 @@
 }
 
 .login-icon a {
-    color:  #652aa3;
+    color: #652aa3;
     text-decoration: none;
     font-size: 1.7rem;
     font-weight: 800;
+    padding: 0 1rem;
 }
 
 .login-icon a:hover {
@@ -69,6 +62,78 @@
     background-color: #313131;
 }
 
-.dark-home h1 {
-    color: #f3f3f3;
+
+
+@media (max-width: 1400px) {
+    .homePage {
+        margin-top: 6rem;
+    }
+
+    .homePage h1 {
+        font-size: 4rem;
+        margin: 5rem auto;
+    }
+
+    .homePage p {
+        font-size: 2rem;
+    }
+
+    .login-icon {
+        margin: 3rem auto;
+    }
+
+    .login-icon a {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .homePage h1 {
+        font-size: 3.5rem;
+        margin: 5rem auto;
+    }
+
+    .homePage p {
+        font-size: 1.8rem;
+    }
+
+    .login-icon a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .homePage {
+        background-size: contain;
+    }
+    
+    .homePage h1 {
+        margin: 3.5rem auto;
+    }
+
+    .login-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 786px) {
+    .homePage h1 {
+        font-size: 2.5rem;
+        margin: 3rem auto 2rem auto;
+    }
+
+    .homePage p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 651px) {
+    .homePage h1 {
+        font-size: 2rem;
+        margin: 2rem auto 1rem auto;
+    }
+
+    .homePage p {
+        font-size: 1rem;
+    }
 }

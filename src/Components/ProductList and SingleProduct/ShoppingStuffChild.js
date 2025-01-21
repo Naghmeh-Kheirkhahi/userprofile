@@ -12,7 +12,7 @@ function ShoppingStuffChild(props) {
 
 
     return (
-        <div className="col-4 product-container">
+        <div className="col-6 col-md-4 product-container">
             <div className="product">
                 {/* we can chose any name for click action after props*/}
 
@@ -34,7 +34,7 @@ function ShoppingStuffChild(props) {
 
                         {/* <button onClick={props.buyProduct}>BUY NOW</button> */}
 
-                        <ShoppingButton btnName={"BUY NOW"} btnClass={theme === 'dark' ? 'darkProBtn' : 'productBtn'} btnClick={props.buyProduct} />
+                        <ShoppingButton btnName={"BUY NOW"} btnClass= {theme === 'dark' ? 'productBtn darkProBtn' : 'productBtn lightProBtn'} btnClick={props.buyProduct} />
                     </div>
                 </div>
             </div>

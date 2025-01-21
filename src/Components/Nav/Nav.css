@@ -1,9 +1,9 @@
 
 .mainMenu {
     position: fixed;
-    left:0;
-    right:0;
-    top:0;
+    top: 0;
+    left: 0;
+    width: 100%;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     box-shadow: 0px 5px 10px #917c5e;
@@ -11,11 +11,9 @@
     z-index: 99;
 }
 
-
 .navbar {
     background-color: rgb(255, 240, 216);
     padding: 1rem;
-    position: relative;
     z-index: 100;
 }
 
@@ -35,7 +33,7 @@
 }
 
 .nav-item {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 800;
     padding: 1rem 1rem 0 2rem;
 }
@@ -52,9 +50,9 @@
 .navLogin {
     color: rgb(150, 65, 0);
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 800;
-    padding: 0.5rem 2rem 0 0;
+    padding-right: 2rem;
 }
 
 .navLogin:hover {
@@ -66,60 +64,54 @@
     padding: 0.1rem;
 }
 
-.navBtn {
-    background-color: rgb(255, 152, 25);
-    border: 1px solid rgb(255, 140, 0);
+.navBtn button {
     border-radius: 10px;
     font-size: 1.3rem;
     font-weight: 800;
-    color: rgb(144, 0, 144);
     padding: 0.5rem 1rem;
-    margin: 1.5rem 2rem 1rem 1rem;
+    margin: 1rem 2rem;
 }
 
-.navBtn i {
-    padding: 0.1rem;
-    margin-bottom: -0.5rem;
-    color: rgb(255, 225, 0);
-    font-size: 1.6rem;
+.light-navBtn {
+    background-color: rgb(255, 152, 25);
+    border: 1px solid rgb(255, 140, 0);
 }
 
 .dark-navBtn {
     background-color: rgb(45, 45, 45);
     border: 1px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: rgb(194, 128, 255);
-    padding: 0.5rem 1rem;
-    margin: 1.5rem 2rem 1rem 1rem ;
+}
+
+.navBtn i {
+    padding: 0.1rem;
+    margin-bottom: -0.5rem;
+    font-size: 2rem;
+}
+
+.light-navBtn i {
+    color: rgb(255, 225, 0);
 }
 
 .dark-navBtn i {
-    padding: 0.1rem;
-    margin-bottom: -0.5rem;
-    color: rgb(255, 255, 255);
-    font-size: 1.6rem;
+    color: rgb(255, 245, 167);
 }
 
 .navDropdown {
-    position: relative;
     display: inline-block;
-    /* float: right ; */
 }
 
 .navDropdown ul {
     display: none;
-    position: absolute;
+    position: fixed;
     list-style: none;
-    background-color: rgb(255, 202, 162);
-    min-width: 10rem;
-    z-index: 1000;
-    right: 0;
-    padding: 0;
-    margin: 0;
     border-radius: 5px;
+    background-color: rgb(255, 202, 162);
     box-shadow: 0px 5px 10px #917c5e;
+    width: 10%;
+    z-index: 100;
+    padding: 0;
+    right: 0;
+    margin: 6rem 0 0 121rem;
 }
 
 .navDropdown:hover ul {
@@ -128,11 +120,11 @@
 
 .navDropdown li {
     font-size: 1.5rem;
+    text-align: center;
     font-weight: 700;
     padding: 1rem; 
     display: block;
     border-bottom: 1px solid rgb(238, 103, 0);
-    /* float: none; */
 }
 
 .navDropdown li:last-child {
@@ -143,7 +135,6 @@
     color: rgb(120, 52, 0);
     text-decoration: none;
     display: block;
-    /* float: none; */
 }
 
 .navDropdown li a:hover {

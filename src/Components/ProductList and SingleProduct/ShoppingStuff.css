@@ -1,13 +1,4 @@
-
-
-*{
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
+/* ***ShoppingParent*** */
 
 .mainClassProduct {
     align-items: center;
@@ -16,51 +7,44 @@
 }
 
 .mainClassProduct h1 {
-    margin: 2rem 0 3rem 0;
+    margin: 2rem auto 3rem auto;
     padding: 1rem 0;
     font-size: 4rem;
     color: rgb(68, 68, 68);
     font-weight: 900;
 }
 
-
-
-
-.btns{
+.btns {
     display: flex;
     justify-content: center;
-    margin: 2rem 0 5rem 0;
+    margin: 2rem auto 5rem auto;
 }
 
-
-.categoryBtn {
+.catBtn {
     margin: 1rem 2rem;
     border-radius: 10px;
+    font-size: 1.7rem;
+    font-weight: 800;
+    padding: 1rem 2rem;
+}
+
+.lightCatBtn {
     border: 1px solid rgb(50, 50, 50);
     background-color: rgb(50, 50, 50);
-    color:  rgb(255, 149, 0);
-    font-size: 1.5rem;
-    font-weight: 800;
-    padding: 1rem 2rem;
+    color: rgb(255, 149, 0);
 }
 
-/* ***Theme Button*** */
-
-.themeCatBtn {
-    margin: 1rem 2rem;
-    border-radius: 10px;
+.darkCatBtn {
     border: 1px solid rgb(255, 149, 0);
     background-color: rgb(255, 149, 0);
-    color:  #532187;
-    font-size: 1.5rem;
-    font-weight: 800;
-    padding: 1rem 2rem;
+    color: #532187;
 }
 
+.mainClassProduct .dark-title {
+    color: #f3f3f3;
+}
 
-
-/* ------------------------ */
-
+/* ***ShoppingChild*** */
 
 .product-container {
     display: flex;
@@ -71,22 +55,13 @@
     border: 2px solid #b39dc9;
     border-radius: 10px;
     background-color: rgb(241, 241, 241);
-    flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis */
+    flex: 1 1 300px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensure content is spaced evenly */
-    padding: 1rem; /* Add some padding for better spacing */
-    margin: 1rem; /* Add margin to separate the products */
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem;
     cursor: pointer;
-}
-
-
-.product img {
-    width: 60%;
-    border-radius: 20px;
-    margin: 2rem auto 4rem auto; /* Center the image horizontally */
-    background-color: transparent;
-    mix-blend-mode: multiply;
 }
 
 .heart-icon {
@@ -99,9 +74,15 @@
     padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
+.product img {
+    width: 60%;
+    margin: 2rem auto 4rem auto;
+    background-color: transparent;
+    mix-blend-mode: multiply;
+}
 
 .productInfo {
-    flex: 1; /* Make productInfo take up remaining space */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -112,13 +93,16 @@
     margin-bottom: 2rem;
 }
 
-.price, .category, .description, .rating {
+.price,
+.category,
+.description,
+.rating {
     color: rgb(47, 47, 47);
     margin-bottom: 3rem;
 }
 
 .price {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
 
 .category {
@@ -126,23 +110,250 @@
 }
 
 .description {
-    font-size: 1.2rem;
-}
-
-.rating {
     font-size: 1.3rem;
 }
 
+.rating {
+    font-size: 1.4rem;
+}
+
+.productBtn {
+    margin: 1rem auto;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    padding: 1rem 1.5rem;
+}
+
+.lightProBtn {
+    border: 1px solid rgb(185, 18, 0);
+    background-color: rgb(185, 18, 0);
+    color: rgb(255, 255, 255);
+}
+
+.darkProBtn {
+    border: 1px solid rgb(40, 40, 40);
+    background-color: rgb(40, 40, 40);
+    color: rgb(255, 25, 0);
+}
+
+@media(max-width: 1400px) {
+
+    /* ***ShoppingParent*** */
+    .mainClassProduct h1 {
+        margin: 1rem auto 2rem auto;
+        font-size: 3rem;
+    }
+
+    .btns {
+        margin: 1rem auto;
+    }
+
+    .catBtn {
+        margin: 1rem;
+        font-size: 1.2rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    /* ***ShoppingChild*** */
+    .product {
+        padding: 0.5rem;
+        margin: 1rem 0;
+    }
+
+    .heart-icon {
+        font-size: 2rem;
+    }
+
+    .product img {
+        margin: 1rem auto 2rem auto;
+    }
+
+    .product h2 {
+        font-size: 1.5rem;
+    }
+
+    .price,
+    .category,
+    .description,
+    .rating {
+        margin-bottom: 2rem;
+    }
+
+    .price {
+        font-size: 1.3rem;
+    }
+
+    .category {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+
+    .rating {
+        font-size: 1.2rem;
+    }
+
+    .productBtn {
+        margin-top: 0;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media(max-width: 1200px) {
+
+    /* ***ShoppingParent*** */
+    .mainClassProduct h1 {
+        margin: 0 auto 1rem auto;
+        font-size: 2.5rem;
+    }
+
+    /* ***ShoppingChild*** */
+    .heart-icon {
+        font-size: 1.5rem;
+    }
+
+    .product h2 {
+        font-size: 1.3rem;
+    }
+
+    .price,
+    .category,
+    .description,
+    .rating {
+        margin-bottom: 1.5rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .category {
+        font-size: 1.1rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .rating {
+        font-size: 1.1rem;
+    }
+}
+
+@media(max-width: 992px) {
+
+    /* ***ShoppingParent*** */
+    .mainClassProduct h1 {
+        font-size: 2rem;
+        margin-top: -3rem;
+    }
+
+    .product img {
+        width: 70%;
+    }
+
+    .catBtn {
+        margin: 0 1rem;
+        font-size: 1rem;
+    }
+
+    /* ***ShoppingChild*** */
+    .productBtn {
+        font-size: 0.9rem;
+    }
+}
+
+@media(max-width: 768px) {
+
+    /* ***ShoppingParent*** */
+    .mainClassProduct h1 {
+        margin-top: -6rem;
+    }
+
+    .product img {
+        width: 60%;
+    }
+
+    .catBtn {
+        margin: 0 0.3rem;
+        font-size: 0.9rem;
+    }
+
+    /* ***ShoppingChild*** */
+    .productBtn {
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 576px) {
+
+    /* ***ShoppingParent*** */
+    .catBtn {
+        margin: 0 0.1rem;
+        font-size: 0.8rem;
+    }
+
+    /* ***ShoppingChild*** */
+    .product {
+        padding: 0.5rem;
+        margin: 1rem 0;
+    }
+
+    .product img {
+        width: 70%;
+    }
+
+    .product h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .price,
+    .category,
+    .description,
+    .rating {
+        margin-bottom: 1rem;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+
+    .category {
+        font-size: 0.9rem;
+    }
+
+    .description {
+        font-size: 0.8rem;
+    }
+
+    .rating {
+        font-size: 0.9rem;
+    }
+}
 
 
-/* ------------------------ */
 
-/* ***ThemeContext*** */
+
+
+
+
+
+
+
+
+
+
+
+/* ***singleProduct*** */
 
 .dark-singleProduct {
     background-color: #313131;
 }
-
 
 .singleProduct {
     display: flex;
@@ -164,7 +375,8 @@
     background-color: rgb(253, 234, 255);
 }
 
-.singleProduct img , .light-singleProduct img {
+.singleProduct img,
+.light-singleProduct img {
     width: 80%;
     border-radius: 20px;
     margin: 0 auto 2rem auto;
@@ -172,7 +384,8 @@
     mix-blend-mode: multiply;
 }
 
-.singleProduct h1 , .light-singleProduct h1 {
+.singleProduct h1,
+.light-singleProduct h1 {
     font-size: 2rem;
     color: rgb(184, 19, 1);
     font-weight: 800;
@@ -184,7 +397,6 @@
     font-size: 1.8rem;
     color: rgb(67, 14, 73);
     margin-bottom: 1rem;
-
 }
 
 .productCat {
@@ -202,36 +414,11 @@
     font-size: 1.3rem;
     margin-top: 1.5rem;
     color: rgb(67, 14, 73);
-
 }
 
 .productRating span {
     color: rgb(246, 102, 0);
     padding: 0.1rem;
-}
-
-.productBtn {
-    margin: 1rem 10rem 4rem 10rem;
-    border-radius: 10px;
-    border: 1px solid rgb(185, 18, 0);
-    background-color: rgb(185, 18, 0);
-    color:  rgb(255, 255, 255);
-    font-size: 1.3rem;
-    font-weight: 800;
-    padding: 0.5rem 0;
-}
-
-/* ***Theme Button*** */
-
-.darkProBtn {
-    margin: 1rem 10rem;
-    border-radius: 10px;
-    border: 1px solid rgb(40, 40, 40);
-    background-color: rgb(40, 40, 40);
-    color: rgb(255, 25, 0);
-    font-size: 1.3rem;
-    font-weight: 900;
-    padding: 0.5rem 0;
 }
 
 
@@ -242,7 +429,7 @@
     border-radius: 10px;
     border: 1px solid rgb(185, 18, 0);
     background-color: rgb(185, 18, 0);
-    color:  rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     font-size: 1.3rem;
     font-weight: 800;
     padding: 1rem 2rem;
@@ -257,8 +444,6 @@
     font-weight: 800;
     padding: 1rem 2rem;
 }
-
-/* ***Theme Button*** */
 
 .darkSingleProBtn {
     margin: 1rem 0 0 0.5rem;
@@ -281,7 +466,8 @@
     padding: 1rem 2rem;
 }
 
-.favProductBtn i , .darkFavProBtn i {
+.favProductBtn i,
+.darkFavProBtn i {
     padding: 0.1rem 0.2rem;
     margin-bottom: -0.3rem;
     font-size: 1.5rem;

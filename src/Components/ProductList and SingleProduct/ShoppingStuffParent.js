@@ -10,8 +10,6 @@ import './ShoppingStuff.css';
 
 
 
-
-
 function ShoppingStuffParent() {
 
     const navigate = useNavigate();
@@ -28,12 +26,10 @@ function ShoppingStuffParent() {
     }, [])
 
 
-
     const handleSingleProduct = (productId) => {
         console.log(productId);
         navigate(`/product/${productId}`)
     }
-
 
 
     const [quantity, setQuantity] = useState(1);
@@ -46,7 +42,6 @@ function ShoppingStuffParent() {
     }
 
 
-
     const [category, setCategory] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -54,7 +49,6 @@ function ShoppingStuffParent() {
         console.log(category);
         setCategory(category);
     }
-
 
 
     useEffect(() => {
@@ -89,7 +83,6 @@ function ShoppingStuffParent() {
     }, [])
 
 
-
     const { username } = useContext(UserContext);
 
     const handleFavoriteClick = (product) => {
@@ -109,17 +102,16 @@ function ShoppingStuffParent() {
     };
 
 
-
     return (
         <>
             <div className="mainClassProduct">
-                <h1>Different Products</h1>
+                <h1 className={theme=== 'dark' ? 'dark-title' : ''}>Producto Shop Products</h1>
 
                 <div class="btns">
-                    <ShoppingButton btnName={"Men's Clothing"} btnClass={theme === 'dark' ? 'themeCatBtn' : 'categoryBtn'} btnClick={() => handleCategoryClick("men's clothing")} />
-                    <ShoppingButton btnName={"Women's Clothing"} btnClass={theme === 'dark' ? 'themeCatBtn' : 'categoryBtn'} btnClick={() => handleCategoryClick("women's clothing")} />
-                    <ShoppingButton btnName={"Jewelry"} btnClass={theme === 'dark' ? 'themeCatBtn' : 'categoryBtn'} btnClick={() => handleCategoryClick("jewelery")} />
-                    <ShoppingButton btnName={"Electronics"} btnClass={theme === 'dark' ? 'themeCatBtn' : 'categoryBtn'} btnClick={() => handleCategoryClick("electronics")} />
+                    <ShoppingButton btnName={"Men's Clothing"} btnClass={theme === 'dark' ? 'catBtn darkCatBtn' : 'catBtn lightCatBtn'} btnClick={() => handleCategoryClick("men's clothing")} />
+                    <ShoppingButton btnName={"Women's Clothing"} btnClass={theme === 'dark' ? 'catBtn darkCatBtn' : 'catBtn lightCatBtn'} btnClick={() => handleCategoryClick("women's clothing")} />
+                    <ShoppingButton btnName={"Jewelry"} btnClass={theme === 'dark' ? 'catBtn darkCatBtn' : 'catBtn lightCatBtn'} btnClick={() => handleCategoryClick("jewelery")} />
+                    <ShoppingButton btnName={"Electronics"} btnClass={theme === 'dark' ? 'catBtn darkCatBtn' : 'catBtn lightCatBtn'} btnClick={() => handleCategoryClick("electronics")} />
                 </div>
 
 
