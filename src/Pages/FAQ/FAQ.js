@@ -1,11 +1,13 @@
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import './FAQ.css';
+import { ThemeContext } from "../../Context/ThemeContext";
 
 
 
 function FAQ() {
 
+    const { theme } = useContext(ThemeContext);
     const [openIndex, setOpenIndex] = useState(null); // State to track which answer is open
 
     const faqs = [
@@ -58,21 +60,23 @@ function FAQ() {
 
     return (
         <>
-            <div className="faq-section">
-                <h1>Frequently Asked Questions (FAQ)</h1>
+            <div className={theme === 'dark' ? 'dark-faq' : ''}>
+                <div className={theme === 'dark' ? 'faq-section dark-faq-section' : 'faq-section light-faq-section'}>
+                    <h1>Frequently Asked Questions (FAQ)</h1>
 
-                {faqs.map((faq, index) => (
-                    <div className="faq-item" key={index}>
-                        <h3 className="faq-question" onClick={() => toggleAnswer(index)}>
-                            {index + 1}. {faq.question}
-                        </h3>
-                        {openIndex === index && (
-                            <div className="faq-answer">
-                                {faq.answer}
-                            </div>
-                        )}
-                    </div>
-                ))}
+                    {faqs.map((faq, index) => (
+                        <div className="faq-item" key={index}>
+                            <h3 className="faq-question" onClick={() => toggleAnswer(index)}>
+                                {index + 1}. {faq.question}
+                            </h3>
+                            {openIndex === index && (
+                                <div className="faq-answer">
+                                    {faq.answer}
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
             </div>
         </>
     );

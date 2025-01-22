@@ -104,7 +104,7 @@ function SingleProduct() {
     return (
         <>
             <div className={theme === 'dark' ? 'dark-singleProduct' : ''}>
-                <div className={theme === 'dark' ? 'light-singleProduct' : 'singleProduct'}>
+                <div className={theme === 'dark' ? 'singleProSection dark-singleProSection' : 'singleProSection light-singleProSection'}>
                     <img src={product.image} />
                     <div className="ps-5">
                         <h1>{product.title}</h1>
@@ -114,13 +114,13 @@ function SingleProduct() {
                         <p className="productRating"><b>Rating: {product.ratingRate} </b><span class="fa fa-star"></span><span class="fa fa-star"></span>
                             <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
 
-                        <div className="d-flex justify-content-between">
-                            <ShoppingButton btnName={"BUY NOW"} btnClass={theme === 'dark' ? 'darkSingleProBtn' : 'singleProductBtn'} btnClick={() => addProductToCart(product.id)} />
+                        <div className="signleProBtns">
+                            <ShoppingButton btnName={"BUY NOW"} btnClass={theme === 'dark' ? 'singleProBtn darkSingleProBtn' : 'singleProBtn lightSingleProBtn'} btnClick={() => addProductToCart(product.id)} />
 
                             <ShoppingButton
                                 btnName={isFavorite && username ? 'Remove from Favorites' : 'Add to Favorites'}
                                 btnStyle={{ color: isFavorite && username ? 'rgb(255, 255, 255)' : 'rgb(139, 14, 0)' }}
-                                btnClass={theme === 'dark' ? 'darkFavProBtn' : 'favProductBtn'} btnClick={() => addProductToInterest(product)} />
+                                btnClass={theme === 'dark' ? 'favProBtn darkFavProBtn' : 'favProBtn lightFavProBtn'} btnClick={() => addProductToInterest(product)} />
                         </div>
 
                         {/* <button onClick={buySingleProduct}>BUY NOW</button> */}
