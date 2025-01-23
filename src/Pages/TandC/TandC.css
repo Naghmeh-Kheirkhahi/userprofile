@@ -1,52 +1,203 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.TandC {
-    margin-top: 5rem;
-    padding: 15rem 10rem 10rem 10rem;
+.light-TandC {
     background-color: #eac9ff;
 }
 
-.TandC h1 {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 3rem;
-    padding: 0.5rem 0;
-    color: #692c8f;
-    padding: 1rem 0;
+.TandC-container {
+    margin: 20rem 10rem 10rem 10rem;
 }
 
-/* .TandC h3 , .TandC h5 {
+.TandC-container h1 {
+    text-align: center;
+    font-size: 3.3rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
     padding: 0.5rem 0;
-    text-shadow: none;
-} */
+    color: #692c8f;
+}
 
-.TandC h3 {
-    font-size: 2rem;
+.TandC-container h3 {
+    font-size: 2.3rem;
     font-weight: 700;
-    color: rgb(60, 60, 60);
+    color: rgb(70, 70, 70);
     margin-top: 1rem;
 }
 
-.TandC h5 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: rgb(60, 60, 60);
+.TandC-container h5 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: rgb(70, 70, 70);
     line-height: 2.5rem;
 }
 
-.TandC p {
-    font-size: 1.5rem;
-    color: rgb(60, 60, 60);
+.TandC-container p {
+    font-size: 1.6rem;
     margin-left: 2rem;
 }
 
-.TandC a {
+.TandC-container a {
     text-decoration: none;
-    color: rgb(60, 60, 60);
+    color: rgb(70, 70, 70);
+}
+
+.TandC-container span {
+    font-size: 1.7rem;
+    color: rgb(232, 35, 0);
+    padding: 0.1rem;
+    margin-bottom: -0.3rem;
+}
+
+/*****ThemeContext******/
+
+.dark-TandC {
+    background-color: #313131;
+}
+
+.dark-TandC h1 {
+    color: #c490ff;
+}
+
+.dark-TandC h3 {
+    color: #d3adff;
+}
+
+.dark-TandC h5 {
+    color: #dfdfdf;
+}
+
+.dark-TandC p {
+    color: #ffffff;
+}
+
+@media(max-width: 1400px) {
+    .TandC-container {
+        margin: 12rem 5rem 6rem 5rem;
+    }
+
+    .TandC-container h1 {
+        font-size: 2.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .TandC-container h3 {
+        font-size: 2rem;
+    }
+
+    .TandC-container h5 {
+        font-size: 1.3rem;
+    }
+
+    .TandC-container p {
+        font-size: 1.3rem;
+    }
+
+    .TandC-container span {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 1200px) {
+    .TandC-container {
+        margin: 12rem 4rem 5rem 4rem;
+    }
+
+    .TandC-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .TandC-container h3 {
+        font-size: 1.8rem;
+    }
+
+    .TandC-container h5 {
+        font-size: 1.2rem;
+    }
+
+    .TandC-container p {
+        font-size: 1.2rem;
+        margin-left: 1.8rem;
+    }
+
+    .TandC-container span {
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width: 992px) {
+    .TandC-container {
+        margin: 10rem 3rem 4rem 3rem;
+    }
+
+    .TandC-container h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .TandC-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .TandC-container h5 {
+        font-size: 1rem;
+    }
+
+    .TandC-container p {
+        font-size: 1rem;
+        margin-left: 1.5rem;
+    }
+
+    .TandC-container span {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width: 768px) {
+    .TandC-container {
+        margin: 10rem 2rem 3rem 2rem;
+    }
+
+    .TandC-container h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .TandC-container h3 {
+        font-size: 1.3rem;
+    }
+
+    .TandC-container h5 {
+        font-size: 0.9rem;
+    }
+
+    .TandC-container p {
+        font-size: 0.9rem;
+        margin-left: 1.3rem;
+    }
+
+    .TandC-container span {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 576px) {
+    .TandC-container h1 {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+
+    .TandC-container h3 {
+        font-size: 1.2rem;
+    }
+
+    .TandC-container h5 {
+        font-size: 0.8rem;
+    }
+
+    .TandC-container p {
+        font-size: 0.8rem;
+        margin-left: 1.2rem;
+    }
+
+    .TandC-container span {
+        font-size: 0.9rem;
+    }
 }

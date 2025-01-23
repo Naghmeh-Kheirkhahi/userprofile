@@ -1,47 +1,192 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.customer-support {
-    margin-top: 5rem;
-    padding: 15rem 10rem 10rem 10rem;
+.light-customer-support {
     background-color: #eac9ff;
 }
 
-.customer-support h1 {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 3rem;
-    color: #692c8f;
-    padding: 1rem 0;
+.customer-support-container {
+    margin: 20rem 10rem 10rem 10rem;
 }
 
-.customer-support h2 {
-    font-size: 2rem;
+.customer-support-container h1 {
+    text-align: center;
+    font-size: 3.3rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
+    padding: 0.5rem 0;
+    color: #692c8f;
+}
+
+.customer-support-container h2 {
+    font-size: 2.3rem;
     font-weight: 700;
-    color: rgb(60, 60, 60);
+    color: rgb(70, 70, 70);
     margin-top: 1rem;
 }
 
-.customer-support h6 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: rgb(60, 60, 60);
+.customer-support-container h6 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: rgb(70, 70, 70);
     line-height: 2rem;
 }
 
-.customer-support p {
-    font-size: 1.5rem;
-    color: rgb(60, 60, 60);
+.customer-support-container p {
+    font-size: 1.6rem;
     margin-left: 0.5rem;
-    font-weight: 400;
 }
 
-.customer-support i {
+.customer-support-container i {
     font-size: 0.5rem;
     margin-right: 0.5rem;
+    padding: 0.1rem;
+}
+
+/*****ThemeContext******/
+
+.dark-customer-support {
+    background-color: #313131;
+}
+
+.dark-customer-support h1 {
+    color: #c490ff;
+}
+
+.dark-customer-support h2 {
+    color: #d3adff;
+}
+
+.dark-customer-support h6 {
+    color: #dfdfdf;
+}
+
+.dark-customer-support p {
+    color: #ffffff;
+}
+
+@media(max-width: 1400px) {
+    .customer-support-container {
+        margin: 12rem 5rem 6rem 5rem;
+    }
+
+    .customer-support-container h1 {
+        font-size: 2.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .customer-support-container h2 {
+        font-size: 2rem;
+    }
+
+    .customer-support-container h6 {
+        font-size: 1.3rem;
+    }
+
+    .customer-support-container p {
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width: 1200px) {
+
+    .customer-support-container {
+        margin: 12rem 4rem 5rem 4rem;
+    }
+
+    .customer-support-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .customer-support-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .customer-support-container h6 {
+        font-size: 1.2rem;
+    }
+
+    .customer-support-container p {
+        font-size: 1.2rem;
+        margin-left: 0.4rem;
+    }
+
+    .customer-support-container i {
+        margin-right: 0.3rem;
+    }
+}
+
+@media(max-width: 992px) {
+    .customer-support-container {
+        margin: 10rem 3rem 4rem 3rem;
+    }
+
+    .customer-support-container h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .customer-support-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .customer-support-container h6 {
+        font-size: 1rem;
+    }
+
+    .customer-support-container p {
+        font-size: 1rem;
+        margin-left: 0.3rem;
+    }
+
+    .customer-support-container i {
+        font-size: 0.4rem;
+        margin-right: 0.2rem;
+    }
+}
+
+@media(max-width: 768px) {
+    .customer-support-container {
+        margin: 10rem 2rem 3rem 2rem;
+    }
+
+    .customer-support-container h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .customer-support-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .customer-support-container h6 {
+        font-size: 0.9rem;
+    }
+
+    .customer-support-container p {
+        font-size: 0.9rem;
+        margin-left: 0.2rem;
+    }
+
+    .customer-support-container i {
+        font-size: 0.3rem;
+        margin-right: 0.1rem;
+    }
+}
+
+@media(max-width: 576px) {
+    .customer-support-container h1 {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+
+    .customer-support-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .customer-support-container h6 {
+        font-size: 0.8rem;
+    }
+
+    .customer-support-container p {
+        font-size: 0.8rem;
+        margin-left: 0.1rem;
+    }
 }

@@ -62,9 +62,9 @@ function Category() {
 
     return (
         <>
-            <div className={theme === 'dark' ? 'darkClassCategory' : ''}>
-                <div className="mainClassCategory">
-                    <h1 className={theme === 'dark' ? 'darkTitle' : 'lightTitle'}>{category.replace('-', "'s ")}</h1>
+            <div className={theme === 'dark' ? 'dark-category' : ''}>
+                <div className="category-container">
+                    <h1 className={theme === 'dark' ? 'dark-catTitle' : ''}>{category.replace('-', "'s ")}</h1>
 
                     <div className="row">
                         {filteredProducts.length > 0 ? (

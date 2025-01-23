@@ -1,51 +1,215 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.privacy-policy {
+.light-privacy-policy {
     background-color: #eac9ff;
-    margin-top: 5rem;
-    padding: 15rem 10rem 10rem 10rem;
 }
 
-.privacy-policy h4, .privacy-policy h5{
+.privacy-policy-container {
+    margin: 20rem 10rem 10rem 10rem;
+}
+
+.privacy-policy-container h4,
+.privacy-policy-container h5 {
     text-shadow: none;
-    color: rgb(60, 60, 60);
+    color: rgb(70, 70, 70);
     padding: 0.5rem 0;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 600;
 }
 
-.privacy-policy h1 {
+.privacy-policy-container h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.3rem;
     font-weight: 800;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     padding: 0.5rem 0;
     color: #692c8f;
-    padding: 1rem 0;
 }
 
-.privacy-policy h5 {
+.privacy-policy-container h5 {
     margin-bottom: 2rem;
-
 }
 
-.privacy-policy h4 {
+.privacy-policy-container h4 {
     margin-bottom: 1rem;
     margin-left: 1rem;
 }
 
-.privacy-policy p {
+.privacy-policy-container p {
     margin-left: 3rem;
     font-size: 1.5rem;
 }
 
-.privacy-policy i {
+.privacy-policy-container i {
     font-size: 0.5rem;
     margin-right: 0.5rem;
+    padding: 0.1rem;
 }
 
+.privacy-policy-container span {
+    font-size: 1.7rem;
+    color: rgb(232, 35, 0);
+    padding: 0.1rem;
+    margin-bottom: -0.3rem;
+}
+
+/*****ThemeContext******/
+
+.dark-privacy-policy {
+    background-color: #313131;
+}
+
+.dark-privacy-policy h4,
+.dark-privacy-policy h5 {
+    color: #dfdfdf;
+}
+
+.dark-privacy-policy h1 {
+    color: #c490ff;
+}
+
+.dark-privacy-policy p {
+    color: #ffffff;
+}
+
+@media(max-width: 1400px) {
+    .privacy-policy-container {
+        margin: 12rem 5rem 6rem 5rem;
+    }
+
+    .privacy-policy-container h4,
+    .privacy-policy-container h5 {
+        font-size: 1.3rem;
+    }
+
+    .privacy-policy-container h1 {
+        font-size: 2.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .privacy-policy-container h5 {
+        margin-bottom: 1.5rem;
+    }
+
+    .privacy-policy-container h4 {
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .privacy-policy-container p {
+        margin-left: 2.5rem;
+        font-size: 1.3rem;
+    }
+
+    .privacy-policy-container span {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 1200px) {
+    .privacy-policy-container {
+        margin: 12rem 4rem 5rem 4rem;
+    }
+
+    .privacy-policy-container h4,
+    .privacy-policy-container h5 {
+        font-size: 1.2rem;
+    }
+
+    .privacy-policy-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .privacy-policy-container p {
+        margin-left: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .privacy-policy-container i {
+        margin-right: 0.3rem;
+    }
+
+    .privacy-policy-container span {
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width: 992px) {
+    .privacy-policy-container {
+        margin: 10rem 3rem 4rem 3rem;
+    }
+
+    .privacy-policy-container h4,
+    .privacy-policy-container h5 {
+        font-size: 1rem;
+    }
+
+    .privacy-policy-container h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .privacy-policy-container p {
+        margin-left: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .privacy-policy-container i {
+        font-size: 0.4rem;
+        margin-right: 0.2rem;
+    }
+
+    .privacy-policy-container span {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width: 768px) {
+    .privacy-policy-container {
+        margin: 10rem 2rem 3rem 2rem;
+    }
+
+    .privacy-policy-container h4,
+    .privacy-policy-container h5 {
+        font-size: 0.9rem;
+    }
+
+    .privacy-policy-container h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .privacy-policy-container p {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .privacy-policy-container i {
+        font-size: 0.3rem;
+        margin-right: 0.1rem;
+    }
+
+    .privacy-policy-container span {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 576px) {
+    .privacy-policy-container h1 {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+
+    .privacy-policy-container h4,
+    .privacy-policy-container h5 {
+        font-size: 0.8rem;
+    }
+
+    .privacy-policy-container p {
+        margin-left: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .privacy-policy-container span {
+        font-size: 0.9rem;
+    }
+}

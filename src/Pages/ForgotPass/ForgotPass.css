@@ -1,134 +1,118 @@
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.login-main {
+.light-forget-pass {
     background-color: #9d00c5;
 }
 
-/* ThemeContext */
-.dark-login-main {
+.dark-forget-pass {
     background-color: #350042;
 }
 
-
-.login-container {
+.forget-pass-container {
+    width: 90%;
     background-color: #ffffff;
     border-radius: 10px;
-    margin: 20rem 15rem 15rem 15rem;
+    margin: 20rem auto 10rem auto;
 }
 
-
-.login-image img {
+.forget-pass-image img {
     width: 100%;
-    margin-bottom: 5rem;
+    height: 80%;
+    margin-top: 12rem;
 }
 
-.login-form {
-    padding: 3rem 0 5rem 0;
+.forget-pass-form {
+    padding: 5rem 0;
 }
 
-
-.login-heading {
+.forget-pass-title {
     text-align: center;
 }
 
-.login-heading h1 {
-    font-size: 3.2rem;
-    color: #8700a9;
-    font-weight: 800;
-    margin: 3rem 0 2rem 0;
-    padding: 0.5rem 0;
+.forget-pass-logo img {
+    width: 15%;
+    border-radius: 50%;
+    margin-left: 0;
 }
 
-.login-heading p {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
-    color: rgb(55, 55, 55);
-}
-
-.login-logo a {
+.forget-pass-logo a {
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
 }
 
-.login-logo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-left: 0;
-}
-
-.login-logo h1 {
+.forget-pass-logo a h1 {
     font-size: 2.5rem;
     color: #c300d8;
     font-weight: 800;
-    margin: 2rem 0 0 1rem;
-    padding: 0.5rem 0;
+    align-items: center;
+    margin-left: 1rem;
 }
 
+.forget-pass-title h1 {
+    font-size: 3rem;
+    color: #8700a9;
+    font-weight: 800;
+    margin: 3rem 0 2rem 0;
+}
 
+.forget-pass-title p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: rgb(55, 55, 55);
+}
 
-.light-pass-form {
-    padding: 3rem ;
+.main-pass-form {
+    padding: 3rem;
     margin: 0 5rem;
-    border: 1px solid #c300d8;
     border-radius: 10px;
+}
+
+.light-main-pass-form {
+    border: 1px solid #c300d8;
     background-color: #ff96f4;
 }
 
-/* ThemeContext */
-.dark-pass-form {
-    padding: 3rem ;
-    margin: 0 5rem;
+.dark-main-pass-form {
     border: 1px solid #c300d8;
-    border-radius: 10px;
     background-color: #d680cd;
 }
 
-.light-pass-form i , .dark-pass-form i {
+.main-pass-form i {
     color: #a8009d;
     padding: 0.5rem 0;
     font-size: 7rem;
 }
 
-.light-pass-form h2 , .dark-pass-form h2 {
+.main-pass-form h2 {
     color: #680082;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 700;
     padding: 0.5rem 0 1.5rem 0;
 }
 
-.light-pass-form p , .dark-pass-form p {
+.main-pass-form p {
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 3rem;
     color: rgb(40, 40, 40);
 }
 
-
-.light-pass-form label, .dark-pass-form label {
+.main-pass-form label {
     font-size: 1.7rem;
     font-weight: 700;
     color: #72008e;
     margin-bottom: 0;
 }
 
-.light-pass-form label i, .dark-pass-form label i {
+.main-pass-form label i {
     color: #72008e;
     font-size: 2rem;
     margin: 0 0.3rem -0.3rem 0;
     padding: 0;
 }
 
-.light-pass-form input, .dark-pass-form input {
+.main-pass-form input {
     width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -139,17 +123,291 @@
     outline: none;
 }
 
-
-.pass-btn {
+.forget-pass-btn {
     width: 100%;
-    margin: 2rem auto 3rem auto;
+    margin: 1.5rem auto 2rem auto;
     padding: 1rem;
-    background-color: #ff9100;
-    border: 1px solid #dc7d00;
-    color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 700;
     border-radius: 10px;
     cursor: pointer;
+    color: #ffffff;
 }
 
+.light-pass-btn {
+    background-color: #ff9100;
+    border: 1px solid #dc7d00;
+}
+
+.dark-pass-btn {
+    background-color: #ff4d00;
+    border: 1px solid #dc3b00;
+}
+
+@media(max-width: 1400px) {
+    .forget-pass-container {
+        margin: 15rem auto 7rem auto;
+    }
+
+    .forget-pass-image img {
+        height: 70%;
+        margin-top: 8rem;
+    }
+
+    .forget-pass-form {
+        padding: 3rem 0;
+    }
+
+    .forget-pass-logo a h1 {
+        font-size: 2rem;
+    }
+
+    .forget-pass-title h1 {
+        font-size: 2.5rem;
+        margin: 2rem 0 1rem 0;
+    }
+
+    .forget-pass-title p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .main-pass-form {
+        padding: 2rem;
+        margin: 0 4rem;
+    }
+
+    .main-pass-form i {
+        font-size: 5rem;
+    }
+
+    .main-pass-form h2 {
+        font-size: 1.8rem;
+        padding: 0.5rem 0;
+    }
+
+    .main-pass-form p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .main-pass-form label {
+        font-size: 1.3rem;
+    }
+
+    .main-pass-form label i {
+        font-size: 1.5rem;
+    }
+
+    .main-pass-form input {
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .forget-pass-btn {
+        margin: 1rem auto 1.5rem auto;
+        padding: 0.5rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width: 1200px) {
+    .forget-pass-container {
+        margin: 12rem auto 5rem auto;
+    }
+
+    .forget-pass-image img {
+        height: 60%;
+        margin-top: 10rem;
+    }
+
+    .forget-pass-form {
+        padding: 2.5rem 0;
+    }
+
+    .forget-pass-logo img {
+        width: 18%;
+    }
+
+    .forget-pass-logo a h1 {
+        font-size: 1.8rem;
+        margin-left: 0.5rem;
+    }
+
+    .forget-pass-title h1 {
+        font-size: 2rem;
+        margin: 1.5rem 0 0.8rem 0;
+    }
+
+    .forget-pass-title p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .main-pass-form {
+        padding: 1.5rem;
+        margin: 0 3rem;
+    }
+
+    .main-pass-form i {
+        font-size: 4.5rem;
+    }
+
+    .main-pass-form h2 {
+        font-size: 1.5rem;
+        padding: 0.4rem 0;
+    }
+
+    .main-pass-form p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .main-pass-form label {
+        font-size: 1.2rem;
+    }
+
+    .main-pass-form label i {
+        font-size: 1.4rem;
+    }
+
+    .main-pass-form input {
+        font-size: 1rem;
+    }
+
+    .forget-pass-btn {
+        margin: 0.5rem auto 1rem auto;
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 992px) {
+    .forget-pass-image img {
+        height: 50%;
+        margin-top: 12rem;
+    }
+
+    .forget-pass-form {
+        padding: 2rem 0;
+    }
+
+    .forget-pass-logo a h1 {
+        font-size: 1.5rem;
+    }
+
+    .forget-pass-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .forget-pass-title p {
+        font-size: 0.9rem;
+    }
+
+    .main-pass-form {
+        padding: 1.2rem;
+        margin: 0 2rem;
+    }
+
+    .main-pass-form i {
+        font-size: 4rem;
+    }
+
+    .main-pass-form h2 {
+        font-size: 1.3rem;
+        padding: 0.3rem 0;
+    }
+
+    .main-pass-form p {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .main-pass-form label {
+        font-size: 1.1rem;
+    }
+
+    .main-pass-form label i {
+        font-size: 1.3rem;
+    }
+
+    .main-pass-form input {
+        font-size: 0.9rem;
+    }
+}
+
+@media(max-width: 768px) {
+    .forget-pass-container {
+        /* width: 90%; */
+        /* margin: 12rem auto 5rem auto; */
+    }
+
+    .forget-pass-image img {
+        height: 50%;
+        margin-top: 12rem;
+    }
+
+    .forget-pass-form {
+        padding: 2rem 0;
+    }
+
+    .forget-pass-logo img {
+        /* width: 18%; */
+    }
+
+    .forget-pass-logo a h1 {
+        font-size: 1.5rem;
+        /* margin-left: 0.5rem; */
+    }
+
+    .forget-pass-title h1 {
+        font-size: 1.8rem;
+        /* margin: 1.5rem 0 0.8rem 0; */
+    }
+
+    .forget-pass-title p {
+        font-size: 0.9rem;
+        /* margin-bottom: 1.5rem; */
+    }
+
+    .main-pass-form {
+        padding: 1.2rem;
+        margin: 0 2rem;
+    }
+
+    .main-pass-form i {
+        font-size: 4rem;
+    }
+
+    .main-pass-form h2 {
+        font-size: 1.3rem;
+        padding: 0.3rem 0;
+    }
+
+    .main-pass-form p {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .main-pass-form label {
+        font-size: 1.1rem;
+    }
+
+    .main-pass-form label i {
+        font-size: 1.3rem;
+    }
+
+    .main-pass-form input {
+        /* padding: 0.5rem; */
+        /* margin-bottom: 0.5rem; */
+        font-size: 0.9rem;
+    }
+
+    .forget-pass-btn {
+        /* margin: 0.5rem auto 1rem auto;
+        padding: 0.5rem;
+        font-size: 1rem; */
+    }
+}
+
+@media(max-width: 576px) {}

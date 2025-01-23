@@ -37,17 +37,16 @@ function ForgotPass() {
 
     return (
         <>
-            <div className={theme === 'dark' ? 'dark-login-main' : 'login-main'}>
-                <div className="login-container">
+            <div className={theme === 'dark' ? 'dark-forget-pass' : 'light-forget-pass'}>
+                <div className="forget-pass-container">
                     <div className="row">
-                        <div className="login-image col-6">
+                        <div className="forget-pass-image col-6">
                             <img src={forgotPass} />
                         </div>
 
-
-                        <div className="login-form col-6">
-                            <div className="login-heading">
-                                <div className="login-logo">
+                        <div className="forget-pass-form col-6">
+                            <div className="forget-pass-title">
+                                <div className="forget-pass-logo">
                                     <Link to="/"><img src={logo} alt="Logo" />
                                         <h1>Producto Shop</h1>
                                     </Link>
@@ -58,7 +57,7 @@ function ForgotPass() {
                                 <p>Please enter your Email Address to reset your Password.</p>
                             </div>
 
-                            <div className={theme === 'dark' ? 'dark-pass-form' : 'light-pass-form'}>
+                            <div className={theme === 'dark' ? 'main-pass-form dark-main-pass-form' : 'main-pass-form light-main-pass-form'}>
                                 <div class="panel panel-default">
                                     <div class="panel-body">
                                         <div class="text-center">
@@ -73,7 +72,7 @@ function ForgotPass() {
                                                         <input type="email" id="formEmail" value={email} onChange={(e) => setEmail(e.target.value)} />
                                                     </div>
 
-                                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init className="pass-btn">Reset Password</button>
+                                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init className={theme=== 'dark' ? 'forget-pass-btn dark-pass-btn' : 'forget-pass-btn light-pass-btn'}>Reset Password</button>
 
                                                 {/* <input type="hidden" class="hide" name="token" id="token" value="" /> */}
                                             </form>

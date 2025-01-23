@@ -1,3 +1,4 @@
+
 footer {
     background-color: rgb(229, 134, 0);
     padding: 2rem 3rem;
@@ -109,40 +110,6 @@ footer {
     font-size: 1.5rem;
     font-weight: 700;
 }
-
-
-
-/* CSS for Category Componenet */
-
-.mainClassCategory {
-    align-items: center;
-    text-align: center;
-    margin: 20rem 5rem 10rem 5rem;
-}
-
-.lightTitle {
-    margin: 2rem 0 4rem 0;
-    padding: 1rem 0;
-    font-size: 4rem;
-    color: rgb(98, 0, 128);
-    font-weight: 900;
-}
-
-/* themeContext */
-
-.darkClassCategory {
-    background-color: rgb(50, 50, 50);
-}
-
-.darkTitle {
-    margin: 2rem 0 4rem 0;
-    padding: 1rem 0;
-    font-size: 4rem;
-    color: rgb(162, 91, 184);
-    font-weight: 900;
-}
-
-
 
 @media(max-width: 1400px) {
     .footer-logo img {
@@ -260,5 +227,82 @@ footer {
 
     .subscribe-form button {
         padding: 0.6rem;
+    }
+}
+
+
+
+
+
+/*****Category Component*****/
+
+.dark-category {
+    background-color: rgb(50, 50, 50);
+}
+
+.category-container {
+    align-items: center;
+    text-align: center;
+    margin: 20rem 5rem 10rem 5rem;
+}
+
+.category-container h1 {
+    margin: 2rem 0 4rem 0;
+    padding: 1rem 0;
+    font-size: 4.5rem;
+    color: rgb(98, 0, 128);
+    font-weight: 900;
+}
+
+.dark-category .dark-catTitle {
+    color: rgb(194, 88, 226);
+}
+
+@media(max-width: 1400px) {
+    .category-container {
+        margin: 10rem 5rem 5rem 5rem;
+    }
+    .category-container h1 {
+        margin-bottom: 3rem;
+        font-size: 3.5rem;
+    }
+}
+
+@media(max-width: 1200px) {
+    .category-container {
+        margin: 8rem 4rem 4rem 4rem;
+    }
+
+    .category-container h1 {
+        margin-bottom: 2.5rem;
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 992px) {
+    .category-container {
+        margin: 8rem 3rem 4rem 3rem;
+    }
+    .category-container h1 {
+        margin-bottom: 2rem;
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 768px) {
+    .category-container {
+        margin: 7rem 2rem 3rem 2rem;
+    }
+
+    .category-container h1 {
+        margin-bottom: 1.5rem;
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width: 576px) {
+    .category-container h1 {
+        margin-bottom: 1rem;
+        font-size: 2.3rem;
     }
 }

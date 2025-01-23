@@ -9,9 +9,11 @@
 }
 
 .main-aboutUs h1 {
+    text-align: center;
     font-size: 3.5rem;
     color: rgb(86, 56, 99);
     font-weight: 800;
+    margin-bottom: 1rem;
     padding: 1rem 0;
 }
 
@@ -34,8 +36,7 @@
 }
 
 
-
-/* **************ThemeContext*************** */
+/*****ThemeContext******/
 
 .dark-about {
     background-color: #313131;
@@ -66,6 +67,7 @@
     
     .main-aboutUs h1 {
         font-size: 2rem;
+        margin-bottom: 0.5rem;
     }
 
     .main-aboutUs h2 {
