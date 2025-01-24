@@ -1,70 +1,51 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.login-main {
+.light-login {
     background-color: #9d00c5;
 }
 
-/* ThemeContext */
-.dark-login-main {
+.dark-login {
     background-color: #350042;
 }
 
-
 .login-container {
+    width: 90%;
     background-color: #ffffff;
     border-radius: 10px;
-    margin: 20rem 15rem 15rem 15rem;
+    margin: 20rem auto 10rem auto;
 }
 
-.prelogged {
+.prelogin {
     text-align: center;
     font-size: 3rem;
     font-weight: 700;
+    margin: 10rem 5rem;
+}
+
+.light-prelogin {
     color: #e24400;
-    margin: 10rem 5rem;
-}
-/* ThemeContext */
-.dark-prelogged {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #ba3800;
-    margin: 10rem 5rem;
 }
 
+.dark-prelogin {
+    color: #ba3800;
+}
 
 .login-image img {
-    margin: 25rem auto 0 auto;
     width: 100%;
+    height: 100%;
 }
 
 .login-form {
-    padding: 3rem 0 5rem 0;
+    padding: 5rem 0;
 }
 
-
-.login-heading {
+.login-title {
     text-align: center;
 }
 
-.login-heading h1 {
-    font-size: 3.2rem;
-    color: #8700a9;
-    font-weight: 800;
-    margin: 3rem 0 2rem 0;
-    padding: 0.5rem 0;
-}
-
-.login-heading p {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
-    color: rgb(55, 55, 55);
+.login-logo img {
+    width: 15%;
+    border-radius: 50%;
+    margin-left: 0;
 }
 
 .login-logo a {
@@ -74,41 +55,59 @@
     text-decoration: none;
 }
 
-.login-logo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-left: 0;
-}
-
-.login-logo h1 {
+.login-logo a h1 {
     font-size: 2.5rem;
     color: #c300d8;
     font-weight: 800;
-    margin: 2rem 0 0 1rem;
-    padding: 0.5rem 0;
+    align-items: center;
+    margin-left: 1rem;
 }
 
+.login-title h1 {
+    font-size: 3rem;
+    color: #8700a9;
+    font-weight: 800;
+    margin: 3rem 0 2rem 0;
+}
 
+.login-title p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: rgb(55, 55, 55);
+}
 
-.light-login-form {
-    padding: 2rem 3rem ;
+.main-login-form {
+    padding: 3rem;
     margin: 0 5rem;
-    border: 1px solid #c300d8;
     border-radius: 10px;
+}
+
+.light-main-login-form {
+    border: 1px solid #c300d8;
     background-color: #ff96f4;
 }
 
-/* ThemeContext */
-.dark-login-form {
-    padding: 2rem 3rem ;
-    margin: 0 5rem;
+.dark-main-login-form {
     border: 1px solid #c300d8;
-    border-radius: 10px;
     background-color: #d680cd;
 }
 
-.light-login-form input, .dark-login-form input {
+.main-login-form label {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #72008e;
+    margin-bottom: 0;
+}
+
+.main-login-form label i {
+    color: #72008e;
+    font-size: 2rem;
+    margin: 0 0.3rem -0.3rem 0;
+    padding: 0;
+}
+
+.main-login-form input {
     width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -119,58 +118,47 @@
     outline: none;
 }
 
-.light-login-form label, .dark-login-form label {
+.login-btn {
+    width: 100%;
+    margin: 1.5rem auto 2rem auto;
+    padding: 1rem;
     font-size: 1.7rem;
     font-weight: 700;
-    color: #72008e;
-    margin-bottom: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #ffffff;
 }
 
-.light-login-form i, .dark-login-form i {
-    color: #72008e;
-    margin: 0 0.3rem -0.3rem 0;
-    padding-top: 0.2rem;
+.light-login-btn {
+    background-color: #ff9100;
+    border: 1px solid #dc7d00;
 }
 
+.dark-login-btn {
+    background-color: #ff570f;
+    border: 1px solid #ef4000;
+}
 
-
-.lg-checkBox input {
+.login-checkBox input {
     width: 1rem;
     height: 1rem;
     margin-left: 0.5rem;
 }
 
-.lg-checkBox label {
+.login-checkBox label {
     color: rgb(55, 55, 55);
     font-size: 1.5rem;
     margin: 0.5rem 0 0 0.5rem;
 }
 
-
-
-.forget-pass {
+.login-forget-pass {
     padding-top: 0.3rem;
 }
 
-.forget-pass a {
+.login-forget-pass a {
     color: #72008e;
     font-size: 1.5rem;
     font-weight: 700;
-}
-
-
-
-.login-btn {
-    width: 100%;
-    margin: 2rem auto 3rem auto;
-    padding: 1rem;
-    background-color: #ff9100;
-    border: 1px solid #dc7d00;
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 700;
-    border-radius: 10px;
-    cursor: pointer;
 }
 
 .login-socialmedia {
@@ -180,11 +168,6 @@
 .login-socialmedia p {
     font-size: 1.5rem;
     color: rgb(55, 55, 55);
-}
-
-.login-socialmedia button {
-    font-size: 1.5rem;
-    color: #72008e;
 }
 
 .login-socialmedia a {
@@ -199,6 +182,8 @@
     padding: 2rem 0 1rem 0;
 }
 
-.socialmedia-icon a {
+.socialmedia-icon a i{
     margin: 0 2rem;
+    color: #72008e;
+    cursor: pointer;
 }

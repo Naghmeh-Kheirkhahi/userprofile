@@ -4,7 +4,7 @@ import "./Register.css";
 import { Link } from "react-router-dom";
 import logo from "../../Assets/images/logo.jpg";
 import { useNavigate } from "react-router-dom";
-import register from "../../Assets/images/register.JPG";
+import register from "../../Assets/images/register.jpg";
 import { ThemeContext } from "../../Context/ThemeContext";
 import { UserContext } from "../../Context/UserContext";
 
@@ -52,11 +52,11 @@ function Register() {
 
     return (
         <>
-            <div className={theme === 'dark' ? 'dark-register-main' : 'register-main'}>
+            <div className={theme === 'dark' ? 'dark-register' : 'light-register'}>
                 <div className="register-container">
 
                     {username ? (
-                        <div className={theme === 'dark' ? 'dark-prelogged' : 'prelogged'}>
+                        <div className={theme === 'dark' ? 'prelogin dark-prelogin' : 'prelogin light-prelogin'}>
                             <p>You have already Logged in as a User.</p>
                             <p>To access the Login Form, please Log out first.</p>
                         </div>
@@ -68,7 +68,7 @@ function Register() {
 
 
                             <div className="register-form col-6">
-                                <div className="register-heading">
+                                <div className="register-title">
                                     <div className="register-logo">
                                         <Link to="/"><img src={logo} alt="Logo" />
                                             <h1>Producto Shop</h1>
@@ -80,7 +80,7 @@ function Register() {
                                     <p>Please create an account to register in our website.</p>
                                 </div>
 
-                                <form onSubmit={handleRegister} className={theme === 'dark' ? 'dark-register-form' : 'light-register-form'}>
+                                <form onSubmit={handleRegister} className={theme === 'dark' ? 'main-register-form dark-main-register-form' : 'main-register-form light-main-register-form'}>
 
                                     <div data-mdb-input-init class="flex-fill mb-4">
                                         <label class="form-label" for="formName"><i class="fa fa-user"></i> Name</label>
@@ -107,14 +107,14 @@ function Register() {
                                         <input type="password" id="formRePass" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                                     </div>
 
-                                    <div class="rgs-checkBox">
+                                    <div class="register-checkBox">
                                         <input class="form-check-input" type="checkbox" value="" id="formCheck" />
                                         <label class="form-check-label" for="formCheck">
                                             I agree all statements in <a href="#!">Terms of service</a>
                                         </label>
                                     </div>
 
-                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init className="register-btn">Register</button>
+                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init className={theme=== 'dark' ? 'register-btn dark-register-btn' : 'register-btn light-register-btn'}>Register</button>
                                 </form>
                             </div>
                         </div>
