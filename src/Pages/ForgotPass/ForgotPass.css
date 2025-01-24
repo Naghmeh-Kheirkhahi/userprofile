@@ -164,6 +164,11 @@
         margin: 15rem auto 7rem auto;
     }
 
+    .prelogin {
+        font-size: 2.5rem;
+        margin: 8rem 4rem;
+    }
+
     .forget-pass-image img {
         height: 70%;
         margin-top: 8rem;
@@ -232,6 +237,11 @@
         margin: 12rem auto 5rem auto;
     }
 
+    .prelogin {
+        font-size: 2rem;
+        margin: 6rem 3rem;
+    }
+
     .forget-pass-image img {
         height: 60%;
         margin-top: 10rem;
@@ -298,6 +308,11 @@
 }
 
 @media(max-width: 992px) {
+    .prelogin {
+        font-size: 1.8rem;
+        margin: 5rem 2.5rem;
+    }
+
     .forget-pass-image img {
         height: 50%;
         margin-top: 12rem;
@@ -356,6 +371,11 @@
         margin: 10rem auto 4rem auto;
     }
 
+    .prelogin {
+        font-size: 1.5rem;
+        margin: 4rem 2rem;
+    }
+
     .forget-pass-image {
         display: none;
     }
@@ -406,6 +426,11 @@
 }
 
 @media(max-width: 576px) {
+    .prelogin {
+        font-size: 1.3rem;
+        margin: 3rem 1.5rem;
+    }
+
     .forget-pass-logo img {
         width: 18%;
     }
