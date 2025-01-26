@@ -98,7 +98,7 @@ function Login() {
 
                                     {/* 2 column grid layout for inline styling */}
                                     <div class="row text-center">
-                                        <div class="col-6 d-flex justify-content-center">
+                                        <div class="col-6 col-md-12 col-lg-6 d-flex justify-content-center">
                                             {/* Checkbox */}
                                             <div class="login-checkBox">
                                                 <input class="form-check-input" type="checkbox" value="" id="formCheck" />
@@ -106,7 +106,7 @@ function Login() {
                                             </div>
                                         </div>
 
-                                        <div class="col-6 login-forget-pass">
+                                        <div class="col-6 col-md-12 col-lg-6 login-forget-pass">
                                             {/* Simple link */}
                                             <a href="/ForgotPass">Forgot password?</a>
                                         </div>

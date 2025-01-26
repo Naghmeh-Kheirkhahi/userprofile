@@ -54,7 +54,6 @@ function Register() {
         <>
             <div className={theme === 'dark' ? 'dark-register' : 'light-register'}>
                 <div className="register-container">
-
                     {username ? (
                         <div className={theme === 'dark' ? 'prelogin dark-prelogin' : 'prelogin light-prelogin'}>
                             <p>You have already Logged in as a User.</p>
@@ -62,12 +61,12 @@ function Register() {
                         </div>
                     ) : (
                         <div className="row">
-                            <div className="register-image col-6">
+                            <div className="register-image col-12 col-md-6">
                                 <img src={register} />
                             </div>
 
 
-                            <div className="register-form col-6">
+                            <div className="register-form col-12 col-md-6">
                                 <div className="register-title">
                                     <div className="register-logo">
                                         <Link to="/"><img src={logo} alt="Logo" />
