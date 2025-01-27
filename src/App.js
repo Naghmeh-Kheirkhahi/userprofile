@@ -23,10 +23,9 @@ import Register from './Pages/Register/Register';
 import ForgotPass from './Pages/ForgotPass/ForgotPass';
 
 import { ThemeProvider } from './Context/ThemeContext';
-import Test from './Components/Test/Test';
-
+// import Test from './Components/Test/Test';
 import { UserProvider } from './Context/UserContext';
-import DisplayUsername from './Components/Test/DisplayUsername';
+// import DisplayUsername from './Components/Test/DisplayUsername';
 
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import UserPanel from './Pages/UserPanel/UserPanel';
@@ -43,9 +42,7 @@ import Category from './Components/Footer/Category';
 function App() {
 
   return (
-
     <>
-
       <ThemeProvider>
         <UserProvider>
           <Nav />
