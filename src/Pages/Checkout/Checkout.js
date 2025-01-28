@@ -27,19 +27,19 @@ function Checkout() {
 
     return (
         <>
-            <div className={theme === 'dark' ? 'dark-main-checkout' : ''}>
+            <div className={theme === 'dark' ? 'dark-checkout' : ''}>
                 <div className='main-checkout'>
-                    <div className="title">
-                        <h2 className={theme === 'dark' ? 'light-title' : 'dark-title'}>Responsive Checkout Form</h2>
-                        <p className={theme === 'dark' ? 'light-info' : 'dark-info'}>Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p>
+                    <div className="checkout-title">
+                        <h1 className={theme === 'dark' ? 'light-checkout-title' : 'dark-checkout-title'}>Responsive Checkout Form</h1>
+                        <p className={theme === 'dark' ? 'light-checkout-text' : 'dark-checkout-text'}>Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p>
                     </div>
 
                     <div className="row">
-                        <div className="col-9 pe-0">
-                            <div className={theme === 'dark' ? 'dark-checkout-container' : 'container'}>
-                                <form className={theme === 'dark' ? 'dark-checkout-form' : 'checkout-form'} action="/action_page.php">
+                        <div className="col-12 col-lg-9">
+                            <div className="checkout-info">
+                                <form className={theme === 'dark' ? 'dark-checkout-form' : 'light-checkout-form'} action="/action_page.php">
                                     <div className="row">
-                                        <div className="col-6 pe-5">
+                                        <div className="col-6">
                                             <h3>Billing Address</h3>
 
                                             <label for="fname"><i className="fa fa-user"></i> Full Name</label>
@@ -61,12 +61,10 @@ function Checkout() {
                                             <input type="text" id="zip" name="zip" placeholder="10001" />
                                         </div>
 
-                                        <div className="col-6 ps-5 pe-5">
+                                        <div className="col-6">
                                             <h3>Payment</h3>
                                             <label for="fname">Accepted Cards</label>
                                             <img src={cards} alt="cards" />
-
-                                            <br /><br />
 
                                             <label for="cname">Name on Card</label>
                                             <input type="text" id="cname" name="cardname" placeholder="John More Doe" />
@@ -82,30 +80,28 @@ function Checkout() {
                                         </div>
                                     </div>
 
-                                    <div className="checkbox">
+                                    <div className="checkout-checkbox">
                                         <label><input type="checkbox" checked="checked" name="sameadr" /> Shipping address same as billing</label>
                                     </div>
 
-                                    <button>Continue to Check Out</button>
+                                    <button className={theme === 'dark' ? 'dark-checkout-btn' : 'light-checkout-btn'}>Continue to Check Out</button>
                                 </form>
                             </div>
                         </div>
 
 
-                        <div className="col-3 ps-0">
-                            <div className={theme === 'dark' ? 'dark-cart-container' : 'container'}>
-                                <div className="productList">
-                                    <h4>Cart <span><i className="fa fa-shopping-cart"></i> <b className="itemNumber">{totalQuantity}</b></span></h4>
+                        <div className="col-12 col-lg-3">
+                            <div className="checkout-result">
+                                <div className="checkout-productList">
+                                    <h4>Cart <span><i className="fa fa-shopping-cart"></i> <b className="productItems-quantity">{totalQuantity}</b></span></h4>
 
-                                    {
-                                        productsList.map(item => (
-                                            <p><a href="#">{item.title}</a> <span>{item.price}</span></p>
-                                        ))
-                                    }
+                                    {productsList.map(item => (
+                                        <p className="checkout-productInfo"><a href="#">{item.title}</a> <span>{item.price}</span></p>
+                                    ))}
 
                                     <hr />
-                                    <div className="totalPrice p-0 mt-5">
-                                        <p>Total <span><b>{totalPrice} &euro; </b></span></p>
+                                    <div className="checkout-totalPrice">
+                                        <p>Total <span>{totalPrice} &euro; </span></p>
                                     </div>
                                 </div>
                             </div>
