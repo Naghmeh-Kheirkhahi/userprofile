@@ -101,8 +101,8 @@ function Checkout() {
                                     {productsList.map(item => (
                                         <div className="checkout-productInfo">
                                             <div className="row align-items-center">
-                                                <p className="col-10 ps-5 ps-lg-5 col-xxl-8 ps-xxl-4 pe-xxl-5">{item.title}</p>
-                                                <p className="col-2 ps-4 ps-lg-5 col-xxl-4 ps-xxl-4"><b>{item.price} &euro;</b></p>
+                                                <div className="col-9 col-md-10 col-xxl-8"><p className="checkout-proTitle">{item.title}</p></div>
+                                                <div className="col-3 col-md-2 col-xxl-4"><p className="checkout-proPrice">{item.price} &euro;</p></div>
                                             </div>
                                         </div>
                                     ))}
