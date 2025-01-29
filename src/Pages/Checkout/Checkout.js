@@ -30,12 +30,12 @@ function Checkout() {
             <div className={theme === 'dark' ? 'dark-checkout' : ''}>
                 <div className='main-checkout'>
                     <div className="checkout-title">
-                        <h1 className={theme === 'dark' ? 'light-checkout-title' : 'dark-checkout-title'}>Responsive Checkout Form</h1>
-                        <p className={theme === 'dark' ? 'light-checkout-text' : 'dark-checkout-text'}>Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p>
+                        <h1 className={theme === 'dark' ? 'dark-checkout-title' : 'light-checkout-title'}>Responsive Checkout Form</h1>
+                        <p className={theme === 'dark' ? 'dark-checkout-text' : 'light-checkout-text'}>Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p>
                     </div>
 
-                    <div className="row">
-                        <div className="col-12 col-lg-9">
+                    <div className="row m-0">
+                        <div className="col-12 col-xxl-9">
                             <div className="checkout-info">
                                 <form className={theme === 'dark' ? 'dark-checkout-form' : 'light-checkout-form'} action="/action_page.php">
                                     <div className="row">
@@ -81,7 +81,7 @@ function Checkout() {
                                     </div>
 
                                     <div className="checkout-checkbox">
-                                        <label><input type="checkbox" checked="checked" name="sameadr" /> Shipping address same as billing</label>
+                                        <label htmlFor="sameadr"><input type="checkbox" checked="checked" id="sameadr" name="sameadr" /> Shipping address same as billing</label>
                                     </div>
 
                                     <button className={theme === 'dark' ? 'dark-checkout-btn' : 'light-checkout-btn'}>Continue to Check Out</button>
@@ -90,18 +90,27 @@ function Checkout() {
                         </div>
 
 
-                        <div className="col-12 col-lg-3">
+                        <div className="col-12 col-xxl-3">
                             <div className="checkout-result">
-                                <div className="checkout-productList">
-                                    <h4>Cart <span><i className="fa fa-shopping-cart"></i> <b className="productItems-quantity">{totalQuantity}</b></span></h4>
+                                <div className={theme === 'dark' ? 'checkout-productList dark-productList' : 'checkout-productList light-productList'}>
+                                    <div className="checkout-cart">
+                                        <h4>Cart</h4>
+                                        <span><i className="fa fa-shopping-cart"></i> <span className="productList-quantity">{totalQuantity}</span></span>
+                                    </div>
 
                                     {productsList.map(item => (
-                                        <p className="checkout-productInfo"><a href="#">{item.title}</a> <span>{item.price}</span></p>
+                                        <div className="checkout-productInfo">
+                                            <div className="row align-items-center">
+                                                <p className="col-10 ps-5 ps-lg-5 col-xxl-8 ps-xxl-4 pe-xxl-5">{item.title}</p>
+                                                <p className="col-2 ps-4 ps-lg-5 col-xxl-4 ps-xxl-4"><b>{item.price} &euro;</b></p>
+                                            </div>
+                                        </div>
                                     ))}
 
                                     <hr />
                                     <div className="checkout-totalPrice">
-                                        <p>Total <span>{totalPrice} &euro; </span></p>
+                                        <h5>Total Price: </h5>
+                                        <p>{totalPrice} &euro;</p>
                                     </div>
                                 </div>
                             </div>

@@ -1,4 +1,3 @@
-
 .dark-checkout {
     background-color: #313131;
 }
@@ -12,40 +11,46 @@
 }
 
 .checkout-title h1 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.2rem;
+    font-weight: 800;
     padding-bottom: 2rem;
 }
 
 .light-checkout-title {
-    color: #c490ff;
+    color: rgb(110, 0, 140);
 }
 
 .dark-checkout-title {
-    color: rgb(126, 0, 161);
+    color: rgb(198, 100, 225);
 }
 
 .checkout-title p {
-    font-size: 1.5rem;
-    font-weight: 800;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
 .light-checkout-text {
-    color: #d2d2d2;
-}
-
-.dark-checkout-text {
     color: rgb(50, 50, 50);
 }
 
-.checkout-info {
-    padding: 5rem;
+.dark-checkout-text {
+    color: #d2d2d2;
 }
 
-.checkout-info form {
+.checkout-info {
+    padding: 5rem 5rem 0 8rem;
+}
+
+.checkout-result {
+    padding: 5rem 8rem 0 0;
+}
+
+.checkout-info form,
+.checkout-productList {
     padding: 3rem;
     border-radius: 10px;
 }
+
 
 .light-checkout-form {
     border: 2px solid #c350e3;
@@ -58,52 +63,58 @@
 }
 
 .checkout-info form h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    color: rgb(102, 0, 131);
+    color: rgb(94, 0, 120);
     margin-bottom: 2rem;
 }
 
 .checkout-info form img {
+    width: 40%;
     border-radius: 10px;
-    margin-right: 10rem;
     background-color: transparent;
     mix-blend-mode: multiply;
+    margin: 0.2rem auto 3.3rem auto;
 }
 
 .checkout-info form input[type="text"] {
     width: 100%;
-    margin-bottom: 3rem;
-    padding: 1rem;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    font-size: 1.3rem;
     outline: none;
+    border: 2px solid rgb(221, 158, 229);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
 }
 
 .checkout-info form label {
     display: block;
     font-size: 1.5rem;
     font-weight: 700;
-    color: rgb(61, 0, 78);
+    color: rgb(71, 0, 90);
     margin-bottom: 0.5rem;
 }
 
+.checkout-info form label i {
+    padding: 0.1rem;
+    margin-bottom: -0.3rem;
+}
+
 .checkout-checkbox {
-    margin: 1rem 0 2rem 0;
+    margin: 1rem 0 2rem 1rem;
 }
 
 .checkout-checkbox label {
     font-size: 1.5rem;
     font-weight: 700;
-    color: rgb(61, 0, 78);
-    margin-left: 1rem;
+    color: rgb(71, 0, 90);
 }
 
-.checkout-checkbox input {
-    width: 20px;
-    height: 20px;
+.checkout-checkbox input[type="checkbox"] {
+    width: 1.3rem;
+    height: 1.3rem;
     margin-right: 0.5rem;
+    cursor: pointer;
 }
 
 .checkout-info form button {
@@ -111,10 +122,10 @@
     border-radius: 10px;
     color: white;
     cursor: pointer;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 700;
     padding: 1rem 2rem;
-    margin:  1rem auto 2rem auto; 
+    margin: 1rem auto 2rem auto;
 }
 
 .light-checkout-btn {
@@ -128,73 +139,475 @@
 }
 
 
-
-
-.checkout-result {
-    padding: 5rem;
+.light-productList {
+    border: 2px solid rgb(155, 155, 155);
+    background-color: rgb(215, 215, 215);
 }
 
-.checkout-productList {
-    border-radius: 10px;
-    border: 2px solid rgb(159, 159, 159);
-    background-color: rgb(232, 232, 232);
-    padding: 2rem;
-    margin-right: 2rem;
+.dark-productList {
+    border: 2px solid rgb(200, 200, 200);
+    background-color: rgb(250, 250, 250);
 }
 
-.checkout-productList h4 {
-    font-size: 1.8rem;
+.checkout-cart,
+.checkout-cart h4 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.2rem;
     font-weight: 700;
-    margin-bottom: 3rem;
-}
-
-.checkout-productList span {
-    float: right;
-    color: rgb(59, 59, 59);
+    margin-bottom: 1rem;
+    color: rgb(50, 50, 50);
 }
 
 .checkout-productList i {
-    padding: 0.2rem 0;
+    margin-right: -1rem;
 }
 
-.checkout-productList hr {
-    border-top: 2px solid rgb(55, 55, 55);
-}
-
-.productItems-quantity {
+.productList-quantity {
     border: 3px solid rgb(186, 68, 0);
     background-color: white;
     padding: 0 0.5rem;
     border-radius: 50%;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+}
+
+.checkout-productList hr {
+    border-top: 3px solid rgb(40, 40, 40);
 }
 
 .checkout-productInfo {
+    font-size: 1.5rem;
+    color: rgb(110, 0, 140);
     margin-bottom: 1.5rem;
-    font-size: 1.2rem;
 }
 
-.checkout-productInfo a {
-    text-decoration: none;
-    color: rgb(136, 0, 174);
-    display: inline-block;
-    width: 80%;
+.checkout-totalPrice {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
 }
 
-.checkout-productInfo span {
-    float: right;
-    color: rgb(136, 0, 174);
+.checkout-totalPrice h5,
+.checkout-totalPrice p {
+    font-size: 1.7rem;
+    font-weight: 800;
 }
 
 .checkout-totalPrice p {
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-
-.checkout-totalPrice span {
-    font-size: 1.5rem;
-    font-weight: 800;
     color: rgb(186, 68, 0);
-    float: right;
 }
 
+
+@media(max-width: 1400px) {
+    .main-checkout {
+        margin: 15rem auto 8rem auto;
+    }
+
+    .checkout-title h1 {
+        font-size: 2.8rem;
+    }
+
+    .checkout-title p {
+        font-size: 1.3rem;
+        margin: 0 5rem;
+    }
+
+    .checkout-info {
+        padding: 5rem;
+    }
+
+    .checkout-result {
+        padding: 0 10rem;
+    }
+
+    .checkout-productList {
+        padding: 3rem 2rem;
+    }
+
+
+    .checkout-info form h3 {
+        font-size: 1.8rem;
+    }
+
+    .checkout-info form img {
+        margin: 0.2rem auto 3.2rem auto;
+    }
+
+    .checkout-info form input[type="text"] {
+        font-size: 1.3rem;
+        padding: 0.8rem;
+    }
+
+    .checkout-info form label {
+        font-size: 1.3rem;
+    }
+
+    .checkout-checkbox {
+        margin: 0.5rem 0 1rem 1rem;
+    }
+
+    .checkout-checkbox label {
+        font-size: 1.3rem;
+    }
+
+    .checkout-checkbox input[type="checkbox"] {
+        width: 1.1rem;
+        height: 1.1rem;
+        margin-right: 0.2rem;
+    }
+
+    .checkout-info form button {
+        font-size: 1.3rem;
+        padding: 0.8rem 1rem;
+        margin: 0.5rem auto 1rem auto;
+    }
+
+
+    .checkout-cart {
+        font-size: 1.8rem;
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    .checkout-cart h4 {
+        font-size: 1.8rem;
+    }
+
+    .checkout-productList i {
+        margin-right: -0.8rem;
+    }
+
+    .productList-quantity {
+        font-size: 1.3rem;
+    }
+
+    .checkout-productInfo {
+        font-size: 1.3rem;
+    }
+
+    .checkout-totalPrice {
+        margin: 2rem 3rem 0 3rem;
+    }
+
+    .checkout-totalPrice h5,
+    .checkout-totalPrice p {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 1300px) {
+    .checkout-info form img {
+        margin: 0.2rem auto 3.4rem auto;
+    }
+}
+
+@media(max-width: 1200px) {
+    .main-checkout {
+        margin: 13rem auto 7rem auto;
+    }
+
+    .checkout-title h1 {
+        font-size: 2.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .checkout-title p {
+        font-size: 1.2rem;
+    }
+
+    .checkout-info {
+        padding: 4rem;
+    }
+
+    .checkout-result {
+        padding: 0 8rem;
+    }
+
+    .checkout-info form {
+        padding: 2.5rem;
+    }
+
+    .checkout-productList {
+        padding: 2.5rem 1.5rem;
+    }
+
+
+    .checkout-info form h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .checkout-info form img {
+        margin: 0.2rem auto 2.6rem auto;
+    }
+
+    .checkout-info form input[type="text"] {
+        font-size: 1.2rem;
+        padding: 0.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .checkout-info form label {
+        font-size: 1.2rem;
+    }
+
+    .checkout-checkbox label {
+        font-size: 1.2rem;
+    }
+
+    .checkout-checkbox input[type="checkbox"] {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .checkout-info form button {
+        font-size: 1.2rem;
+    }
+
+
+    .checkout-cart {
+        font-size: 1.6rem;
+    }
+
+    .checkout-cart h4 {
+        font-size: 1.6rem;
+    }
+
+    .checkout-productList i {
+        padding: 0.1rem;
+    }
+
+    .productList-quantity {
+        padding: 0 0.4rem;
+        font-size: 1.2rem;
+    }
+
+    .checkout-productInfo {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .checkout-totalPrice {
+        margin: 1.5rem 2.5rem 0 2.5rem;
+    }
+
+    .checkout-totalPrice h5,
+    .checkout-totalPrice p {
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width: 1100px) {
+    .checkout-info form img {
+        width: 45%;
+    }
+}
+
+@media(max-width: 992px) {
+    .checkout-title h1 {
+        font-size: 2rem;
+    }
+
+    .checkout-title p {
+        font-size: 1rem;
+        margin: 0 4rem;
+    }
+
+    .checkout-info {
+        padding: 3rem;
+    }
+
+    .checkout-result {
+        padding: 0 6rem;
+    }
+
+    .checkout-info form {
+        padding: 2rem;
+    }
+
+    .checkout-productList {
+        padding: 2rem 1rem;
+    }
+
+
+    .checkout-info form h3 {
+        font-size: 1.4rem;
+    }
+
+    .checkout-info form img {
+        margin: 0.2rem auto 2.3rem auto;
+    }
+
+    .checkout-info form input[type="text"] {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+
+    .checkout-info form label {
+        font-size: 1rem;
+    }
+
+    .checkout-checkbox label {
+        font-size: 1rem;
+    }
+
+    .checkout-checkbox input[type="checkbox"] {
+        width: 0.9rem;
+        height: 0.9rem;
+    }
+
+    .checkout-info form button {
+        font-size: 1rem;
+    }
+
+
+    .checkout-cart {
+        font-size: 1.4rem;
+        margin: 0 1.5rem 1rem 1.5rem;
+    }
+
+    .checkout-cart h4 {
+        font-size: 1.4rem;
+    }
+
+    .checkout-productList i {
+        margin-right: -0.7rem;
+    }
+
+    .productList-quantity {
+        padding: 0 0.3rem;
+        font-size: 1rem;
+    }
+
+    .checkout-productInfo {
+        font-size: 1.1rem;
+    }
+
+    .checkout-totalPrice h5,
+    .checkout-totalPrice p {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width: 850px) {
+    .checkout-info form img {
+        width: 50%;
+        margin: 0.2rem auto 2.5rem auto;
+    }
+}
+
+@media(max-width: 768px) {
+    /***** edit on wednesday ****/
+
+    /* .main-checkout {
+        margin: 13rem auto 7rem auto;
+    } */
+
+    .checkout-title h1 {
+        font-size: 2rem;
+        /* padding-bottom: 1.5rem; */
+    }
+
+    .checkout-title p {
+        font-size: 1rem;
+        margin: 0 4rem;
+    }
+
+    .checkout-info {
+        padding: 3rem;
+    }
+
+    .checkout-result {
+        padding: 0 6rem;
+    }
+
+    .checkout-info form {
+        padding: 2rem;
+    }
+
+    .checkout-productList {
+        padding: 2rem 1rem;
+    }
+
+
+    .checkout-info form h3 {
+        font-size: 1.4rem;
+        /* margin-bottom: 1.5rem; */
+    }
+
+    .checkout-info form img {
+        width: 50%;
+        margin: 0.2rem auto 2.5rem auto;
+    }
+
+    .checkout-info form input[type="text"] {
+        font-size: 1rem;
+        padding: 0.6rem;
+        /* margin-bottom: 1.5rem; */
+    }
+
+    .checkout-info form label {
+        font-size: 1rem;
+        /* margin-bottom: 0.5rem; */
+    }
+
+    /* .checkout-info form label i {
+        padding: 0.1rem;
+        margin-bottom: -0.3rem;
+    } */
+
+    /* .checkout-checkbox {
+        margin: 0.5rem 0 1rem 1rem;
+    } */
+
+    .checkout-checkbox label {
+        font-size: 1rem;
+    }
+
+    .checkout-checkbox input[type="checkbox"] {
+        width: 0.9rem;
+        height: 0.9rem;
+        /* margin-right: 0.2rem; */
+    }
+
+    .checkout-info form button {
+        font-size: 1rem;
+        /* padding: 0.8rem 1rem;
+        margin: 0.5rem auto 1rem auto; */
+    }
+
+
+    .checkout-cart {
+        font-size: 1.4rem;
+        margin: 0 1.5rem 1rem 1.5rem;
+    }
+
+    .checkout-cart h4 {
+        font-size: 1.4rem;
+    }
+
+    .checkout-productList i {
+        margin-right: -0.7rem;
+        /* padding: 0.1rem; */
+    }
+
+    .productList-quantity {
+        padding: 0 0.3rem;
+        font-size: 1rem;
+    }
+
+    .checkout-productInfo {
+        font-size: 1.1rem;
+        /* margin-bottom: 1rem; */
+    }
+
+    /* .checkout-totalPrice {
+        margin: 1.5rem 2.5rem 0 2.5rem;
+    } */
+
+    .checkout-totalPrice h5,
+    .checkout-totalPrice p {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width: 576px) {}
