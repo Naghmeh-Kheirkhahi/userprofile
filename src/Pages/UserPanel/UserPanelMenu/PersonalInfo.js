@@ -15,20 +15,20 @@ function PersonalInfo() {
     return (
         <>
 
-            <div className={theme === 'dark' ? 'dark-main-class' : 'main-class'}>
+            <div className={theme === 'dark' ? 'dark-main-class' : 'light-main-class'}>
                 <div className="row">
-                    <div className="col-3">
+                    <div className="col-5 col-lg-4 col-xxl-3">
                         <UserPanelNav />
                     </div>
 
 
-                    <div className="col-9">
+                    <div className="col-7 col-lg-8 col-xxl-9">
                         <div className="main-container">
                             <h1>My Personal Information</h1>
 
                             <p className="give-data">Please enter your personal information!</p>
 
-                            <form className="info-form">
+                            <form className="userpanel-form">
                                 <label for="fName">First Name</label>
                                 <input type="text" />
                                 <br />
@@ -53,7 +53,7 @@ function PersonalInfo() {
                                 <label for="address">Address</label>
                                 <input type="text" />
                                 <br />
-                                <button className={theme === 'dark' ? 'dark-btn' : 'light-btn'} type="submit">Save Address</button>
+                                <button className={theme === 'dark' ? 'form-btn dark-form-btn' : 'form-btn light-form-btn'} type="submit">Save Information</button>
                             </form>
                         </div>
                     </div>

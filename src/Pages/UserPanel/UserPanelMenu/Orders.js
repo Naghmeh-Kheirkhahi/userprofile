@@ -13,14 +13,14 @@ function Orders() {
 
     return (
         <>
-            <div className={theme === 'dark' ? 'dark-main-class' : 'main-class'}>
+            <div className={theme === 'dark' ? 'dark-main-class' : 'light-main-class'}>
                 <div className="row">
-                    <div className="col-3">
+                    <div className="col-5 col-lg-4 col-xxl-3">
                         <UserPanelNav />
                     </div>
 
 
-                    <div className="col-9">
+                    <div className="col-7 col-lg-8 col-xxl-9">
                         <div className="main-container">
                             <h1>My Orders</h1>
 

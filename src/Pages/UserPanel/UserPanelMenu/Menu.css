@@ -1,43 +1,32 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.main-class {
-    margin-top: 8rem;
+.light-main-class {
     background-color: #f5c7ff;
 }
 
-/* ThemeContext */
 .dark-main-class {
-    margin-top: 8rem;
     background-color: #d9afe2;
 }
 
-
 .main-container {
-    padding: 8rem;
+    padding: 20rem 8rem 8rem 8rem;
 }
 
 .main-container h1 {
     color: #770095;
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     text-align: center;
 }
 
-
 .give-data {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: 500;
     margin-bottom: 3rem;
     text-align: center;
 }
 
-/* Orders */
 
+/* Orders and Payment List */
 .order-container {
     background-color: #e16bff;
     border: 1px solid #770095;
@@ -101,10 +90,8 @@
 }
 
 
-
-/* Delivery Address */
-
-.address-form {
+/* Delivery Address and Personal Information and Change Password */
+.userpanel-form {
     border: 2px solid #770095;
     border-radius: 10px;
     background-color: #e16bff;
@@ -113,33 +100,232 @@
     width: 50%;
 }
 
-.address-form label {
+.userpanel-form label {
     font-size: 1.5rem;
     color: #430053;
     font-weight: 600;
 }
 
-.address-form input {
+.userpanel-form input {
     padding: 1rem;
     margin-bottom: 2rem;
     font-size: 1.5rem;
-    color: rgb(48, 48, 48);
-    outline: none;
+    color: rgb(50, 50, 50);
     border-radius: 10px;
+    outline: none;
     border: none;
     width: 100%;
 }
 
+.form-btn {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 1.5rem auto 0 auto;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.light-form-btn {
+    background-color: #ff9100;
+    border: 1px solid #dc7d00;
+}
+
+.dark-form-btn {
+    background-color: #ff570f;
+    border: 1px solid #ef4000;
+}
 
 
-/* Payment List */
+@media(max-width: 1400px) {
+    .main-container {
+        padding: 15rem 5rem 7rem 5rem;
+    }
+    
+    .main-container h1 {
+        font-size: 2.8rem;
+        margin-bottom: 3rem;
+    }
+    
+    .give-data {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
 
-/* Here, the classes are similar to the Orders' classes. */
+    /* Delivery Address and Personal Information and Change Password */
+    .userpanel-form {
+        padding: 4rem;
+        width: 80%;
+    }
+    
+    .userpanel-form label {
+        font-size: 1.4rem;
+    }
+    
+    .userpanel-form input {
+        padding: 0.8rem;
+        font-size: 1.4rem;
+    }
+    
+    .form-btn {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 1200px) {
+    .main-container {
+        padding: 12rem 4rem 6rem 4rem;
+    }
+    
+    .main-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .give-data {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Delivery Address and Personal Information and Change Password */
+    .userpanel-form {
+        padding: 3rem;
+        width: 90%;
+    }
+    
+    .userpanel-form label {
+        font-size: 1.3rem;
+    }
+    
+    .userpanel-form input {
+        padding: 0.7rem;
+        margin-bottom: 1.8rem;
+        font-size: 1.3rem;
+    }
+    
+    .form-btn {
+        padding: 0.7rem 0;
+        font-size: 1.4rem;
+        margin: 1rem auto 0 auto;
+    }
+}
+
+@media(max-width: 992px) {
+    .main-container {
+        padding: 12rem 3rem 6rem 2rem;
+    }
+    
+    .main-container h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .give-data {
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    /* Delivery Address and Personal Information and Change Password */
+    .userpanel-form {
+        padding: 2rem;
+        width: 100%;
+    }
+    
+    .userpanel-form label {
+        font-size: 1.2rem;
+    }
+    
+    .userpanel-form input {
+        padding: 0.6rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .form-btn {
+        padding: 0.6rem 0;
+        font-size: 1.3rem;
+        margin: 0.8rem auto 0 auto;
+    }
+}
+
+@media(max-width: 768px) {
+    .main-container {
+        padding: 12rem 2rem 5rem 1rem;
+    }
+    
+    .main-container h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.8rem;
+    }
+    
+    .give-data {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Delivery Address and Personal Information and Change Password */
+    .userpanel-form {
+        padding: 1.5rem;
+    }
+    
+    .userpanel-form label {
+        font-size: 1rem;
+    }
+    
+    .userpanel-form input {
+        font-size: 1rem;
+    }
+    
+    .form-btn {
+        font-size: 1.2rem;
+        margin: 0.7rem auto 0 auto;
+    }
+}
+
+@media(max-width: 576px) {
+    .main-container {
+        padding: 11rem 1rem 4rem 0;
+    }
+    
+    .main-container h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .give-data {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Delivery Address and Personal Information and Change Password */
+    .userpanel-form {
+        padding: 1rem;
+    }
+    
+    .userpanel-form label {
+        font-size: 0.9rem;
+    }
+    
+    .userpanel-form input {
+        padding: 0.5rem;
+        margin-bottom: 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .form-btn {
+        padding: 0.5rem 0;
+        font-size: 1rem;
+        margin: 0.5rem auto 0 auto;
+    }
+}
+
+
+
 
 
 
 /* Interests */
-
 .see-interests {
     font-size: 1.5rem;
     font-weight: 600;
@@ -166,7 +352,8 @@
     border: 2px solid #b39dc9;
     border-radius: 10px;
     background-color: rgb(241, 241, 241);
-    flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis */
+    flex: 1 1 300px;
+    /* Flex-grow, flex-shrink, and flex-basis */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -175,7 +362,6 @@
     cursor: pointer;
     text-align: center;
 }
-
 
 .delete-icon {
     text-align: right;
@@ -240,95 +426,4 @@
     font-weight: 700;
     color: rgb(231, 50, 0);
     padding-top: 10rem;
-}
-
-
-
-
-
-/* Personal Information */
-
-.info-form {
-    border: 2px solid #770095;
-    border-radius: 10px;
-    background-color: #e16bff;
-    padding: 5rem;
-    margin: 0 auto;
-    width: 60%;
-}
-
-.info-form label {
-    font-size: 1.5rem;
-    color: #430053;
-    font-weight: 600;
-}
-
-.info-form input {
-    padding: 1rem;
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    color: rgb(48, 48, 48);
-    outline: none;
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-}
-
-
-
-/* Change Password */
-
-.pass-form {
-    border: 2px solid #770095;
-    border-radius: 10px;
-    background-color: #e16bff;
-    padding: 5rem;
-    margin: 0 auto;
-    width: 60%;
-}
-
-.pass-form label {
-    font-size: 1.5rem;
-    color: #430053;
-    font-weight: 600;
-}
-
-.pass-form input {
-    padding: 1rem;
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    color: rgb(48, 48, 48);
-    outline: none;
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-}
-
-
-/* This button is for Address, Personal Info, and Change Password */
-
-.light-btn {
-    width: 100%;
-    padding: 1rem 0;
-    font-size: 1.7rem;
-    font-weight: 700;
-    margin: 1.5rem auto 0 auto;
-    background-color: #ff9100;
-    border: 1px solid #dc7d00;
-    ;
-    color: #ffffff;
-    border-radius: 10px;
-}
-
-/* ThemeContext */
-.dark-btn {
-    width: 100%;
-    padding: 1rem 0;
-    font-size: 1.7rem;
-    font-weight: 700;
-    margin: 1.5rem auto 0 auto;
-    background-color: #ff6200;
-    border: 1px solid #dc4d00;
-    color: #ffffff;
-    border-radius: 10px;
 }
