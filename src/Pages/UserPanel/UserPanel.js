@@ -19,15 +19,15 @@ function UserPanel() {
 
     return (
         <>
-            <div className={theme === 'dark' ? 'dark-user-panel' : 'user-panel'}>
+            <div className={theme === 'dark' ? 'userpanel dark-userpanel' : 'userpanel light-userpanel'}>
                 <div className="row">
-                    <div className="col-3">
+                    <div className="col-5 col-lg-4 col-xxl-3">
                         <UserPanelNav />
                     </div>
 
 
-                    <div className="col-9">
-                        <div className="user-panel-dashboard">
+                    <div className="col-7 col-lg-8 col-xxl-9">
+                        <div className="userpanel-dashboard">
                             <div className="dashboard-description">
                                 <h3>Hello {username}!</h3>
 
@@ -35,24 +35,24 @@ function UserPanel() {
                             </div>
 
 
-                            <div className="user-panel-content">
-                                <div className="row mb-5">
-                                    <div className="col-3 mb-5 p-5">
+                            <div className="userpanel-content">
+                                <div className="row">
+                                    <div className="col-6 col-lg-3 mb-xxl-5 p-xxl-5 mb-lg-4 pt-lg-5 pb-lg-5 ps-xl-4 pe-xl-4 ps-lg-3 pe-lg-3 pt-3 pb-3 pe-2 ps-2"> 
                                         <Link to='/UserPanel/Orders'><i class="fa fa-shopping-bag"></i>
                                             <p>My Orders</p></Link>
                                     </div>
 
-                                    <div className="col-3 mb-5 p-5">
+                                    <div className="col-6 col-lg-3 mb-xxl-5 p-xxl-5 mb-lg-4 pt-lg-5 pb-lg-5 ps-xl-4 pe-xl-4 ps-lg-3 pe-lg-3 pt-3 pb-3 pe-2 ps-2">
                                         <Link to='/Cart'><i class="fa fa-shopping-cart"></i>
                                             <p>My Cart</p></Link>
                                     </div>
 
-                                    <div className="col-3 mb-5 p-5">
+                                    <div className="col-6 col-lg-3 mb-xxl-5 p-xxl-5 mb-lg-4 pt-lg-5 pb-lg-5 ps-xl-4 pe-xl-4 ps-lg-3 pe-lg-3 pt-3 pb-3 pe-2 ps-2">
                                         <Link to='/UserPanel/Address'><i class="fa fa-map-marker-alt"></i> 
                                             <p>My Delivery Address</p></Link>
                                     </div>
 
-                                    <div className="col-3 mb-5 p-5">
+                                    <div className="col-6 col-lg-3 mb-xxl-5 p-xxl-5 mb-lg-4 pt-lg-5 pb-lg-5 ps-xl-4 pe-xl-4 ps-lg-3 pe-lg-3 pt-3 pb-3 pe-2 ps-2">
                                         <Link to='/UserPanel/Payment'><i class="fa fa-euro"></i>
                                             <p>My Payment List</p></Link>
                                     </div>
@@ -60,22 +60,22 @@ function UserPanel() {
 
 
                                 <div className="row">
-                                    <div className="col-3">
+                                    <div className="col-6 col-lg-3 ps-xxl-5 pe-xxl-5 ps-xl-4 pe-xl-4 ps-lg-3 pe-lg-3 pt-3 pb-3 pe-2 ps-2">
                                         <Link to='/UserPanel/Interests'><i class="fa fa-heart"></i>
                                             <p>My Interests</p></Link>
                                     </div>
 
-                                    <div className="col-3">
+                                    <div className="col-6 col-lg-3 ps-xxl-5 pe-xxl-5 ps-xl-4 pe-xl-4 ps-lg-3 pe-lg-3 pt-3 pb-3 pe-2 ps-2">
                                         <Link to='/UserPanel/PersonalInfo'><i class='fas fa-user-alt'></i>
                                             <p>My Personal Information</p></Link>
                                     </div>
 
-                                    <div className="col-3">
+                                    <div className="col-6 col-lg-3 ps-xxl-5 pe-xxl-5 ps-xl-4 pe-xl-4 ps-lg-3 pe-lg-3 pt-3 pb-3 pe-2 ps-2">
                                         <Link to='/UserPanel/ChangePass'><i class="fa fa-lock"></i>
                                             <p>Change Password</p></Link>
                                     </div>
 
-                                    <div className="col-3">
+                                    <div className="col-6 col-lg-3 ps-xxl-5 pe-xxl-5 ps-xl-4 pe-xl-4 ps-lg-3 pe-lg-3 pt-3 pb-3 pe-2 ps-2">
                                         <Logout/>
                                     </div>
                                 </div>

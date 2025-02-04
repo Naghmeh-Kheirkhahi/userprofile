@@ -17,16 +17,16 @@ function UserPanelNav() {
 
     return (
         <>
-            <div className={theme === 'dark' ? 'dark-list' : 'user-panel-list'}>
+            <div className={theme === 'dark' ? 'userpanel-list dark-userpanel-list' : 'userpanel-list light-userpanel-list'}>
                 <h1>My User Panel</h1>
 
-                <div className="user-panel-image">
+                <div className="userpanel-image">
                     <img src={UserImage} alt="user image" />
                     <p>{username}</p>
                 </div>
 
 
-                <div className="user-panel-nav">
+                <div className="userpanel-nav">
                     <ul>
                         <li><Link to='/UserPanel'><i class="fa fa-dashboard"></i> <p>My Dashboard</p></Link></li>
                         <li><Link to='/UserPanel/Orders'><i class="fa fa-shopping-bag"></i> <p>My Orders</p></Link></li>
@@ -36,7 +36,7 @@ function UserPanelNav() {
                         <li><Link to='/UserPanel/Interests'><i class="fa fa-heart"></i> <p>My Interests</p></Link></li>
                         <li><Link to='/UserPanel/PersonalInfo'><i class='fas fa-user-alt'></i> <p>My Personal Information</p></Link></li>
                         <li><Link to='/UserPanel/ChangePass'><i class="fa fa-lock"></i> <p>Change Password</p></Link></li>
-                        <li><Logout/></li>
+                        <li><Logout /></li>
                     </ul>
                 </div>
             </div>

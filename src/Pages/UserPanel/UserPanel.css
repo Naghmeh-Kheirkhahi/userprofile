@@ -1,40 +1,26 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-.user-panel {
-    margin-top: 8rem;
+.light-userpanel {
     background-color: #f5c7ff;
 }
 
-/* ThemeContext */
-.dark-user-panel {
-    margin-top: 8rem;
+.dark-userpanel {
     background-color: #d9afe2;
 }
 
-
 /* userpanel navbar (the left side) */
+.userpanel-list {
+    height: 100%;
+    padding: 18rem 2rem 5rem 2rem;
+}
 
-.user-panel-list {
+.light-userpanel-list {
     background-color: #9d00c5;
-    padding: 5rem 2rem;
-    height: 100%;
 }
 
-/* ThemeContext */
-.dark-list {
+.dark-userpanel-list {
     background-color: #350042;
-    padding: 5rem 2rem;
-    height: 100%;
 }
 
-
-.user-panel-list h1, .dark-list h1 {
+.userpanel-list h1 {
     color: #ffffff;
     font-size: 3rem;
     font-weight: 800;
@@ -43,58 +29,56 @@
     padding: 1rem 0;
 }
 
-.user-panel-image {
+.userpanel-image {
     text-align: center;
     margin-bottom: 5rem;
     border-bottom: 1px solid #ffffff;
 }
 
-.user-panel-image img {
+.userpanel-image img {
     width: 40%;
     border-radius: 50%;
     border: 1px solid #ffffff;
     margin: auto;
 }
 
-.user-panel-image p {
+.userpanel-image p {
     color: #ffffff;
     font-size: 2.5rem;
     font-weight: 700;
-    margin: 1rem auto 3rem auto;
+    margin: 1rem auto 2rem auto;
 }
 
-.user-panel-nav ul {
+.userpanel-nav ul {
     list-style: none;
-    margin-left: 3rem;
+    margin-left: 5rem;
 }
 
-.user-panel-nav ul li {
+.userpanel-nav ul li {
     margin-bottom: 0.5rem;
     font-size: 1.8rem;
     font-weight: 700;
 }
 
-.user-panel-nav ul a {
+.userpanel-nav ul a {
     text-decoration: none;
     color: #ffffff;
     display: flex;
     padding: 0.5rem 0;
 }
 
-.user-panel-nav ul i {
-    padding: 0.3rem 1rem 0.1rem 0; 
+.userpanel-nav ul i {
+    padding: 0.3rem 1rem 0.1rem 0;
     margin-bottom: -0.5rem;
 }
 
-
 /* userpanel dashboard (the right side) */
-
-.user-panel-dashboard {
-    padding: 10rem 8rem 5rem 8rem;
+.userpanel-dashboard {
+    padding: 22rem 8rem 0 8rem;
 }
 
 .dashboard-description {
-    margin-bottom: 8rem;
+    margin-bottom: 10rem;
 }
 
 .dashboard-description h3 {
@@ -108,23 +92,313 @@
     font-size: 1.8rem;
 }
 
-
-.user-panel-content {
+.userpanel-content {
     text-align: center;
 }
 
-.user-panel-content a {
+.userpanel-content a {
     text-decoration: none;
 }
 
-.user-panel-content a p {
+.userpanel-content a p {
     font-size: 2rem;
     font-weight: 700;
     color: rgb(72 72 72);
 }
 
-.user-panel-content a i {
+.userpanel-content a i {
     font-size: 4rem;
     color: #dd00ca;
     padding: 1rem 0;
+}
+
+
+@media(max-width: 1400px) {
+
+    /* userpanel navbar (the left side) */
+    .userpanel-list {
+        padding: 12rem 2rem 3rem 2rem;
+    }
+
+    .userpanel-list h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+        padding: 0.5rem 0;
+    }
+
+    .userpanel-image {
+        margin-bottom: 4rem;
+    }
+
+    .userpanel-image p {
+        font-size: 2rem;
+    }
+
+    .userpanel-nav ul {
+        margin-left: 3rem;
+    }
+
+    .userpanel-nav ul li {
+        font-size: 1.5rem;
+    }
+
+    /* userpanel dashboard (the right side) */
+    .userpanel-dashboard {
+        padding: 16rem 5rem 0 5rem;
+    }
+
+    .dashboard-description {
+        margin-bottom: 4rem;
+    }
+
+    .dashboard-description h3 {
+        font-size: 2rem;
+    }
+
+    .dashboard-description p {
+        font-size: 1.5rem;
+    }
+
+    .userpanel-content a p {
+        font-size: 1.4rem;
+    }
+
+    .userpanel-content a i {
+        font-size: 2.8rem;
+        padding: 0.5rem 0;
+    }
+}
+
+
+@media(max-width: 1200px) {
+
+    /* userpanel navbar (the left side) */
+    .userpanel-list {
+        padding: 10rem 1.5rem 2rem 1.5rem;
+    }
+
+    .userpanel-list h1 {
+        font-size: 2.2rem;
+        margin-bottom: 2.2rem;
+        padding: 0.5rem 0;
+    }
+
+    .userpanel-image {
+        margin-bottom: 3rem;
+    }
+
+    .userpanel-image p {
+        font-size: 1.8rem;
+    }
+
+    .userpanel-nav ul {
+        margin-left: 2.5rem;
+    }
+
+    .userpanel-nav ul li {
+        margin-bottom: 0.4rem;
+        font-size: 1.3rem;
+    }
+
+    .userpanel-nav ul i {
+        padding: 0.3rem 0.8rem 0.1rem 0;
+        margin-bottom: -0.4rem;
+    }
+
+    /* userpanel dashboard (the right side) */
+    .userpanel-dashboard {
+        padding: 13rem 4rem 0 4rem;
+    }
+
+    .dashboard-description {
+        margin-bottom: 3rem;
+    }
+
+    .dashboard-description h3 {
+        font-size: 1.8rem;
+    }
+
+    .dashboard-description p {
+        font-size: 1.3rem;
+    }
+
+    .userpanel-content a p {
+        font-size: 1.2rem;
+    }
+
+    .userpanel-content a i {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media(max-width: 992px) {
+
+    /* userpanel navbar (the left side) */
+    .userpanel-list h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .userpanel-image {
+        margin-bottom: 2rem;
+    }
+
+    .userpanel-image p {
+        font-size: 1.5rem;
+    }
+
+    .userpanel-nav ul {
+        margin-left: 3rem;
+    }
+
+    .userpanel-nav ul li {
+        margin-bottom: 0.3rem;
+        font-size: 1.2rem;
+    }
+
+    .userpanel-nav ul i {
+        padding: 0.2rem 0.8rem 0.1rem 0;
+        margin-bottom: -0.3rem;
+    }
+
+    /* userpanel dashboard (the right side) */
+    .userpanel-dashboard {
+        padding: 13rem 3rem 0 3rem;
+    }
+
+    .dashboard-description {
+        margin-bottom: 4rem;
+    }
+
+    .dashboard-description h3 {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-description p {
+        font-size: 1.2rem;
+    }
+
+    .userpanel-content a i {
+        font-size: 2rem;
+    }
+}
+
+
+@media(max-width: 768px) {
+
+    /* userpanel navbar (the left side) */
+    .userpanel-list {
+        padding: 10rem 1rem 2rem 1rem;
+    }
+
+    .userpanel-list h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .userpanel-image {
+        margin-bottom: 1.5rem;
+    }
+
+    .userpanel-image p {
+        font-size: 1.3rem;
+        margin: 1rem auto 1.5rem auto;
+    }
+
+    .userpanel-nav ul {
+        margin-left: 1.5rem;
+    }
+
+    .userpanel-nav ul li {
+        margin-bottom: 0;
+        font-size: 1rem;
+    }
+
+    .userpanel-nav ul i {
+        padding: 0.2rem 0.5rem 0.1rem 0;
+        margin-bottom: -0.2rem;
+    }
+
+    /* userpanel dashboard (the right side) */
+    .userpanel-dashboard {
+        padding: 13rem 2rem 0 2rem;
+    }
+
+    .dashboard-description {
+        margin-bottom: 3rem;
+    }
+
+    .dashboard-description h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .dashboard-description p {
+        font-size: 1rem;
+    }
+
+    .userpanel-content a p {
+        font-size: 1rem;
+    }
+
+    .userpanel-content a i {
+        font-size: 1.8rem;
+    }
+}
+
+
+@media(max-width: 576px) {
+
+    /* userpanel navbar (the left side) */
+    .userpanel-list {
+        padding: 9rem 1rem 1rem 1rem;
+    }
+
+    .userpanel-list h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .userpanel-image {
+        margin-bottom: 1rem;
+    }
+
+    .userpanel-image p {
+        font-size: 1.2rem;
+        margin: 0.5rem auto 1rem auto;
+    }
+
+    .userpanel-nav ul {
+        margin-left: 0;
+    }
+
+    .userpanel-nav ul li {
+        font-size: 0.9rem;
+    }
+
+    /* userpanel dashboard (the right side) */
+    .userpanel-dashboard {
+        padding: 11rem 1rem 0 1rem;
+    }
+
+    .dashboard-description {
+        margin-bottom: 1rem;
+    }
+
+    .dashboard-description h3 {
+        font-size: 1.2rem;
+    }
+
+    .dashboard-description p {
+        font-size: 0.9rem;
+    }
+
+    .userpanel-content a p {
+        font-size: 0.9rem;
+    }
+
+    .userpanel-content a i {
+        font-size: 1.5rem;
+    }
 }
