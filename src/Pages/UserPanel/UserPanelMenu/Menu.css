@@ -32,17 +32,17 @@
     border: 1px solid #770095;
     border-radius: 10px;
     text-align: center;
-    padding: 3rem 0;
+    padding: 1rem 0;
 }
 
 .order {
-    border-right: 1px solid #770095;
+    padding: 2rem 0;
 }
 
 .order h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .product-order {
@@ -59,11 +59,13 @@
     font-size: 1.5rem;
 }
 
-.order-date {
+.order-date,
+.order-price {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-left: 1px solid #770095;
 }
 
 .order-date h4,
@@ -79,14 +81,6 @@
     margin-top: 0.5rem;
     color: rgb(205 81 0);
     font-weight: 600;
-}
-
-.order-price {
-    border-left: 1px solid #770095;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -142,15 +136,59 @@
     .main-container {
         padding: 15rem 5rem 7rem 5rem;
     }
-    
+
     .main-container h1 {
         font-size: 2.8rem;
         margin-bottom: 3rem;
     }
-    
+
     .give-data {
         font-size: 1.5rem;
         margin-bottom: 2rem;
+    }
+
+    /* Orders and Payment List */
+    .order-container {
+        padding: 1rem 0;
+    }
+
+    .order {
+        padding: 2rem 0;
+    }
+
+    .order h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .product-order {
+        margin-top: 1rem;
+    }
+
+    .product-order h3 {
+        font-size: 1.8rem;
+    }
+
+    .product-order p {
+        font-size: 1.5rem;
+    }
+
+    .order-date,
+    .order-price {
+        height: 100%;
+    }
+
+    .order-date h4,
+    .order-price h4 {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    .order-date p,
+    .order-price p {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        margin-top: 0.5rem;
     }
 
     /* Delivery Address and Personal Information and Change Password */
@@ -158,16 +196,16 @@
         padding: 4rem;
         width: 80%;
     }
-    
+
     .userpanel-form label {
         font-size: 1.4rem;
     }
-    
+
     .userpanel-form input {
         padding: 0.8rem;
         font-size: 1.4rem;
     }
-    
+
     .form-btn {
         font-size: 1.5rem;
     }
@@ -177,12 +215,12 @@
     .main-container {
         padding: 12rem 4rem 6rem 4rem;
     }
-    
+
     .main-container h1 {
         font-size: 2.5rem;
         margin-bottom: 2.5rem;
     }
-    
+
     .give-data {
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
@@ -193,17 +231,17 @@
         padding: 3rem;
         width: 90%;
     }
-    
+
     .userpanel-form label {
         font-size: 1.3rem;
     }
-    
+
     .userpanel-form input {
         padding: 0.7rem;
         margin-bottom: 1.8rem;
         font-size: 1.3rem;
     }
-    
+
     .form-btn {
         padding: 0.7rem 0;
         font-size: 1.4rem;
@@ -215,12 +253,12 @@
     .main-container {
         padding: 12rem 3rem 6rem 2rem;
     }
-    
+
     .main-container h1 {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
-    
+
     .give-data {
         font-size: 1.2rem;
         margin-bottom: 1.2rem;
@@ -231,17 +269,17 @@
         padding: 2rem;
         width: 100%;
     }
-    
+
     .userpanel-form label {
         font-size: 1.2rem;
     }
-    
+
     .userpanel-form input {
         padding: 0.6rem;
         margin-bottom: 1.5rem;
         font-size: 1.2rem;
     }
-    
+
     .form-btn {
         padding: 0.6rem 0;
         font-size: 1.3rem;
@@ -253,12 +291,12 @@
     .main-container {
         padding: 12rem 2rem 5rem 1rem;
     }
-    
+
     .main-container h1 {
         font-size: 1.8rem;
         margin-bottom: 1.8rem;
     }
-    
+
     .give-data {
         font-size: 1rem;
         margin-bottom: 1rem;
@@ -268,15 +306,15 @@
     .userpanel-form {
         padding: 1.5rem;
     }
-    
+
     .userpanel-form label {
         font-size: 1rem;
     }
-    
+
     .userpanel-form input {
         font-size: 1rem;
     }
-    
+
     .form-btn {
         font-size: 1.2rem;
         margin: 0.7rem auto 0 auto;
@@ -287,12 +325,12 @@
     .main-container {
         padding: 11rem 1rem 4rem 0;
     }
-    
+
     .main-container h1 {
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
     }
-    
+
     .give-data {
         font-size: 0.9rem;
         margin-bottom: 0.8rem;
@@ -302,17 +340,17 @@
     .userpanel-form {
         padding: 1rem;
     }
-    
+
     .userpanel-form label {
         font-size: 0.9rem;
     }
-    
+
     .userpanel-form input {
         padding: 0.5rem;
         margin-bottom: 1.2rem;
         font-size: 0.9rem;
     }
-    
+
     .form-btn {
         padding: 0.5rem 0;
         font-size: 1rem;
