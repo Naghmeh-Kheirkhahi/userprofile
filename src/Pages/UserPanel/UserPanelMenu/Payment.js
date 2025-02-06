@@ -25,7 +25,7 @@ function Payment() {
                         <div className="main-container">
                             <h1>My Payment List</h1>
 
-                            <div className="order-container mb-5">
+                            <div className="order-container mb-4 mb-md-5">
                                 <div className="row">
                                     <div className="col-6">
                                         <div className="order">
@@ -50,14 +50,14 @@ function Payment() {
 
                                     <div className="col-3">
                                         <div className="order-date">
-                                            <h4>Payment Date:</h4>
+                                            <h4>Date:</h4>
                                             <p>2024-01-01</p>
                                         </div>
                                     </div>
 
                                     <div className="col-3">
                                         <div className="order-price">
-                                            <h4>Payment Price:</h4>
+                                            <h4>Price:</h4>
                                             <p>100 &euro;</p>
                                         </div>
                                     </div>
@@ -65,7 +65,7 @@ function Payment() {
                             </div>
 
 
-                            <div className="order-container">
+                            <div className="order-container mt-4 mt-md-5">
                                 <div className="row">
                                     <div className="col-6">
                                         <div className="order">
@@ -90,14 +90,14 @@ function Payment() {
 
                                     <div className="col-3">
                                         <div className="order-date">
-                                            <h4>Payment Date:</h4>
+                                            <h4>Date:</h4>
                                             <p>2024-02-02</p>
                                         </div>
                                     </div>
 
                                     <div className="col-3">
                                         <div className="order-price">
-                                            <h4>Payment Price:</h4>
+                                            <h4>Price:</h4>
                                             <p>150 &euro;</p>
                                         </div>
                                     </div>
