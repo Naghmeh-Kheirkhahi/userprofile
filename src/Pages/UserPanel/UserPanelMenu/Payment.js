@@ -49,7 +49,7 @@ function Payment() {
                                     </div>
 
                                     <div className="col-3">
-                                        <div className="order-date">
+                                        <div className="order-date p-0">
                                             <h4>Date:</h4>
                                             <p>2024-01-01</p>
                                         </div>
@@ -88,7 +88,7 @@ function Payment() {
                                         </div>
                                     </div>
 
-                                    <div className="col-3">
+                                    <div className="col-3 p-0">
                                         <div className="order-date">
                                             <h4>Date:</h4>
                                             <p>2024-02-02</p>

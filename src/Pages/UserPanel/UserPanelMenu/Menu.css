@@ -525,9 +525,8 @@
     border: 2px solid #b39dc9;
     border-radius: 10px;
     background-color: rgb(241, 241, 241);
-    flex: 1 1 300px;
-    /* Flex-grow, flex-shrink, and flex-basis */
     display: flex;
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis */
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
@@ -551,22 +550,20 @@
     width: 60%;
     border-radius: 20px;
     margin: 2rem auto 4rem auto;
-    /* Center the image horizontally */
     background-color: transparent;
     mix-blend-mode: multiply;
 }
 
 .fav-productInfo {
-    flex: 1;
-    /* Make productInfo take up remaining space */
     display: flex;
+    flex: 1; /* Make productInfo take up remaining space */
     flex-direction: column;
     justify-content: space-between;
 }
 
 .fav-product h2 {
     font-size: 1.7rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .fav-price,
@@ -574,15 +571,15 @@
 .fav-description,
 .fav-rating {
     color: rgb(47, 47, 47);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .fav-price {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .fav-category {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .fav-description {
@@ -591,6 +588,7 @@
 
 .fav-rating {
     font-size: 1.3rem;
+    /* check why the rating cannot be shown in single product and interests */
 }
 
 .notSee-interests {
