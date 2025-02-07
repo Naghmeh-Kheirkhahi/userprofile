@@ -52,7 +52,7 @@ function Interests() {
                             <div className="row">
                                 {interests.length > 0 ? (
                                     interests.map(interest => (
-                                        <div className="col-4 interests-container">
+                                        <div className="col-12 col-md-6 col-xxl-4 interests-container">
                                             <div className="fav-product">
                                                 <div className="delete-icon"><i class="fa fa-close" onClick={() => handleDeleteClick(interest)}></i></div>
 
