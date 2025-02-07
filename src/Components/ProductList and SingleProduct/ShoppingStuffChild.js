@@ -22,7 +22,7 @@ function ShoppingStuffChild(props) {
                     <img src={props.image} alt="..." />
                     <div className="productInfo">
                         <h2>{props.title}</h2>
-                        <p className="price"><b>Price: </b>{props.price} Euros</p>
+                        <p className="price"><b>Price: </b>{props.price}  &euro;</p>
                         <p className="category"><b>Category: </b>{props.category}</p>
                         <p className="description">
                             <b>Description: </b>

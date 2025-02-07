@@ -89,7 +89,7 @@ function SingleProduct() {
                 updatedFavorites = favorites.filter(favorite => favorite.id !== product.id);
             } else {
                 updatedFavorites = [...favorites, product];
-                alert('The product has been added to your Favorites');            
+                alert('The product has been added to your Favorites');
             }
             localStorage.setItem('favorite', JSON.stringify(updatedFavorites));
             setFavorites(updatedFavorites);
@@ -108,11 +108,19 @@ function SingleProduct() {
                     <img src={product.image} />
                     <div className="ps-5">
                         <h1>{product.title}</h1>
-                        <p className="productPrice"><b>{product.price} </b>Euro</p>
+                        <p className="productPrice"><b>{product.price} &euro;</b></p>
                         <p className="productCat"><b>{product.category} </b>Category</p>
                         <p className="productDescription">{product.description}</p>
-                        <p className="productRating"><b>Rating: {product.ratingRate} </b><span class="fa fa-star"></span><span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+                        <p className="productRating"><b>Rating: {product.rating?.rate} </b>
+                            {[...Array(5)].map((_, index) => {
+                                const ratingValue = index + 1;
+                                const fullStar = ratingValue <= product.rating?.rate;
+                                const halfStar = ratingValue - 0.5 <= product.rating?.rate && ratingValue > product.rating?.rate;
+                                return (
+                                    <span key={index} className={`fa fa-star${fullStar ? '' : halfStar ? '-half-alt' : '-o'}`}></span>
+                                );
+                            })}
+                        </p>
 
                         <div className="signleProBtns">
                             <ShoppingButton btnName={"BUY NOW"} btnClass={theme === 'dark' ? 'singleProBtn darkSingleProBtn' : 'singleProBtn lightSingleProBtn'} btnClick={() => addProductToCart(product.id)} />

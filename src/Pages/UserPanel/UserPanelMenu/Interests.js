@@ -60,7 +60,7 @@ function Interests() {
                                                     <img src={interest.image} alt="..." />
                                                     <div className="fav-productInfo">
                                                         <h2>{interest.title}</h2>
-                                                        <p className="fav-price"><b>Price: </b>{interest.price} Euros</p>
+                                                        <p className="fav-price"><b>Price: </b>{interest.price}  &euro;</p>
                                                         <p className="fav-category"><b>Category: </b>{interest.category}</p>
                                                         <p className="fav-description">
                                                             <b>Description: </b>
@@ -68,7 +68,7 @@ function Interests() {
                                                                 ? `${interest.description.substring(0, 20)}...`
                                                                 : interest.description}
                                                         </p>
-                                                        <p className="fav-rating"><b>Rating: </b>{interest.ratingRate}</p>
+                                                        <p className="fav-rating"><b>Rating: </b>{interest.rating?.rate}</p>
                                                     </div>
                                                 </div>
                                             </div>
