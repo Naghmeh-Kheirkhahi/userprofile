@@ -1,10 +1,9 @@
 
 import React , {useContext} from "react";
-import ShoppingStuffParent from "../../Components/ProductList and SingleProduct/ShoppingStuffParent";
+import ShopsProductList from "../../Components/Product/ShopsProductList";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../../Context/ThemeContext";
-
 
 
 
@@ -26,7 +25,7 @@ function Home() {
 
                     <div className="login-icon"><Link to={'/Login'}><i class="fa fa-user"></i> Login</Link></div>
                 </div>
-                <ShoppingStuffParent />
+                <ShopsProductList />
             </div>
         </>
     )

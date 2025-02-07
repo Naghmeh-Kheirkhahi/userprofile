@@ -1,7 +1,6 @@
 
 import React from "react";
-
-import './ShoppingStuff.css';
+import './Product.css';
 
 
 function ShoppingButton({btnName , btnClass, btnStyle, btnClick}){

@@ -1,12 +1,12 @@
-import React, { useEffect, useState, useContext } from "react";
-import './ShoppingStuff.css';
+import React, {useContext } from "react";
+import './Product.css';
 import ShoppingButton from "./ShoppingButton";
 import { ThemeContext } from "../../Context/ThemeContext";
 
 
 
 
-function ShoppingStuffChild(props) {
+function ShopsProduct(props) {
 
     const { theme } = useContext(ThemeContext);
 
@@ -14,8 +14,6 @@ function ShoppingStuffChild(props) {
     return (
         <div className="col-6 col-md-4 product-container">
             <div className="product">
-                {/* we can chose any name for click action after props*/}
-
                 <div className="heart-icon" style={{ color: props.isFavorite && props.isLogin ? 'rgb(220, 22, 0)' : 'rgb(180, 180, 180)' }}>{props.heartIcon}</div>
 
                 <div onClick={props.showProduct}>
@@ -32,8 +30,6 @@ function ShoppingStuffChild(props) {
                         </p>
                         <p className="rating"><b>Rating: </b>{props.ratingRate}</p>
 
-                        {/* <button onClick={props.buyProduct}>BUY NOW</button> */}
-
                         <ShoppingButton btnName={"BUY NOW"} btnClass= {theme === 'dark' ? 'productBtn darkProBtn' : 'productBtn lightProBtn'} btnClick={props.buyProduct} />
                     </div>
                 </div>
@@ -42,4 +38,4 @@ function ShoppingStuffChild(props) {
     )
 }
 
-export default ShoppingStuffChild;
+export default ShopsProduct;

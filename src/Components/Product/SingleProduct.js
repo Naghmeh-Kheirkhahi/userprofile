@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import './ShoppingStuff.css';
+import './Product.css';
 import ShoppingButton from "./ShoppingButton";
 import { useNavigate } from "react-router-dom";
 import { ThemeContext } from "../../Context/ThemeContext";
@@ -130,9 +130,6 @@ function SingleProduct() {
                                 btnStyle={{ color: isFavorite && username ? 'rgb(255, 255, 255)' : 'rgb(139, 14, 0)' }}
                                 btnClass={theme === 'dark' ? 'favProBtn darkFavProBtn' : 'favProBtn lightFavProBtn'} btnClick={() => addProductToInterest(product)} />
                         </div>
-
-                        {/* <button onClick={buySingleProduct}>BUY NOW</button> */}
-                        {/* we don't use props here because we want to use this method in this component. */}
                     </div>
                 </div>
             </div>

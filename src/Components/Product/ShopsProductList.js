@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ThemeContext } from "../../Context/ThemeContext";
 import { UserContext } from "../../Context/UserContext";
-import ShoppingStuffChild from "./ShoppingStuffChild";
+import ShopsProduct from "./ShopsProduct";
 import ShoppingButton from "./ShoppingButton";
-import './ShoppingStuff.css';
+import './Product.css';
 
 
 
-function ShoppingStuffParent() {
+function ShopsProductList() {
 
     const navigate = useNavigate();
     const { theme } = useContext(ThemeContext);
@@ -119,7 +119,7 @@ function ShoppingStuffParent() {
                     {filteredProducts.map(product => {
                         const isFavorite = favorites.some(favorite => favorite.id === product.id); // we put isFavorite into the return part (not out) when we want to do mapping on the products because if we put it out of it, it could not be understood because product was not already defined.
                         return (
-                            <ShoppingStuffChild
+                            <ShopsProduct
                                 image={product.image}
                                 title={product.title}
                                 price={product.price}
@@ -145,4 +145,4 @@ function ShoppingStuffParent() {
     )
 }
 
-export default ShoppingStuffParent;
+export default ShopsProductList;

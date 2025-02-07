@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { ThemeContext } from "../../Context/ThemeContext";
 import axios from "axios";
-import ShoppingStuffChild from "../ProductList and SingleProduct/ShoppingStuffChild";
+import ShoppingStuffChild from "../Product/ShopsProduct";
 
 
 
