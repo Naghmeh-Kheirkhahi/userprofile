@@ -7,12 +7,11 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     box-shadow: 0px 5px 10px #917c5e;
-    background-color: rgb(255, 240, 216);
     z-index: 99;
 }
 
 .navbar {
-    background-color: rgb(255, 240, 216);
+    background-color: rgb(255, 227, 183);
     padding: 1rem;
     z-index: 100;
 }
