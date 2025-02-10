@@ -14,7 +14,7 @@ function CustomerSupport() {
             <div className={theme === 'dark' ? 'dark-customer-support' : 'light-customer-support'}>
                 <div className="customer-support-container">
                     <div className="mb-md-2 mb-lg-3">
-                        <h1>Custmer Support of Producto Shop</h1>
+                        <h1>Custmer Support of Elnagora Shop</h1>
                         <h6>Welcome to our Customer Support page! We are dedicated to providing you with the best possible shopping experience, and our support team is here to assist you with any questions or concerns you may have.</h6>
                     </div>
 
@@ -26,7 +26,7 @@ function CustomerSupport() {
                     <div className="mb-md-2 mb-lg-3">
                         <h2>Contact us</h2>
                         <p>If you need immediate assistance, please reach out to our customer support team through one of the following methods:</p>
-                        <p><i class="fa fa-circle"></i><b> Email address:</b> Producto-Shop@gemail.com</p>
+                        <p><i class="fa fa-circle"></i><b> Email address:</b> Elnagora-Shop@gemail.com</p>
                         <p><i class="fa fa-circle"></i><b> Phone number:</b> +4915758493654</p>
                         <p><i class="fa fa-circle"></i><b> Live Chat:</b> Click the chat icon on the bottom right corner of the page for instant support.</p>
                     </div>

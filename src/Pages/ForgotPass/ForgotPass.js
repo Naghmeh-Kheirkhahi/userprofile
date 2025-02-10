@@ -57,7 +57,7 @@ function ForgotPass() {
                                 <div className="forget-pass-title">
                                     <div className="forget-pass-logo">
                                         <Link to="/"><img src={logo} alt="Logo" />
-                                            <h1>Producto Shop</h1>
+                                            <h1>Elnagora Shop</h1>
                                         </Link>
                                     </div>
 

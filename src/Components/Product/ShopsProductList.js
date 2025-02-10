@@ -105,7 +105,7 @@ function ShopsProductList() {
     return (
         <>
             <div className="mainClassProduct">
-                <h1 className={theme=== 'dark' ? 'dark-title' : ''}>Producto Shop Products</h1>
+                <h1 className={theme=== 'dark' ? 'dark-title' : ''}>Elnagora Shop Products</h1>
 
                 <div class="btns">
                     <ShoppingButton btnName={"Men's Clothing"} btnClass={theme === 'dark' ? 'catBtn darkCatBtn' : 'catBtn lightCatBtn'} btnClick={() => handleCategoryClick("men's clothing")} />

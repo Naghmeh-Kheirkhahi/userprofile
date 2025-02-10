@@ -15,16 +15,16 @@ function TandC() {
             <div className={theme === 'dark' ? 'dark-TandC' : 'light-TandC'}>
                 <div className="TandC-container">
                     <div className="mb-md-2 mb-lg-3">
-                        <h1>Terms and Conditions of Producto Shop</h1>
-                        <h5>Welcome to Producto Shop! These Terms and Conditions outline the rules and regulations for the use of our website located at <Link to={'/'} style={{ color: theme === 'dark' ? 'rgb(187, 116, 232)' : 'rgb(121, 30, 177)' }}><b>Producto-Shop.com</b></Link>. By accessing this website, you agree to comply with these terms. If you do not agree with any part of these terms, please do not use our website.</h5>
+                        <h1>Terms and Conditions of Elnagora Shop</h1>
+                        <h5>Welcome to Elnagora Shop! These Terms and Conditions outline the rules and regulations for the use of our website located at <Link to={'/'} style={{ color: theme === 'dark' ? 'rgb(187, 116, 232)' : 'rgb(121, 30, 177)' }}><b>Elnagora-Shop.com</b></Link>. By accessing this website, you agree to comply with these terms. If you do not agree with any part of these terms, please do not use our website.</h5>
                     </div>
 
                     <div className="mb-md-2 mb-lg-3">
-                        <h3>1. Acceptance of Terms</h3> <p>By accessing and using Producto Shop, you accept and agree to be bound by these Terms and Conditions. We reserve the right to modify these terms at any time, and your continued use of the website constitutes acceptance of the updated terms.</p>
+                        <h3>1. Acceptance of Terms</h3> <p>By accessing and using Elnagora Shop, you accept and agree to be bound by these Terms and Conditions. We reserve the right to modify these terms at any time, and your continued use of the website constitutes acceptance of the updated terms.</p>
                     </div>
 
                     <div className="mb-md-2 mb-lg-3">
-                        <h3>2. Use of Content</h3> <p>All content provided on Producto Shop, including text, images, and videos, is for informational purposes only. You may not reproduce, distribute, or republish any content without our prior written consent.</p>
+                        <h3>2. Use of Content</h3> <p>All content provided on Elnagora Shop, including text, images, and videos, is for informational purposes only. You may not reproduce, distribute, or republish any content without our prior written consent.</p>
                     </div>
 
                     <div className="mb-md-2 mb-lg-3">
@@ -32,15 +32,15 @@ function TandC() {
                     </div>
 
                     <div className="mb-md-2 mb-lg-3">
-                        <h3>4. Intellectual Property</h3> <p>All intellectual property rights in the content of Producto Shop are owned by us or our licensors. This includes, but is not limited to, copyright, trademarks, and patents. You may not use any of our intellectual property without express permission.</p>
+                        <h3>4. Intellectual Property</h3> <p>All intellectual property rights in the content of Elnagora Shop are owned by us or our licensors. This includes, but is not limited to, copyright, trademarks, and patents. You may not use any of our intellectual property without express permission.</p>
                     </div>
 
                     <div className="mb-md-2 mb-lg-3">
-                        <h3>5. Links to Other Websites</h3> <p>Our website may contain links to third-party websites that are not owned or controlled by Producto Shop. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party sites. We recommend reviewing the terms and conditions and privacy policies of any third-party sites you visit.</p>
+                        <h3>5. Links to Other Websites</h3> <p>Our website may contain links to third-party websites that are not owned or controlled by Elnagora Shop. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party sites. We recommend reviewing the terms and conditions and privacy policies of any third-party sites you visit.</p>
                     </div>
 
                     <div className="mb-md-2 mb-lg-3">
-                        <h3>6. Limitation of Liability</h3> <p>In no event shall Producto Shop, nor its owners, employees, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the website or any content therein.</p>
+                        <h3>6. Limitation of Liability</h3> <p>In no event shall Elnagora Shop, nor its owners, employees, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the website or any content therein.</p>
                     </div>
 
                     <div className="mb-md-2 mb-lg-3">
@@ -60,7 +60,7 @@ function TandC() {
                     </div>
 
                     <div>
-                        <h5><span class="fa fa-star"></span> By using Producto Shop, you acknowledge that you have read, understood, and agree to these Terms and Conditions.</h5>
+                        <h5><span class="fa fa-star"></span> By using Elnagora Shop, you acknowledge that you have read, understood, and agree to these Terms and Conditions.</h5>
                     </div>
                 </div>
             </div>

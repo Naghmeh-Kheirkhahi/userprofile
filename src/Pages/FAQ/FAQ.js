@@ -33,7 +33,7 @@ function FAQ() {
         },
         {
             question: "How can I contact customer support?",
-            answer: "You can reach us via email at support@productoshop.com or call us at (123) 456-7890."
+            answer: "You can reach us via email at support@Elnagorashop.com or call us at (123) 456-7890."
         },
         {
             question: "Do you offer gift cards?",

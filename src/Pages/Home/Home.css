@@ -85,6 +85,10 @@
 }
 
 @media (max-width: 1200px) {
+    .homePage {
+        margin-top: 5rem;
+    }
+
     .homePage h1 {
         font-size: 3.5rem;
         margin: 5rem auto;

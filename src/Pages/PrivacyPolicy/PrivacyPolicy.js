@@ -14,7 +14,7 @@ function PrivacyPolicy() {
             <div className={theme === 'dark' ? 'dark-privacy-policy' : 'light-privacy-policy'}>
                 <div className="privacy-policy-container">
                     <div>
-                        <h1>Privacy Policy of Producto Shop</h1>
+                        <h1>Privacy Policy of Elnagora Shop</h1>
                         <h5>Creating a privacy policy for your shopping website is essential to inform users about how their data is collected, used, and protected. Here’s a general outline you can follow:</h5>
                     </div>
 
@@ -76,7 +76,7 @@ function PrivacyPolicy() {
 
                     <div className="mb-md-3 mb-lg-4">
                         <h4><b>9. Contact Information: </b> Provide contact details for users to reach out with questions or concerns about the privacy policy, including:</h4>
-                        <p><i class="fa fa-circle"></i><b> Email address:</b> Producto-Shop@gemail.com</p>
+                        <p><i class="fa fa-circle"></i><b> Email address:</b> Elnagora-Shop@gemail.com</p>
                         <p><i class="fa fa-circle"></i><b> Phone number:</b> +4915758493654</p>
                         <p><i class="fa fa-circle"></i><b> Mailing Address:</b> Vetterstreet 54, room 514, Chemnitz 09126, Germany</p>
                     </div>

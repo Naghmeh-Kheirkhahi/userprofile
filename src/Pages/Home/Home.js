@@ -17,7 +17,7 @@ function Home() {
         <>
             <div className={theme === 'dark' ? 'dark-home' : ''}>
                 <div className="homePage">
-                    <h1>Producto Shop</h1>
+                    <h1>Elnagora Shop</h1>
 
                     <p>GET START</p>
                     <p>YOUR FAVORITE</p>

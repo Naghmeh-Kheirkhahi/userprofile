@@ -74,7 +74,7 @@ function Login() {
                                 <div className="login-title">
                                     <div className="login-logo">
                                         <Link to="/"><img src={logo} alt="Logo" />
-                                            <h1>Producto Shop</h1>
+                                            <h1>Elnagora Shop</h1>
                                         </Link>
                                     </div>
 
