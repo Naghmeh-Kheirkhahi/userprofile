@@ -5,7 +5,6 @@ import { ThemeContext } from "../../Context/ThemeContext";
 
 
 
-
 function ShopsProduct(props) {
 
     const { theme } = useContext(ThemeContext);
@@ -30,7 +29,7 @@ function ShopsProduct(props) {
                         </p>
                         <p className="rating"><b>Rating: </b>{props.ratingRate}</p>
 
-                        <ShoppingButton btnName={"BUY NOW"} btnClass= {theme === 'dark' ? 'productBtn darkProBtn' : 'productBtn lightProBtn'} btnClick={props.buyProduct} />
+                        <ShoppingButton btnName={"BUY NOW"} btnClass= {`productBtn ${theme === 'dark' ? 'darkProBtn' : 'lightProBtn'}`} btnClick={props.buyProduct} />
                     </div>
                 </div>
             </div>

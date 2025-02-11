@@ -23,7 +23,7 @@ function Nav() {
                     <span className="custom-toggler-icon"></span>
                 </button>
 
-                <div className="collapse navbar-collapse" id="navbarNav">
+                <div className="collapse navbar-collapse ms-4" id="navbarNav">
                     <ul className="navbar-nav me-auto mt-2 mt-xxl-3 mb-2 mb-lg-0">
                         <li className="nav-item">
                             <Link className="nav-link" to="/">Home</Link>
@@ -38,7 +38,7 @@ function Nav() {
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         {username ? (
                             <li className="nav-item nav-dropdown">
-                                <Link className="nav-link" to="/UserPanel" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <Link className="nav-link" to="/UserPanel" id="navbarDropdown">
                                     <i className="fa fa-user"></i> {username}
                                 </Link>
                                 <ul className="dropdown-menu position-fixed" aria-labelledby="navbarDropdown">

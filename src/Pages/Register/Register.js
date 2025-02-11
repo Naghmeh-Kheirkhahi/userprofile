@@ -55,7 +55,7 @@ function Register() {
             <div className={theme === 'dark' ? 'dark-register' : 'light-register'}>
                 <div className="register-container">
                     {username ? (
-                        <div className={theme === 'dark' ? 'prelogin dark-prelogin' : 'prelogin light-prelogin'}>
+                        <div className={`prelogin ${theme === 'dark' ? 'dark-prelogin' : 'light-prelogin'}`}>
                             <p>You have already Logged in as a User.</p>
                             <p>To access the Login Form, please Log out first.</p>
                         </div>
@@ -79,7 +79,7 @@ function Register() {
                                     <p>Please create an account to register in our website.</p>
                                 </div>
 
-                                <form onSubmit={handleRegister} className={theme === 'dark' ? 'main-register-form dark-main-register-form' : 'main-register-form light-main-register-form'}>
+                                <form onSubmit={handleRegister} className={`main-register-form ${theme === 'dark' ? 'dark-main-register-form' : 'light-main-register-form'}`}>
 
                                     <div data-mdb-input-init class="flex-fill mb-4">
                                         <label class="form-label" for="formName"><i class="fa fa-user"></i> Name</label>
@@ -113,7 +113,7 @@ function Register() {
                                         </label>
                                     </div>
 
-                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init className={theme=== 'dark' ? 'register-btn dark-register-btn' : 'register-btn light-register-btn'}>Register</button>
+                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init className={`register-btn ${theme=== 'dark' ? 'dark-register-btn' : 'light-register-btn'}`}>Register</button>
                                 </form>
                             </div>
                         </div>

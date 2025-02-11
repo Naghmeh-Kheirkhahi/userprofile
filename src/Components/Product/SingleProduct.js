@@ -104,7 +104,7 @@ function SingleProduct() {
     return (
         <>
             <div className={theme === 'dark' ? 'dark-singleProduct' : ''}>
-                <div className={theme === 'dark' ? 'singleProSection dark-singleProSection' : 'singleProSection light-singleProSection'}>
+                <div className={`singleProSection ${theme === 'dark' ? 'dark-singleProSection' : 'light-singleProSection'}`}>
                     <img src={product.image} />
                     <div className="ps-5">
                         <h1>{product.title}</h1>
@@ -123,12 +123,12 @@ function SingleProduct() {
                         </p>
 
                         <div className="signleProBtns">
-                            <ShoppingButton btnName={"BUY NOW"} btnClass={theme === 'dark' ? 'singleProBtn darkSingleProBtn' : 'singleProBtn lightSingleProBtn'} btnClick={() => addProductToCart(product.id)} />
+                            <ShoppingButton btnName={"BUY NOW"} btnClass={`singleProBtn ${theme === 'dark' ? 'darkSingleProBtn' : 'lightSingleProBtn'}`} btnClick={() => addProductToCart(product.id)} />
 
                             <ShoppingButton
                                 btnName={isFavorite && username ? 'Remove from Favorites' : 'Add to Favorites'}
                                 btnStyle={{ color: isFavorite && username ? 'rgb(255, 255, 255)' : 'rgb(139, 14, 0)' }}
-                                btnClass={theme === 'dark' ? 'favProBtn darkFavProBtn' : 'favProBtn lightFavProBtn'} btnClick={() => addProductToInterest(product)} />
+                                btnClass={`favProBtn ${theme === 'dark' ? 'darkFavProBtn' : 'lightFavProBtn'}`} btnClick={() => addProductToInterest(product)} />
                         </div>
                     </div>
                 </div>

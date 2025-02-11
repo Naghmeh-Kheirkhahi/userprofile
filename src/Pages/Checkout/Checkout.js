@@ -92,7 +92,7 @@ function Checkout() {
 
                         <div className="col-12 col-xxl-3">
                             <div className="checkout-result">
-                                <div className={theme === 'dark' ? 'checkout-productList dark-productList' : 'checkout-productList light-productList'}>
+                                <div className={`checkout-productList ${theme === 'dark' ? 'dark-productList' : 'light-productList'}`}>
                                     <div className="checkout-cart">
                                         <h4>Cart</h4>
                                         <span><i className="fa fa-shopping-cart"></i> <span className="productList-quantity">{totalQuantity}</span></span>

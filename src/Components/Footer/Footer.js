@@ -3,14 +3,9 @@ import React from "react";
 import './Footer.css';
 import logo from '../../Assets/images/logo.jpg';
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-
 
 
 function Footer() {
-
-    const navigate = useNavigate();
-
 
     return (
         <>

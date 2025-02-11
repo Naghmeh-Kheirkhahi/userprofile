@@ -104,7 +104,7 @@ function ShopsProductList() {
 
     return (
         <>
-            <div className="mainClassProduct">
+            <div className="main-productList">
                 <h1 className={theme=== 'dark' ? 'dark-title' : ''}>Elnagora Shop Products</h1>
 
                 <div class="btns">

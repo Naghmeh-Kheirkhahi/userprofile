@@ -17,7 +17,7 @@ function UserPanelNav() {
 
     return (
         <>
-            <div className={theme === 'dark' ? 'userpanel-list dark-userpanel-list' : 'userpanel-list light-userpanel-list'}>
+            <div className={`userpanel-list ${theme === 'dark' ? 'dark-userpanel-list' : 'light-userpanel-list'}`}>
                 <h1>My User Panel</h1>
 
                 <div className="userpanel-image">

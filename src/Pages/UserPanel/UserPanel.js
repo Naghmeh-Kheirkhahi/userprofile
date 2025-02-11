@@ -19,7 +19,7 @@ function UserPanel() {
 
     return (
         <>
-            <div className={theme === 'dark' ? 'userpanel dark-userpanel' : 'userpanel light-userpanel'}>
+            <div className={`userpanel ${theme === 'dark' ? 'dark-userpanel' : 'light-userpanel'}`}>
                 <div className="row">
                     <div className="col-5 col-lg-4 col-xxl-3">
                         <UserPanelNav />

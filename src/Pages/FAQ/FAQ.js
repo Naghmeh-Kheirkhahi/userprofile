@@ -61,7 +61,7 @@ function FAQ() {
     return (
         <>
             <div className={theme === 'dark' ? 'dark-faq' : ''}>
-                <div className={theme === 'dark' ? 'faq-section dark-faq-section' : 'faq-section light-faq-section'}>
+                <div className={`faq-section ${theme === 'dark' ? 'dark-faq-section' : 'light-faq-section'}`}>
                     <h1>Frequently Asked Questions (FAQ)</h1>
 
                     {faqs.map((faq, index) => (

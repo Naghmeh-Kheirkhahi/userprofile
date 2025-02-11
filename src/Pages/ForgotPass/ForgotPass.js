@@ -43,7 +43,7 @@ function ForgotPass() {
             <div className={theme === 'dark' ? 'dark-forget-pass' : 'light-forget-pass'}>
                 <div className="forget-pass-container">
                     {username ? (
-                        <div className={theme === 'dark' ? 'prelogin dark-prelogin' : 'prelogin light-prelogin'}>
+                        <div className={`prelogin ${theme === 'dark' ? 'dark-prelogin' : 'light-prelogin'}`}>
                             <p>You have already Logged in as a User.</p>
                             <p>To access the Login Form, please Log out first.</p>
                         </div>
@@ -66,7 +66,7 @@ function ForgotPass() {
                                     <p>Please enter your Email Address to reset your Password.</p>
                                 </div>
 
-                                <div className={theme === 'dark' ? 'main-pass-form dark-main-pass-form' : 'main-pass-form light-main-pass-form'}>
+                                <div className={`main-pass-form ${theme === 'dark' ? 'dark-main-pass-form' : 'light-main-pass-form'}`}>
                                     <div class="panel panel-default">
                                         <div class="panel-body">
                                             <div class="text-center">
@@ -81,7 +81,7 @@ function ForgotPass() {
                                                         <input type="email" id="formEmail" value={email} onChange={(e) => setEmail(e.target.value)} />
                                                     </div>
 
-                                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init className={theme === 'dark' ? 'forget-pass-btn dark-pass-btn' : 'forget-pass-btn light-pass-btn'}>Reset Password</button>
+                                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init className={`forget-pass-btn ${theme === 'dark' ? 'dark-pass-btn' : 'light-pass-btn'}`}>Reset Password</button>
 
                                                     {/* <input type="hidden" class="hide" name="token" id="token" value="" /> */}
                                                 </form>

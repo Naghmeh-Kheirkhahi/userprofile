@@ -14,7 +14,6 @@ function PersonalInfo() {
 
     return (
         <>
-
             <div className={theme === 'dark' ? 'dark-main-class' : 'light-main-class'}>
                 <div className="row">
                     <div className="col-5 col-lg-4 col-xxl-3">

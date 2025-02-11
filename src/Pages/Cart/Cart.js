@@ -87,7 +87,7 @@ function Cart() {
         <>
             <div className={theme === 'dark' ? 'dark-cart' : ''}>
                 {products.length > 0 ? (
-                    <div className={theme === 'dark' ? 'main-cart dark-main-cart' : 'main-cart light-main-cart'}>
+                    <div className={`main-cart ${theme === 'dark' ? 'dark-main-cart' : 'light-main-cart'}`}>
                         <div class="row">
                             <div class="col-12 col-lg-8">
                                 <div className="shopping-cart">
@@ -146,7 +146,7 @@ function Cart() {
                         </div>
                     </div>
                 ) : (
-                    <div className={theme === 'dark' ? 'emptyCard dark-emptyCard' : 'emptyCard light-emptyCard'}><p>Your Cart is empty ! &#128577; </p></div>
+                    <div className={`emptyCard ${theme === 'dark' ? 'dark-emptyCard' : 'light-emptyCard'}`}><p>Your Cart is empty ! &#128577; </p></div>
                 )}
             </div>
         </>

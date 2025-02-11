@@ -60,7 +60,7 @@ function Login() {
             <div className={theme === 'dark' ? 'dark-login' : 'light-login'}>
                 <div className="login-container">
                     {username ? (
-                        <div className={theme === 'dark' ? 'prelogin dark-prelogin' : 'prelogin light-prelogin'}>
+                        <div className={`prelogin ${theme === 'dark' ? 'dark-prelogin' : 'light-prelogin'}`}>
                             <p>You have already Logged in as a User.</p>
                             <p>To access the Login Form, please Log out first.</p>
                         </div>
@@ -83,7 +83,7 @@ function Login() {
                                     <p>Please enter your Username and Password.</p>
                                 </div>
 
-                                <form onSubmit={handleLogin} className={theme === 'dark' ? 'main-login-form dark-main-login-form' : 'main-login-form light-main-login-form'}>
+                                <form onSubmit={handleLogin} className={`main-login-form ${theme === 'dark' ? 'dark-main-login-form' : 'light-main-login-form'}`}>
                                     {/* Username input */}
                                     <div data-mdb-input-init class="flex-fill mb-4">
                                         <label class="form-label" for="formEmail"><i class="fa fa-envelope"></i> Username</label>
@@ -113,7 +113,7 @@ function Login() {
                                     </div>
 
                                     {/* Submit button */}
-                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init className={theme=== 'dark' ? 'login-btn dark-login-btn' : 'login-btn light-login-btn'}>Login</button>
+                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init className={`login-btn ${theme=== 'dark' ? 'dark-login-btn' : 'light-login-btn'}`}>Login</button>
 
 
                                     {/* Register buttons */}
