@@ -3,18 +3,18 @@ import './Footer.css';
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { ThemeContext } from "../../Context/ThemeContext";
+import { UserContext } from "../../Context/UserContext";
 import axios from "axios";
 import ShoppingStuffChild from "../Product/ShopsProduct";
-
-
 
 function Category() {
     const navigate = useNavigate();
     const { category } = useParams();
+    const { theme } = useContext(ThemeContext);
+    const { username } = useContext(UserContext);
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
-
-
+    const [favorites, setFavorites] = useState([]);
 
     useEffect(() => {
         axios.get('https://fakestoreapi.com/products/')
@@ -26,8 +26,6 @@ function Category() {
             });
     }, []);
 
-
-
     useEffect(() => {
         if (products.length > 0) {
             const filtered = products.filter(product => {
@@ -38,13 +36,14 @@ function Category() {
         }
     }, [category, products]);
 
-
-
+    useEffect(() => {
+        const savedFavorites = JSON.parse(localStorage.getItem('favorite')) || [];
+        setFavorites(savedFavorites);
+    }, []);
 
     const handleSingleProduct = (productId) => {
         navigate(`/product/${productId}`);
     };
-
 
     const [quantity, setQuantity] = useState(1);
 
@@ -55,10 +54,21 @@ function Category() {
         console.log('total price:', quantity * price);
     };
 
-
-
-    const { theme } = useContext(ThemeContext);
-
+    const handleFavoriteClick = (product) => {
+        if (username) {
+            let updatedFavorites;
+            if (favorites.some(favorite => favorite.id === product.id)) {
+                updatedFavorites = favorites.filter(favorite => favorite.id !== product.id); // Remove from favorites
+            } else {
+                updatedFavorites = [...favorites, product]; // Add to favorites
+            }
+            localStorage.setItem('favorite', JSON.stringify(updatedFavorites));
+            setFavorites(updatedFavorites);
+        } else {
+            alert('You need to Login first to add your Favorites');
+            navigate('/login');
+        }
+    };
 
     return (
         <>
@@ -68,19 +78,28 @@ function Category() {
 
                     <div className="row">
                         {filteredProducts.length > 0 ? (
-                            filteredProducts.map(product => (
-                                <ShoppingStuffChild
-                                    key={product.id}
-                                    image={product.image}
-                                    title={product.title}
-                                    price={product.price}
-                                    category={product.category}
-                                    description={product.description}
-                                    ratingRate={product.rating.rate}
-                                    showProduct={() => handleSingleProduct(product.id)}
-                                    buyProduct={() => handleBuyProduct(product.price)}
-                                />
-                            ))
+                            filteredProducts.map(product => {
+                                const isFavorite = favorites.some(favorite => favorite.id === product.id);
+                                return (
+                                    <ShoppingStuffChild
+                                        key={product.id}
+                                        image={product.image}
+                                        title={product.title}
+                                        price={product.price}
+                                        category={product.category}
+                                        description={product.description}
+                                        ratingRate={product.rating.rate}
+                                        showProduct={() => handleSingleProduct(product.id)}
+                                        buyProduct={() => handleBuyProduct(product.price)}
+                                        heartIcon={<i
+                                            className="fa fa-heart"
+                                            onClick={() => handleFavoriteClick(product)}
+                                        ></i>}
+                                        isFavorite={isFavorite}
+                                        isLogin={username}
+                                    />
+                                );
+                            })
                         ) : (
                             <p>No products found for this category.</p>
                         )}

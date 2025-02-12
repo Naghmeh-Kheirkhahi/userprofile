@@ -127,9 +127,7 @@ function ShopsProductList() {
                                 description={product.description}
                                 ratingRate={product.rating.rate}
                                 showProduct={() => handleSingleProduct(product.id)}
-
                                 buyProduct={() => handleBuyProduct(product.price)}
-
                                 heartIcon={<i
                                     className="fa fa-heart"
                                     onClick={() => handleFavoriteClick(product)}
