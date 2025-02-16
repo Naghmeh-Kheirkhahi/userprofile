@@ -1,12 +1,12 @@
 
-import React, {createContext, useEffect, useState} from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 
 
 
 export const ThemeContext = createContext();
 
-export const ThemeProvider = ({children}) => {
+export const ThemeProvider = ({ children }) => {
 
     const [theme, setTheme] = useState(() => {
         return localStorage.getItem('theme') || 'light';
@@ -21,18 +21,15 @@ export const ThemeProvider = ({children}) => {
 
 
     useEffect(() => {
-
         // document.body.className = theme ==='dark' ? 'dark-mode' : 'light-mode';
         localStorage.setItem('theme', theme);
-            
-        } , [theme]);
-
-        // we can write useEffect when we want to define a general dark-mode and light-mode classes for the whole app. But in this program we have to define the both classes for each page and component separately.
-        // if we put no array, it will mean the program can be run infinitely but if we don't put theme in the array, it will be run only once when the program is rendered. lastly, if we put theme in the array, it will be run whenever the theme is changed.
+    }, [theme]);
+    // we can write useEffect when we want to define a general dark-mode and light-mode classes for the whole app. But in this program we have to define the both classes for each page and component separately.
+    // if we put no array, it will mean the program can be run infinitely but if we don't put theme in the array, it will be run only once when the program is rendered. lastly, if we put theme in the array, it will be run whenever the theme is changed.
 
 
     return (
-        <ThemeContext.Provider value={{theme, toggleTheme}}>
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
             {children}
         </ThemeContext.Provider>
 
