@@ -2,7 +2,7 @@
 import React, { useContext, useState } from "react";
 import './ForgotPass.css';
 import { Link } from "react-router-dom";
-import logo from "../../Assets/images/logo.jpg";
+import Logo from "../../Assets/images/logo.png";
 import { useNavigate } from "react-router-dom";
 import forgotPass from "../../Assets/images/forgot-password.jpg";
 import { UserContext } from "../../Context/UserContext";
@@ -56,7 +56,7 @@ function ForgotPass() {
                             <div className="forget-pass-form col-12 col-md-6">
                                 <div className="forget-pass-title">
                                     <div className="forget-pass-logo">
-                                        <Link to="/"><img src={logo} alt="Logo" />
+                                        <Link to="/"><img src={Logo} alt="Logo" />
                                             <h1>Elnagora Shop</h1>
                                         </Link>
                                     </div>

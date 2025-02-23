@@ -2,7 +2,7 @@
 import React, { useContext, useState } from "react";
 import "./Register.css";
 import { Link } from "react-router-dom";
-import logo from "../../Assets/images/logo.jpg";
+import Logo from "../../Assets/images/logo.png";
 import { useNavigate } from "react-router-dom";
 import register from "../../Assets/images/register.jpg";
 import { ThemeContext } from "../../Context/ThemeContext";
@@ -69,7 +69,7 @@ function Register() {
                             <div className="register-form col-12 col-md-6">
                                 <div className="register-title">
                                     <div className="register-logo">
-                                        <Link to="/"><img src={logo} alt="Logo" />
+                                        <Link to="/"><img src={Logo} alt="Logo" />
                                             <h1>Elnagora Shop</h1>
                                         </Link>
                                     </div>

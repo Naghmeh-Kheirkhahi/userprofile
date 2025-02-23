@@ -1,7 +1,7 @@
 
 import React from "react";
 import './Footer.css';
-import logo from '../../Assets/images/logo.jpg';
+import Logo from '../../Assets/images/logo.png';
 import { Link } from "react-router-dom";
 
 
@@ -16,7 +16,7 @@ function Footer() {
                         <div className="row">
                             <div className="col-12 col-sm-6">
                                 <div className="footer-logo">
-                                    <Link to="/"><img src={logo} alt="Logo" /></Link>
+                                    <Link to="/"><img src={Logo} alt="Logo" /></Link>
                                 </div>
 
                                 <div className="footer-description">

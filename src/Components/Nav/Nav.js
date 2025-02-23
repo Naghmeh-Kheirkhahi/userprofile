@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../Assets/images/logo.jpg';
+import Logo from '../../Assets/images/logo.png';
 import './Nav.css';
 import { ThemeContext } from '../../Context/ThemeContext';
 import { UserContext } from '../../Context/UserContext';
@@ -16,7 +16,7 @@ function Nav() {
         <nav className="navbar navbar-expand-lg navbar-light position-fixed">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
-                    <img src={logo} alt="Logo" className="nav-logo" />
+                    <img src={Logo} alt="Logo" className="nav-logo" />
                 </Link>
 
                 <button className="navbar-toggler me-3 custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

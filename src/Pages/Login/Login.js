@@ -2,7 +2,7 @@
 import React, { useContext, useState } from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
-import logo from "../../Assets/images/logo.jpg";
+import Logo from "../../Assets/images/logo.png";
 import { useNavigate } from "react-router-dom";
 import login from "../../Assets/images/login.jpg";
 import { UserContext } from "../../Context/UserContext";
@@ -73,7 +73,7 @@ function Login() {
                             <div className="login-form col-12 col-md-6">
                                 <div className="login-title">
                                     <div className="login-logo">
-                                        <Link to="/"><img src={logo} alt="Logo" />
+                                        <Link to="/"><img src={Logo} alt="Logo" />
                                             <h1>Elnagora Shop</h1>
                                         </Link>
                                     </div>
