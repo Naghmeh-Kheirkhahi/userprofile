@@ -6,8 +6,7 @@ footer {
 }
 
 .footer-logo img {
-    width: 30%;
-    border-radius: 50%;
+    width: 25%;
 }
 
 .footer-description {
@@ -113,7 +112,7 @@ footer {
 
 @media(max-width: 1400px) {
     .footer-logo img {
-        width: 40%;
+        width: 30%;
     }
 
     .footer-description {
@@ -186,7 +185,6 @@ footer {
 }
 
 @media(max-width: 992px) {
-
     .footer-subscribe h3,
     .footer-list h3 {
         margin-top: 2rem;

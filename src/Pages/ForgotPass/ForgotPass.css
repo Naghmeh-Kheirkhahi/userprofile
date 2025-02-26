@@ -44,7 +44,6 @@
 
 .forget-pass-logo img {
     width: 15%;
-    border-radius: 50%;
     margin-left: 0;
 }
 
@@ -53,14 +52,6 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-}
-
-.forget-pass-logo a h1 {
-    font-size: 2.5rem;
-    color: #c300d8;
-    font-weight: 800;
-    align-items: center;
-    margin-left: 1rem;
 }
 
 .forget-pass-title h1 {
@@ -178,10 +169,6 @@
         padding: 3rem 0;
     }
 
-    .forget-pass-logo a h1 {
-        font-size: 2rem;
-    }
-
     .forget-pass-title h1 {
         font-size: 2.5rem;
         margin: 2rem 0 1rem 0;
@@ -255,11 +242,6 @@
         width: 18%;
     }
 
-    .forget-pass-logo a h1 {
-        font-size: 1.8rem;
-        margin-left: 0.5rem;
-    }
-
     .forget-pass-title h1 {
         font-size: 2rem;
         margin: 1.5rem 0 0.8rem 0;
@@ -322,10 +304,6 @@
         padding: 2rem 0;
     }
 
-    .forget-pass-logo a h1 {
-        font-size: 1.5rem;
-    }
-
     .forget-pass-title h1 {
         font-size: 1.8rem;
     }
@@ -384,10 +362,6 @@
         width: 15%;
     }
 
-    .forget-pass-logo a h1 {
-        font-size: 1.8rem;
-    }
-
     .forget-pass-title h1 {
         font-size: 2rem;
         margin: 1.5rem 0 1rem 0;
@@ -433,10 +407,6 @@
 
     .forget-pass-logo img {
         width: 18%;
-    }
-
-    .forget-pass-logo a h1 {
-        font-size: 1.5rem;
     }
 
     .forget-pass-title h1 {

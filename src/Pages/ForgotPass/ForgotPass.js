@@ -56,9 +56,7 @@ function ForgotPass() {
                             <div className="forget-pass-form col-12 col-md-6">
                                 <div className="forget-pass-title">
                                     <div className="forget-pass-logo">
-                                        <Link to="/"><img src={Logo} alt="Logo" />
-                                            <h1>Elnagora Shop</h1>
-                                        </Link>
+                                        <Link to="/"><img src={Logo} alt="Logo" /></Link>
                                     </div>
 
                                     <h1>Password Form</h1>

@@ -10,13 +10,12 @@
 }
 
 .navbar-brand {
-    width: 5%;
+    width: 4%;
     margin: 0 1rem 0 2rem;
 }
 
 .nav-logo {
     width: 100%;
-    border-radius: 50%;
 }
 
 .custom-toggler {
@@ -134,7 +133,6 @@
 
 @media (max-width: 1400px) {
     .navbar-brand {
-        width: 6%;
         margin: 0 0 0 1rem;
     }
     
@@ -164,6 +162,10 @@
 }
 
 @media (max-width: 1200px) {
+    .navbar-brand {
+        width: 5%;
+    }
+
     .nav-item {
         font-size: 1rem;
     }
@@ -189,7 +191,7 @@
 
 @media (max-width: 992px) {
     .navbar-brand {
-        width: 7%;
+        width: 6%;
     }
     
     .nav-item {
@@ -208,19 +210,19 @@
 
 @media (max-width: 850px) {
     .navbar-brand {
-        width: 8%;
+        width: 7%;
     }
 }
 
 @media (max-width: 768px) {
     .navbar-brand {
-        width: 9%;
+        width: 8%;
     }
 }
 
 @media (max-width: 650px) {
     .navbar-brand {
-        width: 11%;
+        width: 9%;
     }
 }
 
