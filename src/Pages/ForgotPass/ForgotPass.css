@@ -43,7 +43,7 @@
 }
 
 .forget-pass-logo img {
-    width: 15%;
+    width: 18%;
     margin-left: 0;
 }
 
@@ -236,10 +236,6 @@
 
     .forget-pass-form {
         padding: 2.5rem 0;
-    }
-
-    .forget-pass-logo img {
-        width: 18%;
     }
 
     .forget-pass-title h1 {

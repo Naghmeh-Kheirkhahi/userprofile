@@ -69,9 +69,7 @@ function Register() {
                             <div className="register-form col-12 col-md-6">
                                 <div className="register-title">
                                     <div className="register-logo">
-                                        <Link to="/"><img src={Logo} alt="Logo" />
-                                            <h1>Elnagora Shop</h1>
-                                        </Link>
+                                        <Link to="/"><img src={Logo} alt="Logo" /></Link>
                                     </div>
 
                                     <h1>Register Form</h1>

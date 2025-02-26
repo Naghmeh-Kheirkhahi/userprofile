@@ -73,9 +73,7 @@ function Login() {
                             <div className="login-form col-12 col-md-6">
                                 <div className="login-title">
                                     <div className="login-logo">
-                                        <Link to="/"><img src={Logo} alt="Logo" />
-                                            <h1>Elnagora Shop</h1>
-                                        </Link>
+                                        <Link to="/"><img src={Logo} alt="Logo" /></Link>
                                     </div>
 
                                     <h1>Login Form</h1>

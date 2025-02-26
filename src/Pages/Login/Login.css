@@ -43,8 +43,7 @@
 }
 
 .login-logo img {
-    width: 15%;
-    border-radius: 50%;
+    width: 18%;
     margin-left: 0;
 }
 
@@ -300,10 +299,6 @@
 
     .login-form {
         padding: 2.5rem 0;
-    }
-
-    .login-logo img {
-        width: 18%;
     }
 
     .login-logo a h1 {

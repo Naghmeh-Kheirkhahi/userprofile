@@ -43,8 +43,7 @@
 }
 
 .register-logo img {
-    width: 15%;
-    border-radius: 50%;
+    width: 18%;
     margin-left: 0;
 }
 
@@ -254,10 +253,6 @@
 
     .register-form {
         padding: 2.5rem 0;
-    }
-
-    .register-logo img {
-        width: 18%;
     }
 
     .register-logo a h1 {
