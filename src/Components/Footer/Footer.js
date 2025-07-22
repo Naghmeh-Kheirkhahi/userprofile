@@ -9,7 +9,6 @@ function Footer() {
 
     return (
         <>
-
             <footer>
                 <div className="row">
                     <div className="col-12 col-xl-6">
